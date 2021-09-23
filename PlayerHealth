@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Health : MonoBehaviour
+{
+
+    public int currentHP;
+    public GameObject Enemy; // These are to find the GameObjects
+    public GameObject Player;
+
+    void Start()
+    {
+        (Enemy) = GameObject.Find("Enemy"); // Set this to the GameObjects name
+        (Player) = GameObject.Find("Player"); // Set this to the GameObjects name
+    }
+    void Update()
+    {
+        if (currentHP < 1) // This is to destroy the player when you reach 0 HP
+        {
+            Destroy(Player); // You can change this to a different method
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision) // Detecting the damage
+    {
+        if (Enemy)
+            currentHP = -1;
+    }
+}
