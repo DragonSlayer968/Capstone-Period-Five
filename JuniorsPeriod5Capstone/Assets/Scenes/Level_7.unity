@@ -11770,7 +11770,7 @@ GameObject:
   - component: {fileID: 1728873027}
   - component: {fileID: 1728873026}
   - component: {fileID: 1728873025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12893,6 +12893,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 699632627969120059, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 699632627969120059, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 699632627969120059, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 699632628666192145, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_Interpolate
       value: 0
