@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Movement : MonoBehaviour
 
     public LayerMask ground; // What layer the player can jump on
     public SpriteRenderer playerModelRenderer;
-    public Rigidbody2D rb; 
+    public Rigidbody2D rb;
     public Animator animator;
 
     void Move()
@@ -55,10 +56,19 @@ public class Movement : MonoBehaviour
         }
     }
 
+    void Retry()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
     void Update()
     {
         Move();
         Jump();
         UpdateAnimations();
+        Retry();
     }
 }
