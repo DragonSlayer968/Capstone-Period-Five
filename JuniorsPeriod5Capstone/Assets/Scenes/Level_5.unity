@@ -29779,11 +29779,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1282167417
   m_SortingLayer: 0
-<<<<<<< Updated upstream
   m_SortingOrder: 2
-=======
-  m_SortingOrder: 0
->>>>>>> Stashed changes
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -30982,21 +30978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
-=======
-    - target: {fileID: 699632627969120059, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 699632627969120059, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 699632627969120059, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 1
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 699632628666192146, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_Name
       value: Player
