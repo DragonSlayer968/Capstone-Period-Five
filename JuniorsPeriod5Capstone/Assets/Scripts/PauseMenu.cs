@@ -16,16 +16,24 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Pause();
-            pauseMenuCanvas.SetActive(true);
+            // if pause menu isnt active in hierarchy
+            if (!pauseMenuCanvas.activeInHierarchy)
+            {
+                Pause(); // pause the menu
+            }
+            else // if the menu is active in the hieracrhy
+            {
+                Resume(); // resume the menu
+            }
         }
     }
 
     public void Pause()
     {
         Time.timeScale = 0;
+        pauseMenuCanvas.SetActive(true);
     }
 
     public void Resume()
