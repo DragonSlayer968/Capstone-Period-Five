@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeEnemy : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     [Header("Components")]
     public Rigidbody2D rb;
@@ -12,7 +12,9 @@ public class MeleeEnemy : MonoBehaviour
     [Header("Stats")]
     public float speed;
     public float attackDamage;
-    public float health; 
+    public float health;
+    public float enemyType; //1 = moving, 2 = stationary
+    public float enemyRangeType; //1 = melee, 2 = projectile
 
     [Header("Target")]
     public float walkAllowance;
@@ -29,9 +31,12 @@ public class MeleeEnemy : MonoBehaviour
     [Header("FillerAttack")]
     public float attackTime;
     public float origAttackTime;
+    public GameObject projectile;
+    public Transform shotPoint;
+    public float DestroyTime;
     public bool FirstStrike;
     public bool HasAttacked;
-
+    public bool StationaryShooter;
 
     // Start is called before the first frame update
     void Start()
@@ -40,21 +45,25 @@ public class MeleeEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         body = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        if(enemyRangeType == 2 && enemyType == 2)
+        {
+            StationaryShooter = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        health = GetComponent<EnemyHealth>().enemyHealth;
         if (player)
         {
             RangeController();
         }
-
-        if (health == 0)
+      
+        if(health == 0)
         {
             body.SetTrigger("Dead");
         }
+
     }
 
    
@@ -65,12 +74,13 @@ public class MeleeEnemy : MonoBehaviour
         playerHeight = gameObject.transform.position.y - player.transform.position.y;
         direction = gameObject.transform.position.x - player.transform.position.x;
 
-        
-        if (playerDistance <= walkAllowance)
+        if(enemyType == 1)
         {
-           if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
-           {
-                    if (playerDistance > attackAllowance)
+            if (playerDistance <= walkAllowance)
+            {
+                if(playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+                {
+                    if (enemyRangeType == 1 && playerDistance > attackAllowance)
                     {
                         body.SetBool("Walking", true);
                         if (FirstStrike == true)
@@ -78,7 +88,8 @@ public class MeleeEnemy : MonoBehaviour
                             attackTime = origAttackTime;
                         }
 
-                       
+                        if (enemyRangeType == 1)
+                        {
                             if (direction < 0)
                             {
                                 rb.velocity = new Vector2(speed, 0);
@@ -88,18 +99,39 @@ public class MeleeEnemy : MonoBehaviour
                             {
                                 rb.velocity = new Vector2(-speed, 0);
                             }
-                        
+                        }
 
                     }
 
-           }
+                    if (enemyRangeType == 2)
+                    {
+                        body.SetBool("Walking", true);
+                        if (FirstStrike == true)
+                        {
+                            attackTime = origAttackTime;
+                        }
 
+                        if (enemyRangeType == 2)
+                        {
+                            if (direction < 0)
+                            {
+                                rb.velocity = new Vector2(-speed, 0);
+                            }
 
+                            if (direction > 0)
+                            {
+                                rb.velocity = new Vector2(speed, 0);
+                            }
+                        }
+                    }
+                }
+              
+
+            }
+               
         }
-
-        
-
-        if (playerDistance > walkAllowance)
+       
+        if (playerDistance > walkAllowance && enemyType == 1)
         {
             body.SetBool("Walking", false);
             rb.velocity = new Vector2(0, 0);
@@ -107,9 +139,10 @@ public class MeleeEnemy : MonoBehaviour
 
         if (playerDistance <= lookAtAllowance)
         {
-            if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+            if(playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
             {
-                
+                if (StationaryShooter == false)
+                {
                     if (direction < 0)
                     {
                         sprite.flipX = true;
@@ -119,26 +152,28 @@ public class MeleeEnemy : MonoBehaviour
                     {
                         sprite.flipX = false;
                     }
-                
+                }
             }
-
-
+           
+           
         }
-
+       
 
 
         if (playerDistance <= attackAllowance && HasAttacked == false)
         {
-            if (playerDistance <= lookAtAllowance)
+            if(playerDistance <= lookAtAllowance)
             {
                 if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
                 {
-                    
-                    body.SetBool("Walking", false);
-                    rb.velocity = new Vector2(0, 0);
-                    
+                    if (enemyType == 1 && enemyRangeType == 1)
+                    {
+                        body.SetBool("Walking", false);
+                        rb.velocity = new Vector2(0, 0);
+                    }
 
-                    
+                    if (StationaryShooter == false)
+                    {
                         attackTime -= Time.deltaTime;
                         if (attackTime <= 0)
                         {
@@ -146,30 +181,48 @@ public class MeleeEnemy : MonoBehaviour
                             body.SetTrigger("Attack");
                             HasAttacked = true;
                         }
-                    
+                    }
                 }
-
+               
             }
-
-
-
+          
+           
+           
         }
+
+        if(playerDistance <= walkAllowance && enemyType == 2 && enemyRangeType == 2 && HasAttacked == false)
+        {
+            attackTime -= Time.deltaTime;
+            if (attackTime <= 0)
+            {
+
+                body.SetTrigger("Attack");
+                HasAttacked = true;
+            }
+        }
+       
 
     }
 
     public void Attack()
     {
-        if (playerDistance <= attackAllowance + attackExtension)
+        if(playerDistance <= attackAllowance + attackExtension)
         {
             if (player)
             {
                 player.GetComponent<FillerHealth>().Hit();
             }
-
+           
         }
-
+      
     }
 
+    public void Shoot()
+    {
+        GameObject projectileEnemy = Instantiate(projectile, shotPoint.position, shotPoint.rotation);
+        projectileEnemy.GetComponent<ManipulatableProjectile>().enemy = gameObject;
+        Destroy(projectileEnemy, DestroyTime);
+    }
 
     public void EndAttack()
     {
@@ -187,5 +240,4 @@ public class MeleeEnemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
