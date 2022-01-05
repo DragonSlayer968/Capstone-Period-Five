@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: c1314e74166a3a1499a95cff93a9c3f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2681128312870491575
+    second: cannon (1)_0
+  - first:
+      213: 1318331344191207939
+    second: cannon (1)_1
+  - first:
+      213: 7900888714397154516
+    second: cannon (1)_2
+  - first:
+      213: -910400690947058059
+    second: cannon (1)_3
+  - first:
+      213: -8361784705810321730
+    second: cannon (1)_4
+  - first:
+      213: -8744556496166654701
+    second: cannon (1)_5
+  - first:
+      213: 7233534763607597064
+    second: cannon (1)_6
+  - first:
+      213: -8040244193297883866
+    second: cannon (1)_7
+  - first:
+      213: 3931018442494348101
+    second: cannon (1)_8
+  - first:
+      213: -16362925416505452
+    second: cannon (1)_9
+  - first:
+      213: 2167408776262642501
+    second: cannon (1)_10
+  - first:
+      213: -972995586575394806
+    second: cannon (1)_11
+  - first:
+      213: 364221812716115380
+    second: cannon (1)_12
+  - first:
+      213: -7139309567512386687
+    second: cannon (1)_13
+  - first:
+      213: 8603586348896347134
+    second: cannon (1)_14
+  - first:
+      213: 857169905731448283
+    second: cannon (1)_15
+  - first:
+      213: 7194857326036081452
+    second: cannon (1)_16
+  - first:
+      213: -3535059957017132947
+    second: cannon (1)_17
+  - first:
+      213: 116143701680824148
+    second: cannon (1)_18
+  - first:
+      213: 5253862537820397524
+    second: cannon (1)_19
+  - first:
+      213: -5156462069628190389
+    second: cannon (1)_20
+  - first:
+      213: -9162296143557326972
+    second: cannon (1)_21
+  - first:
+      213: 3560649273309142999
+    second: cannon (1)_22
+  - first:
+      213: 4116399810471796858
+    second: cannon (1)_23
+  - first:
+      213: -5216650103320828752
+    second: cannon (1)_24
+  - first:
+      213: -7644814551433052565
+    second: cannon (1)_25
+  - first:
+      213: 6229543082117725318
+    second: cannon (1)_26
+  - first:
+      213: -4378387624084824784
+    second: cannon (1)_27
+  - first:
+      213: -1331116051822250539
+    second: cannon (1)_28
+  - first:
+      213: -2243622420810008228
+    second: cannon (1)_29
+  - first:
+      213: 3153738641104298100
+    second: cannon (1)_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cannon (1)_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 216
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94aac123108bacad0800000000000000
+      internalID: -2681128312870491575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 217
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ab7ca6f57ab4210800000000000000
+      internalID: 1318331344191207939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 217
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcf88fcc6895ad60800000000000000
+      internalID: 7900888714397154516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 217
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57694d4256b9d53f0800000000000000
+      internalID: -910400690947058059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 164
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebea1e9dc19f4fb80800000000000000
+      internalID: -8361784705810321730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_5
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 271
+        width: 33
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31de6a7823815a680800000000000000
+      internalID: -8744556496166654701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_6
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 164
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8002547ea8da26460800000000000000
+      internalID: 7233534763607597064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 164
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d151751805b6090800000000000000
+      internalID: -8040244193297883866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_8
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 271
+        width: 33
+        height: 1
+      alignment: 9
+      pivot: {x: 0.5000076, y: 0.5600952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b826e2278cd8630800000000000000
+      internalID: 3931018442494348101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 164
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f101b810ed5cff0800000000000000
+      internalID: -16362925416505452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 163
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54be2307cce241e10800000000000000
+      internalID: 2167408776262642501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_11
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 268
+        width: 7
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08962e4ba93f72f0800000000000000
+      internalID: -972995586575394806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_12
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 271
+        width: 9
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b594661fc9fd0500800000000000000
+      internalID: 364221812716115380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_13
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 104
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18360e626c31cec90800000000000000
+      internalID: -7139309567512386687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_14
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 104
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3ed585334166770800000000000000
+      internalID: 8603586348896347134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_15
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 147
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd274fdc7745eb00800000000000000
+      internalID: 857169905731448283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_16
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 144
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b5ff73e9449d360800000000000000
+      internalID: 7194857326036081452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_17
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 104
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60494ad2b1f0fec0800000000000000
+      internalID: -3535059957017132947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_18
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 104
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f9591d410ac9100800000000000000
+      internalID: 116143701680824148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_19
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 104
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df5489542879e840800000000000000
+      internalID: 5253862537820397524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_20
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 130
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41490a51119078b0800000000000000
+      internalID: -5156462069628190389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_21
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 104
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487855c833cf8d080800000000000000
+      internalID: -9162296143557326972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_22
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 125
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df185126a7f96130800000000000000
+      internalID: 3560649273309142999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_23
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 126
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7028a861d3602930800000000000000
+      internalID: 4116399810471796858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_24
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 44
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4ae0abe5cba97b0800000000000000
+      internalID: -5216650103320828752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_25
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 44
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e78106ba928e590800000000000000
+      internalID: -7644814551433052565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 44
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c7e9a7d68c37650800000000000000
+      internalID: 6229543082117725318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_27
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 87
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d157157a7dc33c0800000000000000
+      internalID: -4378387624084824784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_28
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 44
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d57050e00de68de0800000000000000
+      internalID: -1331116051822250539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 43
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c597485ab4d0dd0e0800000000000000
+      internalID: -2243622420810008228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon (1)_30
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 43
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470e179b59454cb20800000000000000
+      internalID: 3153738641104298100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
