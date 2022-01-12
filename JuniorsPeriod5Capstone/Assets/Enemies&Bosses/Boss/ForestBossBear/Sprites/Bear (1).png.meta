@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 138a321e5d0ef4e4eace432dd900335a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5191853097510026996
+    second: Bear (1)_0
+  - first:
+      213: -8718420172178761534
+    second: Bear (1)_1
+  - first:
+      213: -7993852575119140697
+    second: Bear (1)_2
+  - first:
+      213: -6132990433240621795
+    second: Bear (1)_3
+  - first:
+      213: -6888381934019046937
+    second: Bear (1)_4
+  - first:
+      213: -4679326913322626810
+    second: Bear (1)_5
+  - first:
+      213: -8270600068546652424
+    second: Bear (1)_6
+  - first:
+      213: -3619123277339202720
+    second: Bear (1)_7
+  - first:
+      213: 8087658474892488373
+    second: Bear (1)_8
+  - first:
+      213: -5241282544424457828
+    second: Bear (1)_9
+  - first:
+      213: 1401740447986619410
+    second: Bear (1)_10
+  - first:
+      213: 3458173869385160121
+    second: Bear (1)_11
+  - first:
+      213: 5134202259353883692
+    second: Bear (1)_12
+  - first:
+      213: -6433894036581465459
+    second: Bear (1)_13
+  - first:
+      213: 3329076438134679560
+    second: Bear (1)_14
+  - first:
+      213: 4042785111784900499
+    second: Bear (1)_15
+  - first:
+      213: -851528290073327024
+    second: Bear (1)_16
+  - first:
+      213: 6302819002621976917
+    second: Bear (1)_17
+  - first:
+      213: -8966874731629625232
+    second: Bear (1)_18
+  - first:
+      213: 4538798471012823054
+    second: Bear (1)_19
+  - first:
+      213: -3574596732253317718
+    second: Bear (1)_20
+  - first:
+      213: 6339350490115900819
+    second: Bear (1)_21
+  - first:
+      213: 309114931996936204
+    second: Bear (1)_22
+  - first:
+      213: -8048682448616891696
+    second: Bear (1)_23
+  - first:
+      213: -100730647813034404
+    second: Bear (1)_24
+  - first:
+      213: -219378280023383070
+    second: Bear (1)_25
+  - first:
+      213: -6635112628046407930
+    second: Bear (1)_26
+  - first:
+      213: -4411530370049224717
+    second: Bear (1)_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bear (1)_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 316
+        width: 76
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4feb81372ea2d0840800000000000000
+      internalID: 5191853097510026996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 316
+        width: 77
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c85faaab03f10780800000000000000
+      internalID: -8718420172178761534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 316
+        width: 78
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a89e29af61201190800000000000000
+      internalID: -7993852575119140697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 316
+        width: 78
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dd2d7e1bd33eaa0800000000000000
+      internalID: -6132990433240621795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_4
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 316
+        width: 78
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e19391902d8760a0800000000000000
+      internalID: -6888381934019046937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_5
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 316
+        width: 78
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601da77e6f0bf0fb0800000000000000
+      internalID: -4679326913322626810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 247
+        width: 76
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f694f2ae0de83d80800000000000000
+      internalID: -8270600068546652424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 247
+        width: 78
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b69dfdd8a46cdc0800000000000000
+      internalID: -3619123277339202720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_8
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 247
+        width: 77
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bee4ac58822d3070800000000000000
+      internalID: 8087658474892488373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 247
+        width: 80
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99ef1c9b493347b0800000000000000
+      internalID: -5241282544424457828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 247
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2141a8db28bf37310800000000000000
+      internalID: 1401740447986619410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 247
+        width: 77
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b59d30efc6edff20800000000000000
+      internalID: 3458173869385160121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 184
+        width: 76
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24dbc1b0c9504740800000000000000
+      internalID: 5134202259353883692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_13
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 184
+        width: 80
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82ce03467736b6a0800000000000000
+      internalID: -6433894036581465459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 184
+        width: 76
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808e32dd161433e20800000000000000
+      internalID: 3329076438134679560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_15
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 184
+        width: 73
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974d2bb3abda1830800000000000000
+      internalID: 4042785111784900499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 184
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05acbf12883ce24f0800000000000000
+      internalID: -851528290073327024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_17
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 184
+        width: 74
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5516dd63d7c187750800000000000000
+      internalID: 6302819002621976917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_18
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 91
+        width: 69
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0704acba0f24f8380800000000000000
+      internalID: -8966874731629625232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 90
+        width: 60
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e003ecb692d0dfe30800000000000000
+      internalID: 4538798471012823054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_20
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 90
+        width: 86
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5d4c6063b746ec0800000000000000
+      internalID: -3574596732253317718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_21
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 90
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3958e06fea5e9f750800000000000000
+      internalID: 6339350490115900819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_22
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 90
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08427494623a4400800000000000000
+      internalID: 309114931996936204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_23
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 90
+        width: 74
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dad44ce4f55d4090800000000000000
+      internalID: -8048682448616891696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_24
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 20
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5eeb1f62022a9ef0800000000000000
+      internalID: -100730647813034404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_25
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 20
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e325cbdd9c94fcf0800000000000000
+      internalID: -219378280023383070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_26
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 20
+        width: 84
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607d59818385be3a0800000000000000
+      internalID: -6635112628046407930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bear (1)_27
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 13
+        width: 88
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff4e51708817c2c0800000000000000
+      internalID: -4411530370049224717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

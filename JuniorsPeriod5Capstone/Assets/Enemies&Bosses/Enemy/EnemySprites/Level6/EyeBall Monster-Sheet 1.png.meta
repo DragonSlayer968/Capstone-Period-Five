@@ -1,0 +1,1356 @@
+fileFormatVersion: 2
+guid: 938f786feafb79741928dca5eab81a92
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 883009578884836175
+    second: EyeBall Monster-Sheet 1_0
+  - first:
+      213: -5824437506152504363
+    second: EyeBall Monster-Sheet 1_1
+  - first:
+      213: 7917790609845086553
+    second: EyeBall Monster-Sheet 1_2
+  - first:
+      213: 3920940533525586038
+    second: EyeBall Monster-Sheet 1_3
+  - first:
+      213: 1161656848438912522
+    second: EyeBall Monster-Sheet 1_4
+  - first:
+      213: 2715242266377599110
+    second: EyeBall Monster-Sheet 1_5
+  - first:
+      213: -8828077802934996817
+    second: EyeBall Monster-Sheet 1_6
+  - first:
+      213: -4427586492226858871
+    second: EyeBall Monster-Sheet 1_7
+  - first:
+      213: 989585301107214644
+    second: EyeBall Monster-Sheet 1_8
+  - first:
+      213: 8445660023052461138
+    second: EyeBall Monster-Sheet 1_9
+  - first:
+      213: -338355625727750789
+    second: EyeBall Monster-Sheet 1_10
+  - first:
+      213: -5361608303283232080
+    second: EyeBall Monster-Sheet 1_11
+  - first:
+      213: -138411335818177984
+    second: EyeBall Monster-Sheet 1_12
+  - first:
+      213: -6047482595526038429
+    second: EyeBall Monster-Sheet 1_13
+  - first:
+      213: -354677880741358647
+    second: EyeBall Monster-Sheet 1_14
+  - first:
+      213: 3836304556493520144
+    second: EyeBall Monster-Sheet 1_15
+  - first:
+      213: 3853647219396484223
+    second: EyeBall Monster-Sheet 1_16
+  - first:
+      213: 2371737273157084762
+    second: EyeBall Monster-Sheet 1_17
+  - first:
+      213: -5337782317691410816
+    second: EyeBall Monster-Sheet 1_18
+  - first:
+      213: 9093461327661521322
+    second: EyeBall Monster-Sheet 1_19
+  - first:
+      213: -1830566078287164840
+    second: EyeBall Monster-Sheet 1_20
+  - first:
+      213: 8869379276424628997
+    second: EyeBall Monster-Sheet 1_21
+  - first:
+      213: -8771605689409557901
+    second: EyeBall Monster-Sheet 1_22
+  - first:
+      213: -7885219892052497875
+    second: EyeBall Monster-Sheet 1_23
+  - first:
+      213: 514251423313076555
+    second: EyeBall Monster-Sheet 1_24
+  - first:
+      213: 8538406049745211850
+    second: EyeBall Monster-Sheet 1_25
+  - first:
+      213: -1848846283224294418
+    second: EyeBall Monster-Sheet 1_26
+  - first:
+      213: -7151296263064144077
+    second: EyeBall Monster-Sheet 1_27
+  - first:
+      213: 6652947971852536981
+    second: EyeBall Monster-Sheet 1_28
+  - first:
+      213: -4305904798118140474
+    second: EyeBall Monster-Sheet 1_29
+  - first:
+      213: -1994397342074675299
+    second: EyeBall Monster-Sheet 1_30
+  - first:
+      213: 3206970385008835558
+    second: EyeBall Monster-Sheet 1_31
+  - first:
+      213: 7956411925174417019
+    second: EyeBall Monster-Sheet 1_32
+  - first:
+      213: 2883760867411580996
+    second: EyeBall Monster-Sheet 1_33
+  - first:
+      213: 3116228471114926871
+    second: EyeBall Monster-Sheet 1_34
+  - first:
+      213: 6386600577027639381
+    second: EyeBall Monster-Sheet 1_35
+  - first:
+      213: -7998461653556088874
+    second: EyeBall Monster-Sheet 1_36
+  - first:
+      213: -771784942845215581
+    second: EyeBall Monster-Sheet 1_37
+  - first:
+      213: 4023539102341284898
+    second: EyeBall Monster-Sheet 1_38
+  - first:
+      213: -375667674965613126
+    second: EyeBall Monster-Sheet 1_39
+  - first:
+      213: -7271631496475810779
+    second: EyeBall Monster-Sheet 1_40
+  - first:
+      213: 2713068531080543176
+    second: EyeBall Monster-Sheet 1_41
+  - first:
+      213: 877865019778472049
+    second: EyeBall Monster-Sheet 1_42
+  - first:
+      213: 1195311416764599810
+    second: EyeBall Monster-Sheet 1_43
+  - first:
+      213: -2589360059667722713
+    second: EyeBall Monster-Sheet 1_44
+  - first:
+      213: -7053594306999694894
+    second: EyeBall Monster-Sheet 1_45
+  - first:
+      213: -8661054459862098882
+    second: EyeBall Monster-Sheet 1_46
+  - first:
+      213: -9136572495021503927
+    second: EyeBall Monster-Sheet 1_47
+  - first:
+      213: -1526572325150097706
+    second: EyeBall Monster-Sheet 1_48
+  - first:
+      213: -1943066004543607056
+    second: EyeBall Monster-Sheet 1_49
+  - first:
+      213: 9151382237206803767
+    second: EyeBall Monster-Sheet 1_50
+  - first:
+      213: 3156001647778080588
+    second: EyeBall Monster-Sheet 1_51
+  - first:
+      213: -9162042251871635282
+    second: EyeBall Monster-Sheet 1_52
+  - first:
+      213: 8624671876911833436
+    second: EyeBall Monster-Sheet 1_53
+  - first:
+      213: -277474075835818264
+    second: EyeBall Monster-Sheet 1_54
+  - first:
+      213: -415085918558885015
+    second: EyeBall Monster-Sheet 1_55
+  - first:
+      213: 8021445570505460968
+    second: EyeBall Monster-Sheet 1_56
+  - first:
+      213: 7000017054415862684
+    second: EyeBall Monster-Sheet 1_57
+  - first:
+      213: 1064081872798907745
+    second: EyeBall Monster-Sheet 1_58
+  - first:
+      213: 4387658156877367839
+    second: EyeBall Monster-Sheet 1_59
+  - first:
+      213: -3576589589372729402
+    second: EyeBall Monster-Sheet 1_60
+  - first:
+      213: -2726733879662062356
+    second: EyeBall Monster-Sheet 1_61
+  - first:
+      213: 5793506217083170675
+    second: EyeBall Monster-Sheet 1_62
+  - first:
+      213: 8092175795536598148
+    second: EyeBall Monster-Sheet 1_63
+  - first:
+      213: 1427255615842819955
+    second: EyeBall Monster-Sheet 1_64
+  - first:
+      213: -517044288763808005
+    second: EyeBall Monster-Sheet 1_65
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2352
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ba2ba9884114c00800000000000000
+      internalID: 883009578884836175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3615582f07b2fa0800000000000000
+      internalID: -5824437506152504363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2256
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9596db10c94a1ed60800000000000000
+      internalID: 7917790609845086553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2208
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670293624aaf96630800000000000000
+      internalID: 3920940533525586038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06e91abfb80f1010800000000000000
+      internalID: 1161656848438912522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2112
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688309e847a7ea520800000000000000
+      internalID: 2715242266377599110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2064
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa07c8ae20e5c7580800000000000000
+      internalID: -8828077802934996817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2016
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980108e2b8d0e82c0800000000000000
+      internalID: -4427586492226858871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1968
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439817b9696bbbd00800000000000000
+      internalID: 989585301107214644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25462cf3b03053570800000000000000
+      internalID: 8445660023052461138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1872
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d0eb0e95bed4bf0800000000000000
+      internalID: -338355625727750789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1824
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2a40ab7adb795b0800000000000000
+      internalID: -5361608303283232080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1776
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0429ba79f93441ef0800000000000000
+      internalID: -138411335818177984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c205cce96031ca0800000000000000
+      internalID: -6047482595526038429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1680
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c319bcb85ee31bf0800000000000000
+      internalID: -354677880741358647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1632
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d32042baa4d3530800000000000000
+      internalID: 3836304556493520144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1584
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c9cc18ab7ea7530800000000000000
+      internalID: 3853647219396484223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56e413eb7a1ae020800000000000000
+      internalID: 2371737273157084762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08664a943436ce5b0800000000000000
+      internalID: -5337782317691410816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa95406f5e6723e70800000000000000
+      internalID: 9093461327661521322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1392
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a40ddb9d58896e0800000000000000
+      internalID: -1830566078287164840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b408db57d561b70800000000000000
+      internalID: 8869379276424628997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aa2f4791ff44680800000000000000
+      internalID: -8771605689409557901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2aed5e2942129290800000000000000
+      internalID: -7885219892052497875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41a0d3e1fcf22700800000000000000
+      internalID: 514251423313076555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 128
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac11c1750138e7670800000000000000
+      internalID: 8538406049745211850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb5d1cd9149756e0800000000000000
+      internalID: -1848846283224294418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337bb7c10fd71cc90800000000000000
+      internalID: -7151296263064144077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1008
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c0d6b7ee4045c50800000000000000
+      internalID: 6652947971852536981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5a487566a5e34c0800000000000000
+      internalID: -4305904798118140474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fd7a42f2a7254e0800000000000000
+      internalID: -1994397342074675299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb36abe292718c20800000000000000
+      internalID: 3206970385008835558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76f3b6bd7ada6e60800000000000000
+      internalID: 7956411925174417019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4485d37ea3d250820800000000000000
+      internalID: 2883760867411580996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b83c3b8411f3b20800000000000000
+      internalID: 3116228471114926871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558890c1363c1a850800000000000000
+      internalID: 6386600577027639381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfa436f081cff090800000000000000
+      internalID: -7998461653556088874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac37befea11a45f0800000000000000
+      internalID: -771784942845215581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22442f6fe7b76d730800000000000000
+      internalID: 4023539102341284898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5e3107d3c59caf0800000000000000
+      internalID: -375667674965613126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52464034ea9f51b90800000000000000
+      internalID: -7271631496475810779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbb85e5471c6a520800000000000000
+      internalID: 2713068531080543176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17813a8959dce2c00800000000000000
+      internalID: 877865019778472049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e09388669969010800000000000000
+      internalID: 1195311416764599810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ecbe7aebeb01cd0800000000000000
+      internalID: -2589360059667722713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9c09d69599c1e90800000000000000
+      internalID: -7053594306999694894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c5b936bd0cdc780800000000000000
+      internalID: -8661054459862098882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a83a139bf543180800000000000000
+      internalID: -9136572495021503927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de7c73fe8680dae0800000000000000
+      internalID: -1526572325150097706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBall Monster-Sheet 1_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe6a0083c7d805e0800000000000000
+      internalID: -1943066004543607056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
