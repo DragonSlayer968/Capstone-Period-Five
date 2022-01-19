@@ -208,7 +208,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 99
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cab7076c56a96429d937bd8b3aac8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 699632628666192145}
 --- !u!1 &699632629153685996
 GameObject:
   m_ObjectHideFlags: 0
