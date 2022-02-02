@@ -22,6 +22,12 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    [SerializeField]
+    AudioSource audioSrc;
+    //public AudioClip walkingSound;
+    //public AudioClip jumpingSound;
+    bool isMoving = false;
+
     void Move()
     {
         dirX = Input.GetAxis("Horizontal"); // Horizontal move dir
@@ -34,11 +40,20 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
+            //jumpingSound.Play();
             Vector3 trajectory = transform.up * jumpPower; // Where the player will jump to
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground); // Ground check
 
             if (hit)
+            {
                 rb.AddForce(trajectory); // Jump to goal position
+            }
+            /*
+            else if (isMoving && !hit)
+            {
+                walkingSound.Stop();
+            }
+            */
         }
     }
 
@@ -66,9 +81,35 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        dirX = Input.GetAxis("Horizontal") * speed;
+
+        if (rb.velocity.x != 0)
+            isMoving = true;
+        else
+            isMoving = false;
+
+        if (isMoving)
+        {
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        }
+        else
+            audioSrc.Stop();
+
         Move();
         Jump();
         UpdateAnimations();
         Retry();
+    }
+    
+    void FixedUpdate()
+    {
+        rb.velocity = new Vector2(dirX, rb.velocity.y);
+    }
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        audioSrc = GetComponent<AudioSource>();
     }
 }

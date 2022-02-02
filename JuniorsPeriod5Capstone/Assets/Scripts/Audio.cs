@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour
 {
-    float dirX;
+    /*float dirX;
     [SerializeField]
     Rigidbody2D rb;
     AudioSource audioSrc;
@@ -19,6 +19,8 @@ public class Audio : MonoBehaviour
 
     void Update ()
     {
+        dirX = Input.GetAxis("Horizontal") * moveSpeed;
+
         if (rb.velocity.x != 0)
             isMoving = true;
         else
@@ -35,7 +37,7 @@ public class Audio : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(dirX, rb.velocity.y);
+        rb.velocity = new Vector2(dirX, rb.velocity.y);
     }
-
+    */
 }
