@@ -24,8 +24,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     AudioSource audioSrc;
-    //public AudioClip walkingSound;
-    //public AudioClip jumpingSound;
+    public AudioClip walkingSound;
+    public AudioClip jumpingSound;
     bool isMoving = false;
 
     void Move()
@@ -40,20 +40,22 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            //jumpingSound.Play();
+            audioSrc.clip = jumpingSound;
+            audioSrc.Play();
             Vector3 trajectory = transform.up * jumpPower; // Where the player will jump to
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground); // Ground check
-
+           
             if (hit)
             {
+                audioSrc.clip = jumpingSound;
+                
                 rb.AddForce(trajectory); // Jump to goal position
             }
-            /*
-            else if (isMoving && !hit)
-            {
-                walkingSound.Stop();
-            }
-            */
+           
+            
+            
+
+            
         }
     }
 
@@ -90,8 +92,10 @@ public class Movement : MonoBehaviour
 
         if (isMoving)
         {
+            
             if (!audioSrc.isPlaying)
-                audioSrc.Play();
+                audioSrc.clip = walkingSound;
+            audioSrc.Play();
         }
         else
             audioSrc.Stop();
@@ -111,5 +115,6 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         audioSrc = GetComponent<AudioSource>();
+        audioSrc.clip = walkingSound;
     }
 }
