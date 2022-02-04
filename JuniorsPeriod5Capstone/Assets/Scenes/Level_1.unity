@@ -616,7 +616,7 @@ MonoBehaviour:
   speed: 3
   moveInput: 0
   jumpPower: 52
-  groundCheckDist: 1.35
+  groundCheckDist: 1.5
   facingRight: 1
   IsJumping: 0
   ground:
@@ -653,6 +653,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 699632628666192157, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
   m_PrefabInstance: {fileID: 699632628429983191}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1040115846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040115836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fade38919c44d9d468f9bedb26ab4585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1040115839}
+  movement: {fileID: 1040115840}
+  swordProj: {fileID: 0}
+  swordPoint: {fileID: 0}
 --- !u!1 &1095678727
 GameObject:
   m_ObjectHideFlags: 0
@@ -5650,6 +5666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886536976}
   - component: {fileID: 1886536977}
+  - component: {fileID: 1886536978}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -5697,6 +5714,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7908753, y: 0.098086715}
   m_EdgeRadius: 0
+--- !u!114 &1886536978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886536975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1222b3d432228184687b55322d437ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1040115840}
 --- !u!1 &2032544514
 GameObject:
   m_ObjectHideFlags: 0

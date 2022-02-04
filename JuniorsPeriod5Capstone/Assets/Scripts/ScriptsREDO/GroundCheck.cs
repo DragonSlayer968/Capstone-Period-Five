@@ -10,8 +10,8 @@ public class GroundCheck : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-          
-
+            player.anim.SetBool("IsFalling", false);
+            player.IsJumping = false;
         }
     }
 
@@ -19,8 +19,8 @@ public class GroundCheck : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-           
-
+            player.anim.SetBool("IsFalling", true);
+            
         }
     }
 }

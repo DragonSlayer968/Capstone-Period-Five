@@ -97,7 +97,8 @@ public class PlayerMovement : MonoBehaviour
             if (hit)
             {
                 //audioSrc.clip = jumpingSound;
-                //IsJumping = true;
+                IsJumping = true;
+                anim.SetTrigger("Leap");
                 rb.AddForce(trajectory); // Jump to goal position
             }
         }
