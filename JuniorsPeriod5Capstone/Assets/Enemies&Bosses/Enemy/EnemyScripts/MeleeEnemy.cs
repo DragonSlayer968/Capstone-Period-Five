@@ -163,7 +163,7 @@ public class MeleeEnemy : MonoBehaviour
         {
             if (player)
             {
-                player.GetComponent<FillerHealth>().Hit();
+                player.GetComponent<PlayerHealth>().Hit();
             }
 
         }

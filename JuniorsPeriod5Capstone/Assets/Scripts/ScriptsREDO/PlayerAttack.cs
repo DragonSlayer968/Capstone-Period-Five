@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     [Header("Components")]
     public Animator anim;
     public PlayerMovement movement;
+    public Vector3 Rotate;
+    public bool right = true;
 
     [Header("Attacks")]
     public GameObject swordProj;
@@ -36,11 +38,37 @@ public class PlayerAttack : MonoBehaviour
             anim.SetTrigger("Attack");
 
         }
+
+        if (movement.moveInput < 0)
+        {
+           Rotate = new Vector3(0, 180, 0);
+            right = false;
+        }
+
+        else if (movement.moveInput > 0)
+        {
+            Rotate = new Vector3(0, 0, 0);
+            right = true;
+        }
     }
 
     public void FireProj()
     {
-        Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
+        GameObject proj = Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
+       
+        proj.transform.eulerAngles = Rotate;
+        if(right == true)
+        {
+            proj.GetComponent<Projectile>().IsRight = true;
+        }
+
+        else
+        {
+            proj.GetComponent<Projectile>().IsRight = false;
+        }
+        
+
+       
     }
 
 }

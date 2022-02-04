@@ -8,7 +8,7 @@ public class GroundCheck : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 3)
         {
             player.anim.SetBool("IsFalling", false);
             player.IsJumping = false;
@@ -17,7 +17,7 @@ public class GroundCheck : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 3)
         {
             player.anim.SetBool("IsFalling", true);
             
