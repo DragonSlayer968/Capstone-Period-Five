@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//known issue: dialogue ends too quickly. Dunno the solution for it
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue; //calling the Dialogue script, now inspector will show places for npc name and stuff
@@ -21,11 +23,11 @@ public class DialogueTrigger : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        FinishDialogue();
+        FinishDialogue(); //once the player leaves the collider, dialogue ends
     }
 
     public void FinishDialogue()
     {
-        FindObjectOfType<DialogueManager>().EndDialogue(); 
+        FindObjectOfType<DialogueManager>().EndDialogue(); //see above, calls function in other script
     }
 }

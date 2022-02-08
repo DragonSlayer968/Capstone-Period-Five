@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//
 public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
-    public Text dialogueText, dialogueText1;
+    public Text dialogueText, dialogueText1; //each individual dialogue text var works for ONE NPC each!!...
+    //...to have multiple NPCs say stuff, multiple dialogueTexts are needed
 
     //this keeps track of all dialogue scentences
     public Queue<string> scentences;
 
-    // Start is called before the first frame update
     void Start()
     {
         scentences = new Queue<string>(); //initializing scentences var
@@ -33,7 +34,7 @@ public class DialogueManager : MonoBehaviour
             scentences.Enqueue(scentence);//queues up a new scentence
         }
 
-        DisplayNextScentence();
+        DisplayNextScentence(); //starts DispNextScent void
     }
 
     public void DisplayNextScentence()
@@ -45,7 +46,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string scentence = scentences.Dequeue();
-        dialogueText.text = scentence;
+        dialogueText.text = scentence; //sets the next scentence
         dialogueText1.text = scentence;
     }
 
@@ -54,7 +55,7 @@ public class DialogueManager : MonoBehaviour
     {
         //placeholder
         Debug.Log("End of dialogue");
-        dialogueText.gameObject.SetActive(false);
+        dialogueText.gameObject.SetActive(false); //disables the text game objects
         dialogueText1.gameObject.SetActive(false);
     }
 }
