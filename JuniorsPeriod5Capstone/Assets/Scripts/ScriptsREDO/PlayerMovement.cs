@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
     [Header("Components")]
     public Animator anim; //player animator
     public Rigidbody2D rb; //player rigidbody
@@ -20,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Bools")]
     public bool facingRight = true;
-
     public bool IsJumping;
+    public bool canMove = true;
 
     [Header("Other")]
     //Jump
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>(); //rb = the rigidbody on the object
         anim = GetComponent<Animator>(); //anim = the animator on the object
     }
@@ -37,16 +40,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement(); //Calls movement
+        if (canMove)
+        {
+            Movement(); //Calls movement
+            Jump();
+        }
         MovementAnimation(); //calls movementanimation
-        Jump();
     }
 
     public void Movement() //Horizontal Movement
     {
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-       
+
         if (facingRight == false && moveInput > 0) //if facingRight is false but move input is positive turn facingRight to true
         {
             Flip(); //calls flip
@@ -59,16 +65,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void Flip() //Faces player in direction they are moving
     {
-       
-            //if (IsInAttack == false)
-            //{
-                facingRight = !facingRight; //true = false, false = true
-                Vector3 Scaler = transform.localScale;
-                Scaler.x *= -1; //flip
-                transform.localScale = Scaler;
-            //}
-
-        
+        //if (IsInAttack == false)
+        //{
+        facingRight = !facingRight; //true = false, false = true
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1; //flip
+        transform.localScale = Scaler;
+        //}
     }
 
     public void MovementAnimation() //Controls the animation of the movement
@@ -81,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         else //otherwise
         {
             anim.SetFloat("HorizontalValue", 0); //blendtree: idle
-            
+
         }
     }
 
