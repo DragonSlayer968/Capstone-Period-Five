@@ -200,3 +200,6 @@ MonoBehaviour:
   projDamage: 1
   IsRight: 0
   rb: {fileID: 0}
+  HitVFX: {fileID: 3053158420161777885, guid: f86106f596a9cee47bc00d3f23fb73a4, type: 3}
+  offsetX: 0.169999
+  offset: {x: 0, y: 0, z: 0}

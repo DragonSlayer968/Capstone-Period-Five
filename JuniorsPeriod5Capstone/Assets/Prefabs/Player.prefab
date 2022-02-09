@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 1040115839}
   - component: {fileID: 1040115840}
   - component: {fileID: 1040115846}
+  - component: {fileID: 1040115847}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -561,6 +562,24 @@ MonoBehaviour:
   right: 1
   swordProj: {fileID: 1075022634648908438, guid: c75f2a23631892c43a8240d8e482bdd1, type: 3}
   swordPoint: {fileID: 1481348375}
+--- !u!114 &1040115847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699632628666192146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b3889f5d807ea48ba7536e6052b2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  maxHealth: 5
+  IV: 0
+  IVTime: 2
+  IVOrig: 2
+  anim: {fileID: 1040115839}
 --- !u!1 &699632629153685996
 GameObject:
   m_ObjectHideFlags: 0

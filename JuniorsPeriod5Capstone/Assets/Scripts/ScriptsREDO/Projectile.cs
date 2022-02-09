@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public bool IsRight;
 
     public Rigidbody2D rb;
+    public GameObject HitVFX;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +36,47 @@ public class Projectile : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public float offsetX;
+    public Vector3 offset;
+
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.layer == 3)
+        {
+            if(IsRight == true)
+            {
+                 offset = new Vector3(transform.position.x + offsetX, transform.position.y, transform.position.z);
+            }
+
+            else
+            {
+                 offset = new Vector3(transform.position.x - offsetX, transform.position.y, transform.position.z);
+            }
+            
+            GameObject vfx = Instantiate(HitVFX, offset, transform.rotation);
+            Destroy(vfx, .55f);
+            DestroySelf();
+        }
+
+        else if(other.gameObject.layer == 7)
+        {
+            if (IsRight == true)
+            {
+                 offset = new Vector3(transform.position.x + offsetX, transform.position.y, transform.position.z);
+            }
+
+            else
+            {
+                 offset = new Vector3(transform.position.x - offsetX, transform.position.y, transform.position.z);
+            }
+            GameObject vfx = Instantiate(HitVFX, offset, transform.rotation);
+            Destroy(vfx, .55f);
+            other.GetComponent<EnemyHealth>().Hit(projDamage);
+            DestroySelf();
+        }
+    }
+
 
 }
