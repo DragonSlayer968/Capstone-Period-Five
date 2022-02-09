@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1472961360}
   - component: {fileID: 1091260277}
   - component: {fileID: 8599373354679088040}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,9 +149,9 @@ MonoBehaviour:
   health: 5
   walkAllowance: 5
   direction: 0
-  lookAtAllowance: 10
+  lookAtAllowance: 5
   attackAllowance: 1
-  attackExtension: 0
+  attackExtension: 0.1
   playerDistance: 0
   playerHeight: 0
   heightAllowance: 1
@@ -174,6 +174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
+  invinsible: 0
+  IV: 1
+  IVOrig: 1
+  anim: {fileID: 0}
 --- !u!1 &8513060500572921024
 GameObject:
   m_ObjectHideFlags: 0
