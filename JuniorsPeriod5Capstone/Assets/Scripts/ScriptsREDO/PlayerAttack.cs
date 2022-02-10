@@ -52,10 +52,19 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public GameObject slashSFX;
+    public void Slash()
+    {
+        GameObject slashSound = Instantiate(slashSFX, swordPoint.position, swordPoint.rotation);
+      
+    }
+
+
     public void FireProj()
     {
         GameObject proj = Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
        
+
         proj.transform.eulerAngles = Rotate;
         if(right == true)
         {

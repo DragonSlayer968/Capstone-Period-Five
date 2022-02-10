@@ -55,11 +55,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (facingRight == false && moveInput > 0) //if facingRight is false but move input is positive turn facingRight to true
         {
+           
             Flip(); //calls flip
         }
         else if (facingRight == true && moveInput < 0) //if facingRight is true but move input is negative turn facingRight to false
         {
-            Flip(); //calls flip
+            
+           Flip(); //calls flip
         }
     }
 
@@ -88,12 +90,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public GameObject jumpSFX;
+
     void Jump()
     {
         if (Input.GetButtonDown("Jump") && IsJumping == false)
         {
             //audioSrc.clip = jumpingSound;
             //audioSrc.Play();
+            GameObject jumpSound = Instantiate(jumpSFX, transform.position, transform.rotation);
+            Destroy(jumpSound, .5f);
             Vector3 trajectory = transform.up * jumpPower; // Where the player will jump to
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground); // Ground check
 

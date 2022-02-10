@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
             }
             
             GameObject vfx = Instantiate(HitVFX, offset, transform.rotation);
-            Destroy(vfx, .55f);
+            Destroy(vfx, .5f);
             DestroySelf();
         }
 
