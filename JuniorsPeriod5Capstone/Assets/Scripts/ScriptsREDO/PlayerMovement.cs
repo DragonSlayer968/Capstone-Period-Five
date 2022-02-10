@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
         MovementAnimation(); //calls movementanimation
+        JumpCheck();
     }
 
     public void Movement() //Horizontal Movement
@@ -112,5 +113,30 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
+    public bool CanJump; 
+
+    void JumpCheck()
+    {
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground); // Ground check
+        if (hit)
+        {
+            CanJump = true;
+        }
+
+        else
+        {
+            CanJump = false;
+        }
+
+        if(CanJump == true)
+        {
+            IsJumping = false;
+        }
+
+    }
+
 
 }
