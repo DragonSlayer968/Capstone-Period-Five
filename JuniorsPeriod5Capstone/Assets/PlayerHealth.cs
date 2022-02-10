@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float health, maxHealth;
+    public int hp;
     public bool IV;
     public float IVTime, IVOrig;
 
     public Animator anim;
+    public Image[] healthPoints;
+    public Sprite head, noHead;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,10 @@ public class PlayerHealth : MonoBehaviour
 
         Invincibility();
 
+        
+
+        
+
     }
 
     public void Hit()
@@ -40,6 +48,8 @@ public class PlayerHealth : MonoBehaviour
             anim.SetTrigger("Hit");
             health--;
             IV = true;
+            healthPoints[hp - 1].sprite = noHead;
+            hp--;
         }
        
     }
