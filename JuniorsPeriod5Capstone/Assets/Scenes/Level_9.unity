@@ -9264,7 +9264,7 @@ GameObject:
   - component: {fileID: 1728873027}
   - component: {fileID: 1728873026}
   - component: {fileID: 1728873025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
