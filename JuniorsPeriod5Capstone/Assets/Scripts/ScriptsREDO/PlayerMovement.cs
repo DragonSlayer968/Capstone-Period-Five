@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         }
         MovementAnimation(); //calls movementanimation
         JumpCheck();
+        SetSafePlace();
     }
 
     public void Movement() //Horizontal Movement
@@ -136,6 +137,29 @@ public class PlayerMovement : MonoBehaviour
             IsJumping = false;
         }
 
+    }
+
+
+    public Vector3 LastPos;
+    public float posTime, posTimeOrig;
+
+    public void SetSafePlace()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground);
+        if (hit)
+        {
+            posTime -= Time.deltaTime;
+            if(posTime <= 0)
+            {
+                posTime = posTimeOrig;
+                LastPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            }
+        }
+    }
+
+    public void TeleportToSafePlace()
+    {
+        transform.position = LastPos;
     }
 
 

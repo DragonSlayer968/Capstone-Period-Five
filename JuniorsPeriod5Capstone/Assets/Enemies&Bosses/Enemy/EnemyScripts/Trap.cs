@@ -23,8 +23,8 @@ public class Trap : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<FillerHealth>().Hit();
-            other.transform.position = new Vector3(teleportPoint.position.x, teleportPoint.position.y, teleportPoint.position.z);
+            other.GetComponent<PlayerHealth>().Hit();
+            other.GetComponent<PlayerMovement>().TeleportToSafePlace();
            
         }
     }
