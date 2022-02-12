@@ -25,7 +25,7 @@ public class GroundCheck : MonoBehaviour
         if (other.gameObject.layer == 3)
         {
             player.anim.SetBool("IsFalling", true);
-            
+           // player.IsJumping = true;
         }
     }
 }

@@ -93,27 +93,57 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public GameObject jumpSFX;
+    public GameObject doubleJumpVFX;
+    public GameObject DJpoint;
+    public int jumpValue;
+    public int djInKCost;
+
+    public PlayerAttack ink;
 
     void Jump()
     {
+        ink = GetComponent<PlayerAttack>();
+
         if (Input.GetButtonDown("Jump") && IsJumping == false)
         {
             //audioSrc.clip = jumpingSound;
             //audioSrc.Play();
-            GameObject jumpSound = Instantiate(jumpSFX, transform.position, transform.rotation);
-            Destroy(jumpSound, .5f);
+
             Vector3 trajectory = transform.up * jumpPower; // Where the player will jump to
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground); // Ground check
 
             if (hit)
             {
                 //audioSrc.clip = jumpingSound;
-                IsJumping = true;
+                GameObject jumpSound = Instantiate(jumpSFX, transform.position, transform.rotation);
+                Destroy(jumpSound, .5f);
+                //IsJumping = true;
                 anim.SetTrigger("Leap");
                 rb.AddForce(trajectory); // Jump to goal position
             }
+
         }
+
+        else if (Input.GetButtonDown("Jump") && jumpValue != 1 && IsJumping == true && ink.inkValue >= djInKCost)
+        {
+            ink.inkValue -= djInKCost;
+
+            anim.SetTrigger("Leap");
+            jumpValue = 1;
+
+            Vector3 trajectory = transform.up * jumpPower;
+            rb.AddForce(trajectory);
+
+        }
+
     }
+
+    public void DoubleJumpVFX()
+    {
+        GameObject jumpVisuals = Instantiate(doubleJumpVFX, DJpoint.transform.position, transform.rotation);
+        Destroy(jumpVisuals, .5f);
+    }
+
 
 
     public bool CanJump; 
@@ -125,11 +155,14 @@ public class PlayerMovement : MonoBehaviour
         if (hit)
         {
             CanJump = true;
+            jumpValue = 0;
         }
 
         else
         {
             CanJump = false;
+            IsJumping = true;
+
         }
 
         if(CanJump == true)
