@@ -72,9 +72,18 @@ public class PlayerMovement : MonoBehaviour
         //if (IsInAttack == false)
         //{
         facingRight = !facingRight; //true = false, false = true
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1; //flip
-        transform.localScale = Scaler;
+        if(facingRight == true)
+        {
+            gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        else
+        {
+            gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        //Vector3 Scaler = transform.localScale;
+        //Scaler.x *= -1; //flip
+        //transform.localScale = Scaler;
         //}
     }
 
