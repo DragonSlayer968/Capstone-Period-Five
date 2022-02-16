@@ -25,7 +25,7 @@ public class Trap : MonoBehaviour
         {
             other.GetComponent<PlayerHealth>().Hit();
             other.GetComponent<PlayerMovement>().TeleportToSafePlace();
-           
+
         }
     }
 }
