@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450277572440755492}
   - component: {fileID: 1450277572440755495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450277573224512840}
   - component: {fileID: 1450277573224512843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7255329583852384829}
   - component: {fileID: 756887304292617272}
   - component: {fileID: 861751131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450277573411281662}
   - component: {fileID: 1450277573411281660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpikeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450277573461645918}
   - component: {fileID: 1450277573461645913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

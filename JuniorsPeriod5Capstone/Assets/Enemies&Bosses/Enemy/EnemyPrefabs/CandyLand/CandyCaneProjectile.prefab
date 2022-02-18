@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  projSpeed: 3
+  projSpeed: 6
   direction: 0
   destroysOnImpact: 1
 --- !u!61 &1633054478346188711
