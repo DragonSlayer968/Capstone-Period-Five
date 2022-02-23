@@ -154,8 +154,8 @@ MonoBehaviour:
   attackExtension: 0.1
   playerDistance: 0
   playerHeight: 0
-  heightAllowance: 1
-  depthAllowance: 0
+  heightAllowance: 8
+  depthAllowance: -1
   player: {fileID: 0}
   attackTime: 0
   origAttackTime: 3
@@ -250,7 +250,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8818744554974398353, guid: 97e360e259869e24485df510b07c3f39, type: 3}
+  m_Sprite: {fileID: 7915205881208720834, guid: 708c7671690a63d46afb90c30b09dc1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
