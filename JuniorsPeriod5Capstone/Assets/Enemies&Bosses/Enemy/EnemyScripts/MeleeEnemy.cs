@@ -62,54 +62,50 @@ public class MeleeEnemy : MonoBehaviour
     public void RangeController()
     {
         playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
-        playerHeight = gameObject.transform.position.y - player.transform.position.y;
+        float SetHeightZero = Mathf.Abs(0 - gameObject.transform.position.y);
+        playerHeight = player.transform.position.y + SetHeightZero;
+        //playerHeight = gameObject.transform.position.y - player.transform.position.y;
         direction = gameObject.transform.position.x - player.transform.position.x;
 
-        
-        if (playerDistance <= walkAllowance)
+        if (playerHeight <= heightAllowance && playerHeight >= depthAllowance)
         {
-           if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
-           {
-                    if (playerDistance > attackAllowance)
+            if (playerDistance <= walkAllowance)
+            {
+
+                if (playerDistance > attackAllowance)
+                {
+                    body.SetBool("Walking", true);
+                    if (FirstStrike == true)
                     {
-                        body.SetBool("Walking", true);
-                        if (FirstStrike == true)
-                        {
-                            attackTime = origAttackTime;
-                        }
-
-                       
-                            if (direction < 0)
-                            {
-                                rb.velocity = new Vector2(speed, 0);
-                            }
-
-                            if (direction > 0)
-                            {
-                                rb.velocity = new Vector2(-speed, 0);
-                            }
-                        
-
+                        attackTime = origAttackTime;
                     }
 
-           }
+
+                    if (direction < 0)
+                    {
+                        rb.velocity = new Vector2(speed, 0);
+                    }
+
+                    if (direction > 0)
+                    {
+                        rb.velocity = new Vector2(-speed, 0);
+                    }
 
 
-        }
+                }
 
-        
+             
+            }
 
-        if (playerDistance > walkAllowance)
-        {
-            body.SetBool("Walking", false);
-            rb.velocity = new Vector2(0, 0);
-        }
-
-        if (playerDistance <= lookAtAllowance)
-        {
-            if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+            else
             {
-                
+                body.SetBool("Walking", false);
+                rb.velocity = new Vector2(0, 0);
+            }
+
+            if (playerDistance <= lookAtAllowance)
+            {
+             
                     if (direction < 0)
                     {
                         sprite.flipX = true;
@@ -119,40 +115,28 @@ public class MeleeEnemy : MonoBehaviour
                     {
                         sprite.flipX = false;
                     }
+
+            }
+            if (playerDistance <= attackAllowance && HasAttacked == false && playerHeight <= 1)
+            {
+                body.SetBool("Walking", false);
+                rb.velocity = new Vector2(0, 0);
+
+                attackTime -= Time.deltaTime;
+                if (attackTime <= 0)
+                {
+
+                    body.SetTrigger("Attack");
+                    HasAttacked = true;
+                }
                 
             }
-
-
         }
 
-
-
-        if (playerDistance <= attackAllowance && HasAttacked == false)
+        else
         {
-            if (playerDistance <= lookAtAllowance)
-            {
-                if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
-                {
-                    
-                    body.SetBool("Walking", false);
-                    rb.velocity = new Vector2(0, 0);
-                    
-
-                    
-                        attackTime -= Time.deltaTime;
-                        if (attackTime <= 0)
-                        {
-
-                            body.SetTrigger("Attack");
-                            HasAttacked = true;
-                        }
-                    
-                }
-
-            }
-
-
-
+            body.SetBool("Walking", false);
+            rb.velocity = new Vector2(0, 0);
         }
 
     }
