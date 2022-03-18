@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     // ATTRIBUTES
-
+    [Header("Attributes")]
     public float speed = 12f; // Walk speed
     public float jumpPower = 12f; // Amount of force when jumping
     public float groundCheckDist = 8f; // Jump ray length
@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public float dirX; // x move dir
 
     // OBJECTS
-
+    [Header("Objects")]
     public LayerMask ground; // What layer the player can jump on
     public SpriteRenderer playerModelRenderer;
     public Rigidbody2D rb;
@@ -65,11 +65,11 @@ public class Movement : MonoBehaviour
 
         if (goalDir.x != 0)
         {
-            animator.Play("running");
+            animator.Play("running");//if not still, activates running animation
         }
         else
         {
-            animator.Play("idle");
+            animator.Play("idle");//if still, activate idle animation
         }
     }
 
@@ -77,7 +77,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//reloads current scene
         }
     }
 

@@ -16,6 +16,7 @@ public class TutorialTextEnable : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            // if in range of player, activates the text
             tutorialText.enabled = true;
         }
     }
@@ -24,6 +25,7 @@ public class TutorialTextEnable : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            //if out of range of the player, deactivates the test.
             tutorialText.enabled = false;
         }
     }

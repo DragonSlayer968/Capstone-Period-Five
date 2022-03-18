@@ -204,7 +204,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hit Points
+  m_Text: Health
 --- !u!1 &579613893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,11 +2218,11 @@ MonoBehaviour:
   IVOrig: 2
   anim: {fileID: 1040115839}
   healthPoints:
-  - {fileID: 2100770005}
-  - {fileID: 670774143}
-  - {fileID: 2046818684}
-  - {fileID: 1327681634}
   - {fileID: 2129929069}
+  - {fileID: 1327681634}
+  - {fileID: 2046818684}
+  - {fileID: 670774143}
+  - {fileID: 2100770005}
   head: {fileID: 8145749602050301248, guid: 072f84eec86b89a47a6e57400f46a55d, type: 3}
   noHead: {fileID: 182687263083871259, guid: 072f84eec86b89a47a6e57400f46a55d, type: 3}
 --- !u!1 &699632629153685996
