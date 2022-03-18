@@ -24,7 +24,7 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(patrol = true)
+        if(patrol == true)
         {
             anim.SetBool("Walking", true);
             if (patrolValue == 0) // left

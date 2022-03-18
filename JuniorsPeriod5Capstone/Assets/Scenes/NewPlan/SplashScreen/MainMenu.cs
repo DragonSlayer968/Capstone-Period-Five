@@ -73,12 +73,12 @@ public class MainMenu : MonoBehaviour
 
         if(Play == true)
         {
-            print("SceneManager.LoadScene(WhateverLevelSelectSceneNameIs)");
+            SceneManager.LoadScene("LevelSelect");
         }
 
         if(Credits == true)
         {
-            print("SceneManager.LoadScene(WhateverCreditsSceneNameIs)");
+            SceneManager.LoadScene("Credits");
         }
 
     }

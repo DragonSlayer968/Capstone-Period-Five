@@ -20,10 +20,10 @@ public class StartMenu : MonoBehaviour
     }
     public void PlayCredits ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Credits");
     }
     public void PlayStartMenu ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("MainMenu");
     }
 }

@@ -191,6 +191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4579574660683601632, guid: 3c3d00e132185be4fb06f33eb1a99f09, type: 3}
+      propertyPath: sceneToLoad
+      value: Level_2
+      objectReference: {fileID: 0}
     - target: {fileID: 4579574660683601635, guid: 3c3d00e132185be4fb06f33eb1a99f09, type: 3}
       propertyPath: m_Name
       value: EndSceneCol
@@ -5900,7 +5904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.169719
+      value: 4.39194
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
