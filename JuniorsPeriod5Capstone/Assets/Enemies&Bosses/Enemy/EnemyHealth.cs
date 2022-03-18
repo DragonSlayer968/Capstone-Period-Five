@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float enemyHealth;
-    public bool invinsible;
+    public bool invincible;
     public float IV, IVOrig;
 
     public Animator anim;
@@ -19,13 +19,13 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(invinsible == true)
+        if(invincible == true)
         {
             IV -= Time.deltaTime;
             if(IV <= 0)
             {
                 IV = IVOrig;
-                invinsible = false;
+                invincible = false;
             }
         }
     }
@@ -33,12 +33,12 @@ public class EnemyHealth : MonoBehaviour
     public void Hit(float damage)
     {
         
-        if(invinsible == false)
+        if(invincible == false)
         {
             anim.SetTrigger("Hit");
 
             enemyHealth -= damage;
-            invinsible = true;
+            invincible = true;
         }
         
     }
