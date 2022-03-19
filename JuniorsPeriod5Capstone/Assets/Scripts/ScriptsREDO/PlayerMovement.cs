@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Other")]
     //Jump
     public LayerMask ground; // What layer the player can jump on
+    AnimatorClipInfo[] m_CurrentClipInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -35,19 +36,54 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
         rb = GetComponent<Rigidbody2D>(); //rb = the rigidbody on the object
         anim = GetComponent<Animator>(); //anim = the animator on the object
+        m_CurrentClipInfo = anim.GetCurrentAnimatorClipInfo(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        if(rollActive == false)
         {
-            Movement(); //Calls movement
-            Jump();
+            if (canMove)
+            {
+                Movement(); //Calls movement
+                Jump();
+            }
+            MovementAnimation(); //calls movementanimation
+            JumpCheck();
+            SetSafePlace();
+           
+            RollActivate();
+           
+
+
+
         }
-        MovementAnimation(); //calls movementanimation
-        JumpCheck();
-        SetSafePlace();
+
+        else
+        {
+            Roll();
+        }
+       
+    }
+
+    public void RollActivate()
+    {
+        if (m_CurrentClipInfo[0].clip.name == "Run" || m_CurrentClipInfo[0].clip.name == "Idle")
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, ground); // Ground check
+
+            if (hit)
+            {
+                if (Input.GetKeyDown(KeyCode.V))
+                {
+                    rollControl();
+                    anim.SetTrigger("Roll");
+                }
+            }
+        }
+
+        
     }
 
     public void Movement() //Horizontal Movement
@@ -181,6 +217,27 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public bool rollActive;
+    public float rollSpeed;
+    public void rollControl()
+    {
+        rollActive = !rollActive;
+    }
+    public void Roll()
+    {
+       
+        if (facingRight == false)
+        {
+            rb.velocity = new Vector2(-rollSpeed, 0);
+        }
+
+        else
+        {
+            rb.velocity = new Vector2(rollSpeed, 0);
+        }
+
+        
+    }
 
     public Vector3 LastPos;
     public float posTime, posTimeOrig;

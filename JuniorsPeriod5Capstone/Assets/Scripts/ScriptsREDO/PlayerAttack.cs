@@ -45,12 +45,12 @@ public class PlayerAttack : MonoBehaviour
         CheckStateOfMovement();
         InkController();
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             slashPrimed = true;
         }
 
-        else if (Input.GetKeyUp(KeyCode.Mouse1))
+        else if (Input.GetKeyUp(KeyCode.S))
         {
             slashPrimed = false;
         }

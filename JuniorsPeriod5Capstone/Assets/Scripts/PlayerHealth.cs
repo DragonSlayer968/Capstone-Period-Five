@@ -34,23 +34,53 @@ public class PlayerHealth : MonoBehaviour
         }
 
         Invincibility();
-
+        Parry();
         
 
         
 
     }
 
+    public bool Parrying;
+    public float parryDamage;
+    public float parryHealing;
+
+    public bool DefensePath;
+    public int path;
+
+    public void Parry()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1)) //make cost ink
+        {
+            ParryChange();
+            anim.SetTrigger("Parry");
+        }
+    }
+
+    public void ParryChange()
+    {
+        Parrying = !Parrying;
+    }
+
     public void Hit()
     {
-        if(IV == false)
+        if(Parrying == false)
         {
-            anim.SetTrigger("Hit");
-            health--;
-            IV = true;
-            healthPoints[hp - 1].sprite = noHead;
-            hp--;
+            if (IV == false)
+            {
+                anim.SetTrigger("Hit");
+                health--;
+                IV = true;
+                healthPoints[hp - 1].sprite = noHead;
+                hp--;
+            }
         }
+
+        else
+        {
+            print("parried"); 
+        }
+       
        
     }
 
