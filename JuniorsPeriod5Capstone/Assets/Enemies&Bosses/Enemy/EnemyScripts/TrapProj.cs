@@ -36,7 +36,7 @@ public class TrapProj : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<FillerHealth>().Hit();
+            other.GetComponent<PlayerHealth>().Hit(2);
             if (destroysOnImpact == true)
             {
                 Destroy(gameObject);

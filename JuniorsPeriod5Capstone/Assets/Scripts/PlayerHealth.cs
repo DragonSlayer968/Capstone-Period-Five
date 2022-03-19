@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     public Image[] healthPoints;
     public Sprite head, noHead;
 
+    public PlayerAttack paExtend;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +30,7 @@ public class PlayerHealth : MonoBehaviour
             anim.SetTrigger("Dead");
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Hit();
-        }
+       
 
         Invincibility();
         Parry();
@@ -48,6 +47,9 @@ public class PlayerHealth : MonoBehaviour
     public bool DefensePath;
     public int path;
 
+    public GameObject ParryProj;
+    public GameObject ParrySound;
+
     public void Parry()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1)) //make cost ink
@@ -62,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
         Parrying = !Parrying;
     }
 
-    public void Hit()
+    public void Hit(int Attacker)
     {
         if(Parrying == false)
         {
@@ -78,7 +80,31 @@ public class PlayerHealth : MonoBehaviour
 
         else
         {
-            print("parried"); 
+           
+
+            if (Attacker == 1)
+            {
+                print("parried");
+            }
+
+            if(Attacker == 2)
+            {
+                GameObject slashSound = Instantiate(ParrySound, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+                GameObject proj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+                proj.transform.eulerAngles = paExtend.Rotate;
+                if (paExtend.right == true)
+                {
+                    proj.GetComponent<Projectile>().IsRight = true;
+                }
+
+                else
+                {
+                    proj.GetComponent<Projectile>().IsRight = false;
+                }
+            }
+
+
+            
         }
        
        
