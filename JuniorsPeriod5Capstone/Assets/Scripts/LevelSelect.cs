@@ -9,6 +9,7 @@ public class LevelSelect : MonoBehaviour
     public Sprite[] Icons;
     public string[] levelName;
     public string[] levelToLoad;
+    public string[] sceneNames;
     public int LevelValue;
     public Animator levelSelectAnimation;
 
@@ -130,10 +131,14 @@ public class LevelSelect : MonoBehaviour
         levelSelectAnimation.SetTrigger("Author");
     }
 
+    public void PlayPressed()
+    {
+        levelSelectAnimation.SetTrigger("LevelSelected");
+    }
 
     public void LoadSelectedLevel(string selectedLevel)//Parameter allows the creater to set what scene they want to go to
     {
-        selectedLevel = levelToLoad[LevelValue];
+        selectedLevel = sceneNames[LevelValue];
         SceneManager.LoadScene(selectedLevel);//Loads selected Level
     }
 
