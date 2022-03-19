@@ -1132,7 +1132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 392542037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1018114952}
+        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_MethodName: LoadSelectedLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &524798815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2342,7 +2354,7 @@ MonoBehaviour:
   - {fileID: -4869886503335195585, guid: 0e179c792a937fb4cb1679ded54a297e, type: 3}
   - {fileID: 1396488315575550225, guid: 0e179c792a937fb4cb1679ded54a297e, type: 3}
   levelName:
-  - -Insert tutorial level name here-
+  - The Hills
   - Plaza
   - The Edge
   - The Forest
@@ -2352,6 +2364,17 @@ MonoBehaviour:
   - -??? I dont know what to name- boss lair
   - -??? I dont know what to name- arena 1
   - -??? I dont know what to name- arena 2
+  levelToLoad:
+  - Level_1
+  - Level_2
+  - Level_3
+  - Level_4
+  - Level_5
+  - Level_6
+  - Level_7
+  - Level_8
+  - Level_9
+  - Level_10
   LevelValue: 0
   levelSelectAnimation: {fileID: 1018114957}
   title: {fileID: 410995542}
@@ -3528,7 +3551,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5471698, g: 0.33468035, b: 0.04903879, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

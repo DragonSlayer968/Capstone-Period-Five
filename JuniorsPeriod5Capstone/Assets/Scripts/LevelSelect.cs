@@ -8,6 +8,7 @@ public class LevelSelect : MonoBehaviour
 {
     public Sprite[] Icons;
     public string[] levelName;
+    public string[] levelToLoad;
     public int LevelValue;
     public Animator levelSelectAnimation;
 
@@ -121,6 +122,7 @@ public class LevelSelect : MonoBehaviour
     {
         Icon.sprite = Icons[LevelValue];
         title.text = levelName[LevelValue];
+        
     }
 
     public void StartLevelSelect()
@@ -131,6 +133,9 @@ public class LevelSelect : MonoBehaviour
 
     public void LoadSelectedLevel(string selectedLevel)//Parameter allows the creater to set what scene they want to go to
     {
+        selectedLevel = levelToLoad[LevelValue];
         SceneManager.LoadScene(selectedLevel);//Loads selected Level
     }
+
+    
 }
