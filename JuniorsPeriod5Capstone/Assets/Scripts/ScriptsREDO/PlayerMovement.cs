@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     //Tutorial
     public bool jtDone;
-    
+
+    public PlayerAbilities abilities;
 
 
     [Header("Other")]
@@ -56,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             if (canMove)
             {
                 Movement(); //Calls movement
-                Jump();
+                JumpEew();
             }
             MovementAnimation(); //calls movementanimation
             JumpCheck();
@@ -73,7 +74,36 @@ public class PlayerMovement : MonoBehaviour
         {
             Roll();
         }
+
+        AbilityStats();
        
+    }
+
+    public float baseJumpPower, baseRollSpeed;
+
+    public void AbilityStats()
+    {
+        if(abilities.mainPath != 2)
+        {
+            jumpPower = baseJumpPower;
+            rollSpeed = baseRollSpeed;
+        }
+
+        else
+        {
+            if(abilities.subPath == 1)
+            {
+                jumpPower = baseJumpPower * 1.15f;
+                rollSpeed = baseRollSpeed * .8f;
+            }
+
+            if (abilities.subPath == 2)
+            {
+                jumpPower = baseJumpPower * 1f;
+                rollSpeed = baseRollSpeed * 1.25f;
+            }
+        }
+
     }
 
     public void RollActivate()
@@ -154,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
 
     public PlayerAttack ink;
 
-    void Jump()
+    /*void Jump()
     {
         ink = GetComponent<PlayerAttack>();
 
@@ -189,6 +219,76 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(trajectory);
 
         }
+
+    }*/
+
+    [Header("Jump")]
+    public bool isGrounded;
+    public Transform feetPos;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+    private float jumpTimeCounter;
+    public float jumpTime;
+
+    public bool isJumping;
+    public int extJump;
+
+    public void JumpEew()
+    {
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        if (Input.GetKeyDown(KeyCode.Space) && (extJump > 0 || isGrounded == true))
+        {
+            if(isGrounded == false)
+            {
+                if (abilities.mainPath != 2 || abilities.subPath != 1 || abilities.subPathLevel != 3 || extJump == 1)
+                {
+                    ink.inkValue -= djInKCost;
+                }
+            }
+            rb.velocity = Vector2.up * jumpPower;
+            extJump--;
+            GameObject jumpSound = Instantiate(jumpSFX, transform.position, transform.rotation);
+            Destroy(jumpSound, .5f);
+            anim.SetTrigger("Leap");
+            anim.SetBool("IsFalling", true);
+            
+
+        }
+
+        if (isGrounded == true)
+        {
+            if(abilities.mainPath == 2 && abilities.subPath == 1)
+            {
+                
+                if(abilities.subPathLevel == 3)
+                {
+                    extJump = 2;
+                }
+                else
+                {
+                    extJump = 1;
+                }
+
+            }
+            else
+            {
+                extJump = 0;
+            }
+                    
+            anim.SetBool("IsFalling", false);
+            
+
+        }
+
+        else
+        {
+           
+           anim.SetBool("IsFalling", true);
+            
+
+        }
+
 
     }
 

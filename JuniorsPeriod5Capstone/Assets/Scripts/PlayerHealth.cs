@@ -22,10 +22,15 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<CheckPointController>().player = gameObject;
-        checkPointValue = PlayerPrefs.GetInt("Cp");
-        FindObjectOfType<CheckPointController>().cpvalue = checkPointValue;
-        FindObjectOfType<CheckPointController>().CheckPointLoad();
+        CheckPointController checkcpc = FindObjectOfType<CheckPointController>();
+        if (checkcpc)
+        {
+            FindObjectOfType<CheckPointController>().player = gameObject;
+            checkPointValue = PlayerPrefs.GetInt("Cp");
+            FindObjectOfType<CheckPointController>().cpvalue = checkPointValue;
+            FindObjectOfType<CheckPointController>().CheckPointLoad();
+        }
+       
     }
 
     // Update is called once per frame
