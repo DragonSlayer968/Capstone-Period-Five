@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         FindObjectOfType<CheckPointController>().player = gameObject;
+        checkPointValue = PlayerPrefs.GetInt("Cp");
+        FindObjectOfType<CheckPointController>().cpvalue = checkPointValue;
         FindObjectOfType<CheckPointController>().CheckPointLoad();
     }
 

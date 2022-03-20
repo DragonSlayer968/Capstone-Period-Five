@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 61c1e3e927f7b9a4e8698ad18508e1b2
+guid: ffb4fb540a50fdc4c8f24f7aab52f1d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2373183141213679312
-    second: New Piskel (6)_0
+      213: 1745383609532834680
+    second: Gear (1)_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 75
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (6)_0
+      name: Gear (1)_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 7
-        width: 14
-        height: 18
+        x: 272
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0deacf64e7d3fe020800000000000000
-      internalID: 2373183141213679312
+      spriteID: 8736efa3529d83810800000000000000
+      internalID: 1745383609532834680
       vertices: []
       indices: 
       edges: []
@@ -117,7 +117,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 885d1d0d18c0ae047953845b82c8e3ed
     internalID: 0
     vertices: []
     indices: 
