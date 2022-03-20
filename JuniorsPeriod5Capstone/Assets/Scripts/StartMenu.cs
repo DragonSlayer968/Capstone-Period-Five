@@ -22,8 +22,8 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
-    public void PlayStartMenu ()
+    public void PlayLevelSelect ()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LevelSelect");
     }
 }

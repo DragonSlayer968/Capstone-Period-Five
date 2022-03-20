@@ -13,6 +13,8 @@ public class LevelSelect : MonoBehaviour
     public int LevelValue;
     public Animator levelSelectAnimation;
 
+    public GameObject pageFlipSFX;
+
     public Text title;
     public Image Icon;
 
@@ -40,7 +42,7 @@ public class LevelSelect : MonoBehaviour
         if(LevelValue < levelName.Length - 1 && onAuthor == false)
         {
             LevelValue++;
-           
+            StartCoroutine(PageFlipSFX());
         }
 
         else
@@ -81,7 +83,7 @@ public class LevelSelect : MonoBehaviour
     {
         if (LevelValue < levelName.Length - 1 && onAuthor == false)
         {
-            
+            StartCoroutine(PageFlipSFX());
             levelSelectAnimation.SetTrigger("PageFlip");
         }
 
@@ -89,11 +91,13 @@ public class LevelSelect : MonoBehaviour
         {
             if (LevelValue >= levelName.Length - 1)
             {
+                StartCoroutine(PageFlipSFX());
                 levelSelectAnimation.SetTrigger("Final");
             }
 
             else if (onAuthor == true)
             {
+                StartCoroutine(PageFlipSFX());
                 levelSelectAnimation.SetTrigger("Play");
                 
             }
@@ -105,7 +109,7 @@ public class LevelSelect : MonoBehaviour
     {
         if (LevelValue > 0)
         {
-           
+            StartCoroutine(PageFlipSFX());
             levelSelectAnimation.SetTrigger("PageFlipBack");
         }
 
@@ -114,7 +118,7 @@ public class LevelSelect : MonoBehaviour
             if (LevelValue == 0)
             {
                 levelSelectAnimation.SetTrigger("BackToAuthor");
-                
+                StartCoroutine(PageFlipSFX());
             }
         }
     }
@@ -142,5 +146,11 @@ public class LevelSelect : MonoBehaviour
         SceneManager.LoadScene(selectedLevel);//Loads selected Level
     }
 
+    public IEnumerator PageFlipSFX()
+    {
+        pageFlipSFX.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        pageFlipSFX.SetActive(false);
+    }
     
 }
