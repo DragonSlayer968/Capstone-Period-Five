@@ -2437,7 +2437,7 @@ MonoBehaviour:
   - {fileID: -4869886503335195585, guid: 0e179c792a937fb4cb1679ded54a297e, type: 3}
   - {fileID: 1396488315575550225, guid: 0e179c792a937fb4cb1679ded54a297e, type: 3}
   levelName:
-  - The Hills
+  - Tutorial
   - Plaza
   - The Edge
   - The Forest
@@ -2445,8 +2445,8 @@ MonoBehaviour:
   - 'Candyland '
   - Area Zero
   - The Dungeon
-  - -??? I dont know what to name- arena 1
-  - -??? I dont know what to name- arena 2
+  - The Lair
+  - Ends Keep
   levelToLoad:
   - Level_1
   - Level_2
