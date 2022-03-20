@@ -10,6 +10,8 @@ public class TrapProj : MonoBehaviour
     public int direction;
     public bool destroysOnImpact;
 
+    public GameObject shooter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class TrapProj : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerHealth>().Hit(2);
+            other.GetComponent<PlayerHealth>().Hit(2, shooter);
             if (destroysOnImpact == true)
             {
                 Destroy(gameObject);

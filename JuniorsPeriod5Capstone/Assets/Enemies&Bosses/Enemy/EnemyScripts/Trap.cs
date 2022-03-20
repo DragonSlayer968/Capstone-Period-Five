@@ -23,7 +23,7 @@ public class Trap : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerHealth>().Hit(0);
+            other.GetComponent<PlayerHealth>().Hit(0, gameObject);
             other.GetComponent<PlayerMovement>().TeleportToSafePlace();
 
         }

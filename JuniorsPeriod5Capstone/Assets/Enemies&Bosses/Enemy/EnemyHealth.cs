@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float enemyHealth;
+    public float maxHealth;
     public bool invincible;
     public float IV, IVOrig;
 

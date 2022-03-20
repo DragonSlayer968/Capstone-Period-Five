@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public PlayerMovement movement;
     public Vector3 Rotate;
     public bool right = true;
+    public PlayerAbilities abilities;
 
     [Header("Attacks")]
     public GameObject swordProj;
@@ -64,6 +65,63 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+    public float baseInkCost;
+    public float inkCostAfterAbility;
+
+    public float baseDamage;
+    public float damageAfterAbility;
+
+    public float baseproDamage;
+    public float projdamageafterability;
+
+    public void StatController()
+    {
+        if(abilities.mainPath == 1)
+        {
+            if (abilities.subPath == 1)
+            {
+                if(abilities.subPathLevel <= 1)
+                {
+                    meleeDamage = baseDamage / 2;
+                    slashCost = baseInkCost / 2;
+                    projectileDamage = baseproDamage * 1.25f;
+                }
+
+                if(abilities.subPathLevel >= 2)
+                {
+                    meleeDamage = baseDamage / 4;
+                    slashCost = baseInkCost / 5;
+                }
+
+            }
+
+            else if (abilities.subPath == 2)
+            {
+                projectileDamage = baseproDamage;
+                if (abilities.subPathLevel <= 1)
+                {
+                    meleeDamage = baseDamage * 1.5f;
+                    slashCost = baseInkCost * 1.5f;
+                }
+
+                if (abilities.subPathLevel >= 2)
+                {
+                    meleeDamage = baseDamage * 2;
+                    slashCost = baseInkCost * 2;
+                }
+            }
+
+        }
+
+        else
+        {
+            meleeDamage = baseDamage;
+            slashCost = baseInkCost;
+            projectileDamage = baseproDamage;
+        }
+
+    }
+
     public GameObject slashSFX;
     public void Slash()
     {
@@ -89,12 +147,65 @@ public class PlayerAttack : MonoBehaviour
             {
                 for(int i = 0; i < targets.Count; i++)
                 {
-                    targets[i].Hit(meleeDamage);
-                    inkValue += inkGain;
+                    if(abilities.mainPath == 1 && abilities.subPath == 2)
+                    {
+                        float finalDamage = meleeDamage;
+                        int initialCritChance = 0;
+                        if (abilities.subPathLevel == 3)
+                        {
+                            initialCritChance = Random.Range(0, 7);
+                        }
+                        else
+                        {
+                            initialCritChance = Random.Range(0, 10);
+                        }
+                        if(initialCritChance == 0)
+                        {
+                            finalDamage += meleeDamage * 1.5f;
+                        }
+
+                        if(abilities.subPathLevel == 2)
+                        {
+                            int doublecrit = Random.Range(0, 10);
+                            if(doublecrit == 0)
+                            {
+                                finalDamage += meleeDamage * 1.5f;
+                            }
+                        }
+
+                        if (abilities.subPathLevel == 3)
+                        {
+                            int triplecrit = Random.Range(0, 10);
+                            if (triplecrit == 0)
+                            {
+                                finalDamage += meleeDamage * 1.5f;
+                            }
+                        }
+
+                        targets[i].Hit(finalDamage);
+
+
+                        if (targets[i].enemyHealth <= targets[i].maxHealth * .12 && abilities.subPathLevel == 1) //Jagged blade excute
+                        {
+                            targets[i].enemyHealth = 0;
+                            inkValue += inkGain * 3;
+                        }
+
+                    }
+                    else
+                    {
+                        targets[i].Hit(meleeDamage);
+                        if(abilities.mainPath == 1 && abilities.subPath == 1 && abilities.subPathLevel >= 1)
+                        {
+                            inkValue += inkGain;
+                        }
+                        
+                    }
+                    
                 }
             }
 
-            print("normalAttack");
+            
             
         }
         
@@ -162,21 +273,124 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public GameObject swordProj2, swordProj3, swordProj4;
+    public float projectileDamage;
+
     public void FireProj()
     {
-        GameObject proj = Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
+        
+           
        
-
-        proj.transform.eulerAngles = Rotate;
-        if(right == true)
+        if(abilities.mainPath == 1)
         {
-            proj.GetComponent<Projectile>().IsRight = true;
+            int critchance = 0;
+            if (abilities.subPathLevel == 3)
+            {
+                critchance = Random.Range(0, 7);
+            }
+
+            else
+            {
+                critchance = Random.Range(0, 10);
+            }
+
+            if (abilities.subPathLevel != 3)
+            {
+                GameObject proj = Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
+                proj.GetComponent<Projectile>().projDamage = projectileDamage;
+
+                if (critchance == 0)
+                {
+
+                    GameObject proj2 = Instantiate(swordProj2, swordPoint.position, swordPoint.rotation);
+                    proj2.GetComponent<Projectile>().projDamage = projectileDamage;
+                    proj2.transform.eulerAngles = Rotate;
+                    if (right == true)
+                    {
+                        proj2.GetComponent<Projectile>().IsRight = true;
+                    }
+
+                    else
+                    {
+                        proj2.GetComponent<Projectile>().IsRight = false;
+                    }
+
+                    if (abilities.subPathLevel == 2)
+                    {
+                        int secondCrit = Random.Range(0, 4);
+
+                        if (secondCrit == 0)
+                        {
+                            GameObject proj3 = Instantiate(swordProj3, swordPoint.position, swordPoint.rotation);
+                            proj3.GetComponent<Projectile>().projDamage = projectileDamage;
+                            proj3.transform.eulerAngles = Rotate;
+                            if (right == true)
+                            {
+                                proj3.GetComponent<Projectile>().IsRight = true;
+                            }
+
+                            else
+                            {
+                                proj3.GetComponent<Projectile>().IsRight = false;
+                            }
+                        }
+
+                    }
+
+                }
+
+                proj.transform.eulerAngles = Rotate;
+                if (right == true)
+                {
+                    proj.GetComponent<Projectile>().IsRight = true;
+                }
+
+                else
+                {
+                    proj.GetComponent<Projectile>().IsRight = false;
+                }
+            }
+
+            else
+            {
+                if(critchance == 0)
+                {
+                    GameObject proj4 = Instantiate(swordProj4, swordPoint.position, swordPoint.rotation);
+                    proj4.transform.eulerAngles = Rotate;
+                    proj4.GetComponent<Projectile>().projDamage = projectileDamage * 2.5f;
+                    if (right == true)
+                    {
+                        proj4.GetComponent<Projectile>().IsRight = true;
+                    }
+
+                    else
+                    {
+                        proj4.GetComponent<Projectile>().IsRight = false;
+                    }
+                }
+
+                else
+                {
+                    GameObject proj = Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
+                    proj.GetComponent<Projectile>().projDamage = projectileDamage;
+                    proj.transform.eulerAngles = Rotate;
+                    if (right == true)
+                    {
+                        proj.GetComponent<Projectile>().IsRight = true;
+                    }
+
+                    else
+                    {
+                        proj.GetComponent<Projectile>().IsRight = false;
+                    }
+                }
+
+            }
+           
+
         }
 
-        else
-        {
-            proj.GetComponent<Projectile>().IsRight = false;
-        }
+       
         
 
        
