@@ -2154,6 +2154,8 @@ MonoBehaviour:
   djInKCost: 2
   ink: {fileID: 0}
   CanJump: 0
+  rollActive: 0
+  rollSpeed: 0
   LastPos: {x: 0, y: 0, z: 0}
   posTime: 0.5
   posTimeOrig: 0.5
@@ -2216,6 +2218,14 @@ MonoBehaviour:
   - {fileID: 2100770005}
   head: {fileID: 8145749602050301248, guid: 072f84eec86b89a47a6e57400f46a55d, type: 3}
   noHead: {fileID: 182687263083871259, guid: 072f84eec86b89a47a6e57400f46a55d, type: 3}
+  paExtend: {fileID: 0}
+  Parrying: 0
+  parryDamage: 0
+  parryHealing: 0
+  DefensePath: 0
+  path: 0
+  ParryProj: {fileID: 0}
+  ParrySound: {fileID: 0}
 --- !u!1 &699632629153685996
 GameObject:
   m_ObjectHideFlags: 0
