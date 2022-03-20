@@ -530,7 +530,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -20535,6 +20535,7 @@ GameObject:
   - component: {fileID: 1728873027}
   - component: {fileID: 1728873026}
   - component: {fileID: 1728873025}
+  - component: {fileID: 1728873028}
   m_Layer: 6
   m_Name: Hazards
   m_TagString: Untagged
@@ -20687,6 +20688,21 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1728873028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728873023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6006ffd2b2f428498a4505af5ce35fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xKnock: 0
+  yKnock: 0
+  teleportPoint: {fileID: 0}
 --- !u!1001 &2123764320
 PrefabInstance:
   m_ObjectHideFlags: 0
