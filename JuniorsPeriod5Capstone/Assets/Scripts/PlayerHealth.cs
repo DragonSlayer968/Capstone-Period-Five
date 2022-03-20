@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<CheckPointController>().player = gameObject;
+        FindObjectOfType<CheckPointController>().CheckPointLoad();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0)
         {
             anim.SetTrigger("Dead");
+            
         }
 
        
@@ -75,6 +78,9 @@ public class PlayerHealth : MonoBehaviour
                 IV = true;
                 healthPoints[hp - 1].sprite = noHead;
                 hp--;
+
+               
+
             }
         }
 
@@ -109,6 +115,32 @@ public class PlayerHealth : MonoBehaviour
        
        
     }
+
+    public GameObject deathCanvas;
+    public GameObject deathSound;
+
+    public void Die(GameObject sound)
+    {
+        deathSound = sound;
+
+        deathCanvas.SetActive(true);
+    }
+
+    //DeathButtons
+    public int checkPointValue;
+    public void Continue()
+    {
+        PlayerPrefs.SetInt("Cp", checkPointValue);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
+    public void Quit()
+    {
+        PlayerPrefs.SetInt("Cp", 0);
+        SceneManager.LoadScene("LevelSelect");
+    }
+
 
     public void Invincibility()
     {

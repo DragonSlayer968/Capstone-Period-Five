@@ -55,6 +55,7 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            PlayerPrefs.SetInt("Cp", 0);
             StartCoroutine(OpenSceneCo());
         }
     }

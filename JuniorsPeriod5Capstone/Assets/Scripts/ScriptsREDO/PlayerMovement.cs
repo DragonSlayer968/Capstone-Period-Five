@@ -25,6 +25,15 @@ public class PlayerMovement : MonoBehaviour
     public bool IsJumping;
     public bool canMove = true;
 
+    //Unlocks
+    public bool rollUnlocked;
+    public bool doubleJumpUnlocked;
+
+    //Tutorial
+    public bool jtDone;
+    
+
+
     [Header("Other")]
     //Jump
     public LayerMask ground; // What layer the player can jump on
