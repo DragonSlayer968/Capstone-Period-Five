@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14215272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54, y: 0.16, z: 0}
+  m_LocalPosition: {x: -0.54, y: -0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6872971410456295245}
@@ -154,7 +154,7 @@ MonoBehaviour:
   walkAllowance: 5
   direction: 0
   lookAtAllowance: 10
-  attackAllowance: 4
+  attackAllowance: 6
   attackExtension: 0
   playerDistance: 0
   playerHeight: 0
@@ -181,6 +181,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
+  maxHealth: 0
+  invincible: 0
+  IV: 0
+  IVOrig: 0
+  anim: {fileID: 0}
 --- !u!1 &6872971410825208079
 GameObject:
   m_ObjectHideFlags: 0

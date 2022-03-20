@@ -295,8 +295,11 @@ public class PlayerHealth : MonoBehaviour
                 {
                     GameObject slashSound = Instantiate(ParrySound, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
                     GameObject proj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
-                    if(abilities.subPath == 2 && abilities.subPathLevel > 1)
+
+                    if (abilities.subPath == 2 && abilities.subPathLevel > 1)
                     {
+
+
                         EnemyHealth check = enemy.GetComponent<EnemyHealth>();
                         if (check)
                         {

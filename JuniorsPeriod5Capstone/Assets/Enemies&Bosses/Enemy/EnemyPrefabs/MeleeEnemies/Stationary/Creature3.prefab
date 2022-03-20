@@ -129,7 +129,7 @@ MonoBehaviour:
   playerDistance: 0
   playerHeight: 0
   heightAllowance: 1
-  depthAllowance: 0
+  depthAllowance: -0.5
   player: {fileID: 0}
   attackTime: 0
   origAttackTime: 3
@@ -152,6 +152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
+  maxHealth: 0
+  invincible: 0
+  IV: 0
+  IVOrig: 0
+  anim: {fileID: 0}
 --- !u!1 &2199043314584464392
 GameObject:
   m_ObjectHideFlags: 0

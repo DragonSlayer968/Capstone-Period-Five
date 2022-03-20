@@ -73,7 +73,7 @@ public class ShootingEnemy : MonoBehaviour
        
             if (playerDistance <= walkAllowance)
             {
-                if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+                if (playerHeight <= heightAllowance && playerHeight >= gameObject.transform.position.y)
                 {
                         body.SetBool("Walking", true);
                         if (FirstStrike == true)
@@ -108,7 +108,7 @@ public class ShootingEnemy : MonoBehaviour
 
         if (playerDistance <= lookAtAllowance)
         {
-            if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+            if (playerHeight <= heightAllowance && playerHeight >= gameObject.transform.position.y)
             {
                
                     if (direction < 0)
@@ -132,7 +132,7 @@ public class ShootingEnemy : MonoBehaviour
         {
             if (playerDistance <= lookAtAllowance)
             {
-                if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+                if (playerHeight <= heightAllowance && playerHeight >= gameObject.transform.position.y)
                 {
                     
                         attackTime -= Time.deltaTime;

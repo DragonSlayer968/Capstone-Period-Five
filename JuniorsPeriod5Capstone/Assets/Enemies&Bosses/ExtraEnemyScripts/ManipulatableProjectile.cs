@@ -23,11 +23,17 @@ public class ManipulatableProjectile : MonoBehaviour
     {
         if(Direction == 1)
         {
-           
-            Vector2 myPos = enemy.transform.position; //enemy position
-            Vector2 targetPos = player.transform.position; //setting player position as a variable
-            Vector2 direction = (targetPos - myPos).normalized; //finding which direction to fire projectile
-            rb.velocity = direction * projSpeed; //this launches projectile
+            if (enemy)
+            {
+                Vector2 myPos = enemy.transform.position; //enemy position
+                Vector2 targetPos = player.transform.position; //setting player position as a variable
+                Vector2 direction = (targetPos - myPos).normalized; //finding which direction to fire projectile
+                rb.velocity = direction * projSpeed; //this launches projectile
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
            
         }
 
@@ -41,7 +47,7 @@ public class ManipulatableProjectile : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<FillerHealth>().Hit();
+            other.GetComponent<PlayerHealth>().Hit(2, enemy);
             if(destroysOnImpact == true)
             {
                 Destroy(gameObject);

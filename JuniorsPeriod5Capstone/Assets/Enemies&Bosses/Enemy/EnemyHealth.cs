@@ -20,7 +20,12 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(invincible == true)
+        if (enemyHealth == 0)
+        {
+            anim.SetTrigger("Dead");
+        }
+
+        if (invincible == true)
         {
             IV -= Time.deltaTime;
             if(IV <= 0)

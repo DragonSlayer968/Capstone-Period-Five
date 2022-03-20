@@ -116,7 +116,7 @@ MonoBehaviour:
   origAttackTime: 3
   projectile: {fileID: 633041687662005859, guid: 82b25413b718143419d45e91c3c175a0, type: 3}
   shotPoint: {fileID: 529273098}
-  DestroyTime: 0
+  DestroyTime: 3
   FirstStrike: 0
   HasAttacked: 0
   StationaryShooter: 0

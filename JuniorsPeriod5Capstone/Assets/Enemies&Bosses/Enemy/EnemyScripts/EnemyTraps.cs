@@ -79,7 +79,7 @@ public class EnemyTraps : MonoBehaviour
 
         if (playerDistance <= lookAtAllowance)
         {
-            if(playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+            if(playerHeight <= heightAllowance && playerHeight >= gameObject.transform.position.y)
             {
                 if (enemyRangeType == 1)
                 {
@@ -102,10 +102,13 @@ public class EnemyTraps : MonoBehaviour
 
         if (playerDistance <= attackAllowance && HasAttacked == false)
         {
+           
             if(playerDistance <= lookAtAllowance)
             {
-                if (playerHeight <= gameObject.transform.position.y + heightAllowance || playerHeight >= gameObject.transform.position.y + depthAllowance)
+                
+                if (playerHeight <= heightAllowance && playerHeight >= depthAllowance)
                 {
+                    print("Check3");
                     if (enemyRangeType == 1)
                     {
                         attackTime -= Time.deltaTime;
@@ -123,7 +126,7 @@ public class EnemyTraps : MonoBehaviour
            
         }
 
-        if(playerDistance <= walkAllowance && enemyRangeType == 2 && HasAttacked == false)
+        if(playerDistance <= walkAllowance && enemyRangeType == 2 && HasAttacked == false && playerHeight <= heightAllowance && playerHeight >= gameObject.transform.position.y)
         {
             attackTime -= Time.deltaTime;
             if (attackTime <= 0)
@@ -139,11 +142,11 @@ public class EnemyTraps : MonoBehaviour
 
     public void Attack()
     {
-        if(playerDistance <= attackAllowance + attackExtension)
+        if(playerDistance <= attackAllowance + attackExtension && playerHeight <= heightAllowance && playerHeight >= gameObject.transform.position.y)
         {
             if (player)
             {
-                player.GetComponent<FillerHealth>().Hit();
+                player.GetComponent<PlayerHealth>().Hit(1, gameObject);
             }
            
         }

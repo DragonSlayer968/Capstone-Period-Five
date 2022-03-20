@@ -51,10 +51,7 @@ public class MeleeEnemy : MonoBehaviour
             RangeController();
         }
 
-        if (health == 0)
-        {
-            body.SetTrigger("Dead");
-        }
+       
     }
 
    
@@ -62,9 +59,8 @@ public class MeleeEnemy : MonoBehaviour
     public void RangeController()
     {
         playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
-        float SetHeightZero = Mathf.Abs(0 - gameObject.transform.position.y);
-        playerHeight = player.transform.position.y + SetHeightZero;
-        //playerHeight = gameObject.transform.position.y - player.transform.position.y;
+       
+        playerHeight = Mathf.Abs(gameObject.transform.position.y - player.transform.position.y);
         direction = gameObject.transform.position.x - player.transform.position.x;
 
         if (playerHeight <= heightAllowance && playerHeight >= depthAllowance)
