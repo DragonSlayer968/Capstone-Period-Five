@@ -43,6 +43,7 @@ public class SceneTransition : MonoBehaviour
         {
             if (sceneToLoad != "")
             {
+                
                 SceneManager.LoadScene(sceneToLoad);
             }
             else
@@ -57,6 +58,7 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+           
             PlayerPrefs.SetInt("Cp", 0);
             if(PlayerPrefs.GetInt("LevelsUnlocked") < nextLevel)
             {
@@ -67,9 +69,9 @@ public class SceneTransition : MonoBehaviour
             {
                 PlayerPrefs.SetInt("ShopLevel", shopLevelUnlocked);
             }
-            
-            FindObjectOfType<GameController>().Save();
             StartCoroutine(OpenSceneCo());
+            FindObjectOfType<GameController>().Save();
+          
         }
     }
 }
