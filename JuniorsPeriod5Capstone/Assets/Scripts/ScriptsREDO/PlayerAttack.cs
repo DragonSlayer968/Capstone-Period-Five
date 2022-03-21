@@ -63,6 +63,7 @@ public class PlayerAttack : MonoBehaviour
 
         InkSlider.value = inkValue; InkSlider.maxValue = maxInk;
 
+        StatController();
     }
 
     public float baseInkCost;
@@ -277,10 +278,7 @@ public class PlayerAttack : MonoBehaviour
     public float projectileDamage;
 
     public void FireProj()
-    {
-        
-           
-       
+    {                      
         if(abilities.mainPath == 1)
         {
             int critchance = 0;
@@ -390,7 +388,21 @@ public class PlayerAttack : MonoBehaviour
 
         }
 
-       
+        else
+        {
+            GameObject proj = Instantiate(swordProj, swordPoint.position, swordPoint.rotation);
+            proj.GetComponent<Projectile>().projDamage = projectileDamage;
+            proj.transform.eulerAngles = Rotate;
+            if (right == true)
+            {
+                proj.GetComponent<Projectile>().IsRight = true;
+            }
+
+            else
+            {
+                proj.GetComponent<Projectile>().IsRight = false;
+            }
+        }
         
 
        
