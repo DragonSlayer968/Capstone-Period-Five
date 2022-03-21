@@ -50,6 +50,9 @@ public class Shop : MonoBehaviour
     public GameObject talkObject;
     public float playerDist;
 
+    public int test;
+
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -59,6 +62,54 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if(test < 7)
+            {
+                test++;
+            }
+
+            else
+            {
+                test = 0;
+            }
+
+
+            PlayerPrefs.SetInt("ShopLevel", test);
+            print(PlayerPrefs.GetInt("ShopLevel"));
+        }
+
+        if(PlayerPrefs.GetInt("ShopLevel") == 2 && playerAbilities.mainPath == 0)
+        {
+            PagesUnlocked = 2;
+        }
+
+        else if(playerAbilities.mainPath > 0)
+        {
+            if(PlayerPrefs.GetInt("ShopLevel") == 3)
+            {
+                PagesUnlocked = 3;
+            }
+
+            if(playerAbilities.subPath > 0 && PlayerPrefs.GetInt("ShopLevel") == 4)
+            {
+                PagesUnlocked = 4;
+            }
+
+            if (playerAbilities.subPathLevel == 1 && PlayerPrefs.GetInt("ShopLevel") == 5)
+            {
+                PagesUnlocked = 5;
+            }
+
+            if (playerAbilities.subPathLevel == 2 && PlayerPrefs.GetInt("ShopLevel") == 6)
+            {
+                PagesUnlocked = 6;
+            }
+
+            
+        }
+
+
         playerDist = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
         if(playerDist < talkDist)
         {
@@ -101,6 +152,44 @@ public class Shop : MonoBehaviour
         IconUi();
         TextUi();
         OtherUI();
+
+    }
+
+    public int price;
+    public void Prices()
+    {
+        if(ShopPage <= 1)
+        {
+            price = 50;
+        }
+
+        if(ShopPage == 2)
+        {
+            price = 150;
+        }
+
+        if(ShopPage == 3)
+        {
+            price = 200;
+        }
+
+        if(ShopPage == 4)
+        {
+            if (ShopPage == 4 && playerAbilities.subPathLevel == 0)
+            {
+                price = 225;
+            }
+
+            if (ShopPage == 5 && playerAbilities.subPathLevel == 1)
+            {
+                price = 250;
+            }
+
+            if (ShopPage == 6 && playerAbilities.subPathLevel == 2)
+            {
+                price = 275;
+            }
+        }
 
     }
 
@@ -296,6 +385,56 @@ public class Shop : MonoBehaviour
         {
             ShopPage--;
         }
+    }
+
+    public void Purchase(int type) 
+    {
+        if(playerAbilities.playerCoin > price)
+        {
+            if (ShopPage == 1)
+            {
+                player.GetComponent<PlayerMovement>().rollUnlocked = true;
+                playerAbilities.playerCoin -= price;
+            }
+
+            if (ShopPage == 2)
+            {
+                playerAbilities.mainPath = type;
+                playerAbilities.subPath = 0;
+                playerAbilities.subPathLevel = 0;
+                playerAbilities.playerCoin -= price;
+            }
+
+            if (ShopPage == 3)
+            {
+                playerAbilities.subPath = type;
+                playerAbilities.subPathLevel = 0;
+                playerAbilities.playerCoin -= price;
+            }
+
+            if (ShopPage >= 4)
+            {
+                if (ShopPage == 4 && playerAbilities.subPathLevel == 0)
+                {
+                    playerAbilities.subPathLevel = 1;
+                    playerAbilities.playerCoin -= price;
+                }
+
+                if (ShopPage == 5 && playerAbilities.subPathLevel == 1)
+                {
+                    playerAbilities.subPathLevel = 2;
+                    playerAbilities.playerCoin -= price;
+                }
+
+                if (ShopPage == 6 && playerAbilities.subPathLevel == 2)
+                {
+                    playerAbilities.subPathLevel = 3;
+                    playerAbilities.playerCoin -= price;
+                }
+            }
+        }
+        
+
     }
 
 

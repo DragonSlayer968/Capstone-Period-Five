@@ -363,7 +363,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1354375748}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &109169557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -410,36 +422,6 @@ RectTransform:
   m_AnchoredPosition: {x: -85.41666, y: 23.537485}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &138984933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 138984934}
-  m_Layer: 0
-  m_Name: GroundCheck (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &138984934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138984933}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: -1.74, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 699632628429983192}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &153872014
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1699576812}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &178981047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1306,7 +1300,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1664047004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &461724565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1698,7 +1704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1787710375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &611542018
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2392,17 +2410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeae4322fb261241a4aa46a98708b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &887937247 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1040115846, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-  m_PrefabInstance: {fileID: 699632628429983191}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fade38919c44d9d468f9bedb26ab4585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &909082050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,6 +2457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964356723}
+  - component: {fileID: 964356724}
   m_Layer: 0
   m_Name: Level 4-max shop
   m_TagString: Untagged
@@ -2478,6 +2486,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &964356724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964356722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f13cb065a4fd444294813d0c5c1eaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopValue: 2
+  buyButton: {fileID: 178981046}
+  buyText: {fileID: 1699576812}
+  price: {fileID: 1971921388}
 --- !u!1 &965013522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,7 +2990,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571487634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1017265937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3556,7 +3592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1217055785}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1157016000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15761,6 +15809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509294408}
+  - component: {fileID: 1509294409}
   m_Layer: 0
   m_Name: SlipperyInk
   m_TagString: Untagged
@@ -15792,6 +15841,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -14.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1509294409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509294407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f13cb065a4fd444294813d0c5c1eaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopValue: 1
+  buyButton: {fileID: 611542017}
+  buyText: {fileID: 1787710375}
+  price: {fileID: 2094712540}
 --- !u!1 &1534391378
 GameObject:
   m_ObjectHideFlags: 0
@@ -16999,6 +17064,8 @@ MonoBehaviour:
   talkDist: 3
   talkObject: {fileID: 1937423417}
   playerDist: 0
+  test: 0
+  price: 0
   ShopMenu: {fileID: 265341000}
 --- !u!1 &1787710373
 GameObject:
@@ -17236,7 +17303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 965013524}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759335509}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Purchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1832513078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18048,26 +18127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 597490878, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -89.5311
-      objectReference: {fileID: 0}
-    - target: {fileID: 597490878, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 74.8168
-      objectReference: {fileID: 0}
-    - target: {fileID: 597490878, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.8545
-      objectReference: {fileID: 0}
-    - target: {fileID: 597490878, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.4327
-      objectReference: {fileID: 0}
-    - target: {fileID: 597490879, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2373183141213679312, guid: 61c1e3e927f7b9a4e8698ad18508e1b2, type: 3}
     - target: {fileID: 800513038, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18076,64 +18135,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: ink
-      value: 
-      objectReference: {fileID: 887937247}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: CanJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: extJump
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: feetPos
-      value: 
-      objectReference: {fileID: 138984934}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: jumpTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: abilities
-      value: 
-      objectReference: {fileID: 887937246}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: jumpPower
-      value: 9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: checkRadius
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: baseJumpPower
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: baseRollSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040115840, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 699632628429983193, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: subPath
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 699632628429983193, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: mainPath
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 699632628666192146, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 699632628666192146, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 699632628666192157, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}

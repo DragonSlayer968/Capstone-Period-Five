@@ -8,6 +8,8 @@ public class SceneTransition : MonoBehaviour
 {
     public RectTransform fader;
     public string sceneToLoad;
+    public int nextLevel;
+    public int shopLevelUnlocked;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,17 @@ public class SceneTransition : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt("Cp", 0);
+            if(PlayerPrefs.GetInt("LevelsUnlocked") < nextLevel)
+            {
+                PlayerPrefs.SetInt("LevelsUnlocked", nextLevel);
+            }
+
+            if(PlayerPrefs.GetInt("ShopLevel") < shopLevelUnlocked)
+            {
+                PlayerPrefs.SetInt("ShopLevel", shopLevelUnlocked);
+            }
+            
+            FindObjectOfType<GameController>().Save();
             StartCoroutine(OpenSceneCo());
         }
     }

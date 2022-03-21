@@ -9,21 +9,39 @@ public class CheckPointController : MonoBehaviour
 
     public GameObject player;
 
+    private void Awake()
+    {
+        cpvalue = PlayerPrefs.GetInt("Cp");
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        cpvalue = PlayerPrefs.GetInt("Cp");
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        cpvalue = FindObjectOfType<PlayerHealth>().checkPointValue;
+        
+        //cpvalue = FindObjectOfType<PlayerHealth>().checkPointValue;
     }
 
     public void CheckPointLoad()
     {
-        player.transform.position = checkPoints[cpvalue].transform.position;
+        if(cpvalue < checkPoints.Length)
+        {
+            player.transform.position = checkPoints[cpvalue].transform.position;
+        }
+        else
+        {
+            cpvalue = 0;
+            PlayerPrefs.SetInt("Cp", 0);
+            player.transform.position = checkPoints[0].transform.position;
+        }
+       
     }
 
 }

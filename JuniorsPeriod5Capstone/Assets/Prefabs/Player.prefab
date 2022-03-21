@@ -173,6 +173,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &138984933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138984934}
+  m_Layer: 0
+  m_Name: GroundCheck (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &138984934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138984933}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.36, y: -1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 699632628666192157}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239348928
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +318,79 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Quit
+--- !u!1 &397922250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397922251}
+  - component: {fileID: 397922253}
+  - component: {fileID: 397922252}
+  m_Layer: 0
+  m_Name: Boots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397922251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397922250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 699632628666192157}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &397922253
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397922250}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.26925504, y: -1.888296}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32503092, y: 0.13764262}
+  m_EdgeRadius: 0
+--- !u!114 &397922252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397922250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0155cdf0b153c4484fe50dc985ee0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SlideDamage: 8
+  landDamage: 8
+  abilities: {fileID: 699632628429983193}
 --- !u!1 &409314320
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 2.412445, y: 0.00002670288}
-  m_SizeDelta: {x: 0, y: 144.3393}
+  m_AnchoredPosition: {x: 1.8545, y: 0.4327}
+  m_SizeDelta: {x: -89.5311, y: 74.8168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &597490880
 CanvasRenderer:
@@ -473,7 +576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 61c1e3e927f7b9a4e8698ad18508e1b2, type: 3}
+  m_Sprite: {fileID: 2373183141213679312, guid: 61c1e3e927f7b9a4e8698ad18508e1b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2730,6 +2833,8 @@ Transform:
   - {fileID: 655166716}
   - {fileID: 1946275369}
   - {fileID: 1537436629}
+  - {fileID: 397922251}
+  - {fileID: 138984934}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3033,7 +3138,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 6
   moveInput: 0
-  jumpPower: 42
+  jumpPower: 9.5
   groundCheckDist: 1.5
   facingRight: 1
   IsJumping: 0
@@ -3041,16 +3146,28 @@ MonoBehaviour:
   rollUnlocked: 0
   doubleJumpUnlocked: 0
   jtDone: 0
+  abilities: {fileID: 699632628429983193}
   ground:
     serializedVersion: 2
     m_Bits: 8
+  baseJumpPower: 8
+  baseRollSpeed: 7
   jumpSFX: {fileID: 2633142407723100824, guid: 1426bddced183b9478b8fcbe3cebc329, type: 3}
   doubleJumpVFX: {fileID: 2561461406238886362, guid: e00f242a66b5f874090e523455e937df, type: 3}
   DJpoint: {fileID: 655166715}
   jumpValue: 0
   djInKCost: 2
-  ink: {fileID: 0}
-  CanJump: 0
+  ink: {fileID: 1040115846}
+  isGrounded: 0
+  feetPos: {fileID: 138984934}
+  checkRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  jumpTime: 1
+  isJumping: 0
+  extJump: 2
+  CanJump: 1
   rollActive: 0
   rollSpeed: 8
   LastPos: {x: 0, y: 0, z: 0}
@@ -3154,6 +3271,7 @@ MonoBehaviour:
   mainPath: 0
   subPath: 0
   subPathLevel: 0
+  playerCoin: 0
 --- !u!1 &699632629153685996
 GameObject:
   m_ObjectHideFlags: 0

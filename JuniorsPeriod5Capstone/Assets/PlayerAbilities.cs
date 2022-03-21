@@ -10,6 +10,8 @@ public class PlayerAbilities : MonoBehaviour
     public int subPath; //1 - first subpath, 2 - second subpath
     public int subPathLevel; //Max 3
 
+    public int playerCoin;
+
     void Start()
     {
         
