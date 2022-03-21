@@ -3150,7 +3150,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 8
-  baseJumpPower: 8
+  baseJumpPower: 12
   baseRollSpeed: 7
   jumpSFX: {fileID: 2633142407723100824, guid: 1426bddced183b9478b8fcbe3cebc329, type: 3}
   doubleJumpVFX: {fileID: 2561461406238886362, guid: e00f242a66b5f874090e523455e937df, type: 3}
