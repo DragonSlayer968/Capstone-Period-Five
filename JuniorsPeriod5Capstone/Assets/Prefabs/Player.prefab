@@ -3204,11 +3204,11 @@ MonoBehaviour:
   InkSlider: {fileID: 58823752}
   targetBoss: {fileID: 0}
   targets: []
-  baseInkCost: 0
+  baseInkCost: 5
   inkCostAfterAbility: 0
-  baseDamage: 0
+  baseDamage: 2
   damageAfterAbility: 0
-  baseproDamage: 0
+  baseproDamage: 1.5
   projdamageafterability: 0
   slashSFX: {fileID: 2567765110196405706, guid: 161f396e441cb6a49aa5ed2d85360aa2, type: 3}
   Recharging: 0
