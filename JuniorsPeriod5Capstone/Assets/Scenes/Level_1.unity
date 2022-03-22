@@ -1201,11 +1201,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 91695883, guid: 71b52a19bcd5b604b873d6f6a0c495d4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.325
       objectReference: {fileID: 0}
     - target: {fileID: 91695883, guid: 71b52a19bcd5b604b873d6f6a0c495d4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1712845327653883931, guid: 71b52a19bcd5b604b873d6f6a0c495d4, type: 3}
       propertyPath: m_RootOrder
@@ -1254,6 +1254,10 @@ PrefabInstance:
     - target: {fileID: 1712845327653883933, guid: 71b52a19bcd5b604b873d6f6a0c495d4, type: 3}
       propertyPath: m_Name
       value: LittleTimmy'sFirstOC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712845327653883933, guid: 71b52a19bcd5b604b873d6f6a0c495d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b52a19bcd5b604b873d6f6a0c495d4, type: 3}
