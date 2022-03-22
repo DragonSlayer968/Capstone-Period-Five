@@ -46,7 +46,7 @@ public class CandyLandTraps : MonoBehaviour
     {
         if (trapType == 1 && other.tag == "Player")
         {
-            other.GetComponent<FillerHealth>().Hit();
+            other.GetComponent<PlayerHealth>().Hit(0, gameObject);
         }
     }
 
