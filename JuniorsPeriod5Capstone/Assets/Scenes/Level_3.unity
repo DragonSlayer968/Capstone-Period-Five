@@ -632,6 +632,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: LevelSelect
       objectReference: {fileID: 0}
+    - target: {fileID: 4579574660683601632, guid: 3c3d00e132185be4fb06f33eb1a99f09, type: 3}
+      propertyPath: shopLevelUnlocked
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4579574660683601633, guid: 3c3d00e132185be4fb06f33eb1a99f09, type: 3}
       propertyPath: m_Size.x
       value: 4.3242493
