@@ -1609,7 +1609,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8327605, y: -0.7238987}
+  m_Offset: {x: 0.96085906, y: -0.63078403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1620,7 +1620,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.267801, y: 1.4100701}
+  m_Size: {x: 3.0116038, y: 2.341219}
   m_EdgeRadius: 0
 --- !u!114 &1356093033
 MonoBehaviour:
@@ -3204,17 +3204,17 @@ MonoBehaviour:
   InkSlider: {fileID: 58823752}
   targetBoss: {fileID: 0}
   targets: []
-  baseInkCost: 0
+  baseInkCost: 4
   inkCostAfterAbility: 0
-  baseDamage: 0
+  baseDamage: 4
   damageAfterAbility: 0
-  baseproDamage: 0
+  baseproDamage: 2
   projdamageafterability: 0
   slashSFX: {fileID: 2567765110196405706, guid: 161f396e441cb6a49aa5ed2d85360aa2, type: 3}
   Recharging: 0
-  swordProj2: {fileID: 0}
-  swordProj3: {fileID: 0}
-  swordProj4: {fileID: 0}
+  swordProj2: {fileID: 208392311979934140, guid: 863a2d5f5257ce941b2da3bf4abcabf0, type: 3}
+  swordProj3: {fileID: 4198843882612632418, guid: fd73de5d7ae026c4dad9d42612ce999e, type: 3}
+  swordProj4: {fileID: 5648235832255845962, guid: c83ce57fc71690f42bbf15b010ec35a5, type: 3}
   projectileDamage: 0
 --- !u!114 &1040115847
 MonoBehaviour:
@@ -3268,9 +3268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityTreeUnlocked: 0
-  mainPath: 0
-  subPath: 0
-  subPathLevel: 0
+  mainPath: 1
+  subPath: 1
+  subPathLevel: 2
   playerCoin: 0
 --- !u!1 &699632629153685996
 GameObject:
