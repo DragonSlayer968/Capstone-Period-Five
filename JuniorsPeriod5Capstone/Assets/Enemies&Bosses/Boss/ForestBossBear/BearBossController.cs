@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BearBossController : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class BearBossController : MonoBehaviour
     public bool inCoolDown;
     public int attackValue;
 
+    public Slider healthSlider;
+    public Text healthText;
+    public EnemyHealth enemyHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +54,11 @@ public class BearBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Started == true)
+        healthSlider.maxValue = enemyHealth.maxHealth;
+        healthSlider.value = enemyHealth.enemyHealth;
+        healthText.text = enemyHealth.enemyHealth + "/" + enemyHealth.maxHealth;
+
+        if (Started == true)
         {
           if(isWalking == true || jumpStarted == true)
             {
@@ -191,9 +200,9 @@ public class BearBossController : MonoBehaviour
 
     public void Attack1Swipe()
     {
-        if(playerDistance <= attackRange  && playerHeight <= gameObject.transform.position.y + heightAllowance && playerHeight >= gameObject.transform.position.y - DepthAllowance)
+        if(playerDistance <= attackRange  && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
         {
-            player.GetComponent<FillerHealth>().Hit();
+            player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
     }
 
@@ -219,9 +228,9 @@ public class BearBossController : MonoBehaviour
     public void Attack2Jumping()
     {
         print("working");
-        if(playerDistance <= jumpRange && playerHeight <= gameObject.transform.position.y + heightAllowance && playerHeight >= gameObject.transform.position.y - DepthAllowance)
+        if(playerDistance <= jumpRange && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
         {
-            player.GetComponent<FillerHealth>().Hit();
+            player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
     }
 
@@ -233,11 +242,7 @@ public class BearBossController : MonoBehaviour
 
     public void Attack3Summon()
     {
-        if (playerDistance <= attackRange && playerHeight <= gameObject.transform.position.y + heightAllowance && playerHeight >= gameObject.transform.position.y - DepthAllowance)
-        {
-            player.GetComponent<FillerHealth>().Hit();
-
-        }
+       
 
         summon = summons[Random.Range(0, summons.Length)];
        
@@ -266,10 +271,10 @@ public class BearBossController : MonoBehaviour
         {
            // playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x) + chargeExtension;
             walkTime -= Time.deltaTime;
-            if (playerDistance <= attackRange + 2 && playerHeight <= gameObject.transform.position.y + heightAllowance && playerHeight >= gameObject.transform.position.y - DepthAllowance)
+            if (playerDistance <= attackRange + 2 && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
             {
-                
-                player.GetComponent<FillerHealth>().Hit();
+
+                player.GetComponent<PlayerHealth>().Hit(1, gameObject);
                 isWalking = false;
                 body.SetBool("IsCharging", false);
                 walkTime = origWalkTime;

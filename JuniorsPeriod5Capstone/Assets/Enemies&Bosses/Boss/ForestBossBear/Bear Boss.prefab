@@ -607,7 +607,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 5191853097510026996, guid: 138a321e5d0ef4e4eace432dd900335a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 2818022157773916459}
   - component: {fileID: 2818022157773916458}
   - component: {fileID: 2818022157773916457}
-  - component: {fileID: 2144716975}
+  - component: {fileID: 1935508116}
   m_Layer: 0
   m_Name: Bear Boss
   m_TagString: Untagged
@@ -758,7 +758,7 @@ MonoBehaviour:
   heightAllowance: 1
   playerDistance: 0
   playerHeight: 0
-  DepthAllowance: 1
+  DepthAllowance: -1
   player: {fileID: 0}
   walkAllowance: 2
   coolDownTime: 5
@@ -768,6 +768,9 @@ MonoBehaviour:
   DestroyTime: 0
   inCoolDown: 1
   attackValue: 0
+  healthSlider: {fileID: 260493745}
+  healthText: {fileID: 1609610285}
+  enemyHealth: {fileID: 1935508116}
   jumpRange: 3
   jumpStarted: 0
   summonPoint: {fileID: 2818022157346017086}
@@ -802,7 +805,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2144716975
+--- !u!114 &1935508116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -811,13 +814,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2818022157773916456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25edb8fdcc5856846bde1f70dff0e371, type: 3}
+  m_Script: {fileID: 11500000, guid: 7207f09742df1c749bba2f46d290f5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 260493745}
-  healthText: {fileID: 1609610285}
-  health: 50
-  maxHealth: 50
+  enemyHealth: 150
+  maxHealth: 150
+  invincible: 0
+  IV: 0.2
+  IVOrig: 0.2
+  anim: {fileID: 0}
 --- !u!1 &2818022158178282755
 GameObject:
   m_ObjectHideFlags: 0
