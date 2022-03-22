@@ -19,7 +19,7 @@ public class LevelSelect : MonoBehaviour
     public Image Icon;
 
     public bool onAuthor = true;
-    
+    public int levelsUnlocked;
 
     public void Close()
     {
