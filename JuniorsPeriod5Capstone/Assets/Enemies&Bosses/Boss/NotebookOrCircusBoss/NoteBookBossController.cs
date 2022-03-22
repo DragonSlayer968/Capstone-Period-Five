@@ -183,7 +183,7 @@ public class NoteBookBossController : MonoBehaviour
     {
         if(playerDistance <= attackRange)
         {
-            player.GetComponent<FillerHealth>().Hit();
+            player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
     }
 

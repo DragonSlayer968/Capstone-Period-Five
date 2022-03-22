@@ -5,6 +5,12 @@ using UnityEngine;
 public class OCHands : MonoBehaviour
 {
     public GameObject body;
+    public GameObject boss;
+
+    private void Awake()
+    {
+        boss = FindObjectOfType<NoteBookBossController>().gameObject;
+    }
 
     public void DestroySelf()
     {
@@ -15,7 +21,7 @@ public class OCHands : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<FillerHealth>().Hit();
+            other.GetComponent<PlayerHealth>().Hit(2, boss);
         }
     } 
 
