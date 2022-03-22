@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerAbilities : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,15 +11,16 @@ public class PlayerAbilities : MonoBehaviour
     public int subPathLevel; //Max 3
 
     public int playerCoin;
-
+    public Text coinText;
     void Start()
     {
-        
+        playerCoin = PlayerPrefs.GetInt("coins");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        coinText.text = ": " + playerCoin;
+        PlayerPrefs.SetInt("coins", playerCoin);
     }
 }

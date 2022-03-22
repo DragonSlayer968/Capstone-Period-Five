@@ -16,19 +16,19 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(coinValue < 11)
+        if(coinValue < 10)
         {
             coinSize = 1;
         }
 
-        else if(coinValue < 21)
+        else if(coinValue < 20)
         {
-            coinSize = 1.1f;
+            coinSize = 1.5f;
         }
 
         else
         {
-            coinSize = 1.2f;
+            coinSize = 2f;
         }
 
         transform.localScale = new Vector3(coinSize, coinSize, 1);
@@ -39,6 +39,7 @@ public class Coin : MonoBehaviour
         if(collision.tag == "Player")
         {
             collision.GetComponent<PlayerAbilities>().playerCoin += coinValue;
+            Destroy(gameObject);
         }
     }
 }

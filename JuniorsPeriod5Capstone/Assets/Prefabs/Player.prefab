@@ -3273,6 +3273,7 @@ MonoBehaviour:
   subPath: 1
   subPathLevel: 2
   playerCoin: 0
+  coinText: {fileID: 65308845064803867}
 --- !u!1 &699632629153685996
 GameObject:
   m_ObjectHideFlags: 0
