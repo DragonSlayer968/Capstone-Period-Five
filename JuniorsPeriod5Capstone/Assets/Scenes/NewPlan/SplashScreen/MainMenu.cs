@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public Sprite[] playerSprites;
     public int currentSprite;
 
-    public bool Play, Credits, Quit, New, Load;
+    public bool Play, Credits, Quit;
     public Animator SelectionAnimator;
 
     void Start()
@@ -37,22 +37,11 @@ public class MainMenu : MonoBehaviour
         currentSprite = randomSprite;
     }
 
-    public void NewSelected()
+    public void PlaySelected()
     {
         if(Credits == false && Quit == false)
         {
             Play = true;
-            New = true;
-        }
-        SelectionAnimator.SetTrigger("Selection");
-    }
-
-    public void LoadSelect()
-    {
-        if (Credits == false && Quit == false)
-        {
-            Play = true;
-            Load = true;
         }
         SelectionAnimator.SetTrigger("Selection");
     }
@@ -84,16 +73,6 @@ public class MainMenu : MonoBehaviour
 
         if(Play == true)
         {
-           
-            if (New == true)
-            {
-                PlayerPrefs.SetInt("LevelsUnlocked", 0);
-                PlayerPrefs.SetInt("Mainpath", 0);
-                PlayerPrefs.SetInt("Subpath", 0);
-                PlayerPrefs.SetInt("Subpathlevel", 0);
-
-                PlayerPrefs.SetInt("HasRoll", 0);
-            }
             SceneManager.LoadScene("LevelSelect");
         }
 

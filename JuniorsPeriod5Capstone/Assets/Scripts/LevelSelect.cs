@@ -11,7 +11,6 @@ public class LevelSelect : MonoBehaviour
     public string[] levelToLoad;
     public string[] sceneNames;
     public int LevelValue;
-    public int levelsUnlocked;
     public Animator levelSelectAnimation;
 
     public GameObject pageFlipSFX;
@@ -20,11 +19,8 @@ public class LevelSelect : MonoBehaviour
     public Image Icon;
 
     public bool onAuthor = true;
+    
 
-    private void Start()
-    {
-        levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked");
-    }
     public void Close()
     {
         if(LevelValue <= levelName.Length - 1)
