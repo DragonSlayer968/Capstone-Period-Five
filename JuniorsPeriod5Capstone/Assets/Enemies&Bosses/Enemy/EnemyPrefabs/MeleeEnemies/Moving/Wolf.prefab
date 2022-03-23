@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1472961360}
   - component: {fileID: 1091260277}
   - component: {fileID: 8599373354679088040}
+  - component: {fileID: 12389062}
   m_Layer: 7
   m_Name: Wolf
   m_TagString: Untagged
@@ -181,6 +182,19 @@ MonoBehaviour:
   anim: {fileID: 0}
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
+  coin: {fileID: 0}
+--- !u!114 &12389062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8513060499278899325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b81d456e36f3c488718345fbb8c48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8513060500572921024
 GameObject:
   m_ObjectHideFlags: 0

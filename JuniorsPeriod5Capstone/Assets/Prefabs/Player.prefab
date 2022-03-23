@@ -2803,6 +2803,7 @@ GameObject:
   - component: {fileID: 1040115846}
   - component: {fileID: 1040115847}
   - component: {fileID: 699632628429983193}
+  - component: {fileID: 733458347}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3211,6 +3212,7 @@ MonoBehaviour:
   damageAfterAbility: 0
   baseproDamage: 2
   projdamageafterability: 0
+  popOut: {fileID: 0}
   slashSFX: {fileID: 2567765110196405706, guid: 161f396e441cb6a49aa5ed2d85360aa2, type: 3}
   Recharging: 0
   swordProj2: {fileID: 208392311979934140, guid: 863a2d5f5257ce941b2da3bf4abcabf0, type: 3}
@@ -3274,6 +3276,18 @@ MonoBehaviour:
   subPathLevel: 2
   playerCoin: 0
   coinText: {fileID: 65308845064803867}
+--- !u!114 &733458347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699632628666192146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b81d456e36f3c488718345fbb8c48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &699632629153685996
 GameObject:
   m_ObjectHideFlags: 0

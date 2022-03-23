@@ -57,9 +57,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void DestroySelfThroughHealth(int coinvalue)
     {
+        if(coin != null)
+        {
+            GameObject enemycoin = Instantiate(coin, transform.position, transform.rotation);
+            enemycoin.GetComponent<Coin>().coinValue += coinvalue;
+        }
         
-        GameObject enemycoin = Instantiate(coin, transform.position, transform.rotation);
-        enemycoin.GetComponent<Coin>().coinValue += coinvalue;
         Destroy(gameObject);
     }
 
