@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public float IV, IVOrig;
 
     public Animator anim;
+    public bool IsDead;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +21,10 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyHealth <= 0)
+        if (enemyHealth <= 0 && IsDead == false)
         {
             anim.SetTrigger("Dead");
+            IsDead = true;
         }
 
         if (invincible == true)
@@ -47,6 +49,11 @@ public class EnemyHealth : MonoBehaviour
             invincible = true;
         }
         
+    }
+
+    public void DestroySelfThroughHealth()
+    {
+        Destroy(gameObject);
     }
 
 }

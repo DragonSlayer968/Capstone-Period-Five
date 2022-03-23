@@ -501,7 +501,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.1777778
+  - time: 0
     functionName: StopTracking
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -517,6 +517,13 @@ AnimationClip:
     messageOptions: 0
   - time: 2.0222223
     functionName: CoolDown
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.0222223
+    functionName: Track
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

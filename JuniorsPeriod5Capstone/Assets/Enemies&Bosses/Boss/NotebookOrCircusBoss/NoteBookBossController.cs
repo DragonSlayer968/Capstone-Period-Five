@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class NoteBookBossController : MonoBehaviour
 {
     [Header("Components")]
@@ -38,6 +38,10 @@ public class NoteBookBossController : MonoBehaviour
     public bool inCoolDown;
     public int attackValue;
 
+    public Slider healthSlider;
+    public Text healthText;
+    public EnemyHealth enemyHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,10 @@ public class NoteBookBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthSlider.maxValue = enemyHealth.maxHealth;
+        healthSlider.value = enemyHealth.enemyHealth;
+        healthText.text = enemyHealth.enemyHealth + "/" + enemyHealth.maxHealth;
+
         playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
         direction = gameObject.transform.position.x - player.transform.position.x;
 
@@ -181,10 +189,10 @@ public class NoteBookBossController : MonoBehaviour
     //Attack 1 - Bash
     public void Attack1()
     {
-        if(playerDistance <= attackRange)
-        {
-            player.GetComponent<PlayerHealth>().Hit(1, gameObject);
-        }
+        //if(playerDistance <= attackRange)
+        //{
+         //   player.GetComponent<PlayerHealth>().Hit(1, gameObject);
+       // }
     }
 
     //Attack 2 - Get Clapped

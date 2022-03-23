@@ -334,6 +334,36 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Little Timmy's First OC
+--- !u!1 &1764088987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764088988}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764088988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764088987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.375, y: -1.375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1712845327653883931}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775436773
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +576,7 @@ GameObject:
   - component: {fileID: 1712845327257502151}
   - component: {fileID: 1712845327257502149}
   - component: {fileID: 1712845327257502148}
+  - component: {fileID: 789549070}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -638,6 +669,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &789549070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712845327257502150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff737b06e8ca0543afcba8719574e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1 &1712845327517394925
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,11 +861,12 @@ GameObject:
   - component: {fileID: 1712845327653883930}
   - component: {fileID: 1712845327653883928}
   - component: {fileID: 1712845327653883929}
-  - component: {fileID: 8752272898462901580}
-  m_Layer: 0
+  - component: {fileID: 1214776732}
+  - component: {fileID: 3985440775353816103}
+  m_Layer: 7
   m_Name: LittleTimmy'sFirstOC
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: Enemy
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -839,6 +885,7 @@ Transform:
   - {fileID: 1712845328554218221}
   - {fileID: 1712845327638121035}
   - {fileID: 582716723}
+  - {fileID: 1764088988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -898,12 +945,15 @@ MonoBehaviour:
   DestroyTime: 0
   inCoolDown: 1
   attackValue: 0
+  healthSlider: {fileID: 1897399062}
+  healthText: {fileID: 898423628}
+  enemyHealth: {fileID: 1214776732}
   CanTrack: 1
   crossProjectile: {fileID: 4548323970350550582, guid: 1c104890f7af21b4d95156d6cb8f81fa, type: 3}
   crossRotationValue: 0
   fingerCount: 0
   dfProjectile: {fileID: 605947929078283313, guid: dd5cacddc46d9e34e82cf8ee0b833a8d, type: 3}
-  ground: {fileID: 0}
+  ground: {fileID: 1764088987}
   heightIncrease: 5.68
   summonValue: 0
   summons:
@@ -931,7 +981,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8752272898462901580
+--- !u!114 &1214776732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -940,13 +990,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712845327653883933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25edb8fdcc5856846bde1f70dff0e371, type: 3}
+  m_Script: {fileID: 11500000, guid: 7207f09742df1c749bba2f46d290f5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 1897399062}
-  healthText: {fileID: 898423628}
-  health: 75
-  maxHealth: 75
+  enemyHealth: 250
+  maxHealth: 250
+  invincible: 0
+  IV: 0
+  IVOrig: 0
+  anim: {fileID: 0}
+  IsDead: 0
+--- !u!61 &3985440775353816103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712845327653883933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12023926, y: -0.57217586}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7595215, y: 1.4975443}
+  m_EdgeRadius: 0
 --- !u!1 &1712845327725018068
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +1037,7 @@ GameObject:
   - component: {fileID: 1712845327725018069}
   - component: {fileID: 1712845327725018067}
   - component: {fileID: 1712845327725018066}
+  - component: {fileID: 185973387}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Untagged
@@ -1050,6 +1130,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &185973387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712845327725018068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff737b06e8ca0543afcba8719574e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1 &1712845328378672317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1155,7 @@ GameObject:
   - component: {fileID: 1712845328378672314}
   - component: {fileID: 1712845328378672312}
   - component: {fileID: 1712845328378672315}
+  - component: {fileID: 1988014926}
   m_Layer: 0
   m_Name: Square (3)
   m_TagString: Untagged
@@ -1153,6 +1248,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1988014926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712845328378672317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff737b06e8ca0543afcba8719574e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1 &1712845328554218220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1307,7 @@ GameObject:
   - component: {fileID: 1712845328704683573}
   - component: {fileID: 1712845328704683571}
   - component: {fileID: 1712845328704683570}
+  - component: {fileID: 1634957333}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1290,3 +1400,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1634957333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712845328704683572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff737b06e8ca0543afcba8719574e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  boss: {fileID: 0}

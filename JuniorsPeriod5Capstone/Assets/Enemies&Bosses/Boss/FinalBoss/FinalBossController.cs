@@ -237,7 +237,7 @@ public class FinalBossController : MonoBehaviour
     {
         if(playerDistance <= attackRange)
         {
-            player.GetComponent<FillerHealth>().Hit();
+            player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
     }
 
@@ -294,7 +294,7 @@ public class FinalBossController : MonoBehaviour
 
         if (playerDistance <= attackRange)
         {
-            player.GetComponent<FillerHealth>().Hit();
+            player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
 
     }
