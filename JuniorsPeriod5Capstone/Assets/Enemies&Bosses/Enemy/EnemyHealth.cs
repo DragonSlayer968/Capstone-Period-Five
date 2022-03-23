@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
     public Animator anim;
     public bool IsDead;
     public GameObject popDamageShow;
+    public GameObject coin;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +55,11 @@ public class EnemyHealth : MonoBehaviour
         
     }
 
-    public void DestroySelfThroughHealth()
+    public void DestroySelfThroughHealth(int coinvalue)
     {
+        
+        GameObject enemycoin = Instantiate(coin, transform.position, transform.rotation);
+        enemycoin.GetComponent<Coin>().coinValue += coinvalue;
         Destroy(gameObject);
     }
 

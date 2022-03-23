@@ -4176,6 +4176,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
+  coin: {fileID: 0}
 --- !u!61 &1030669843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61246,6 +61247,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 947571180591628277, guid: e2704a68316f068408dacd1f93fd4c85, type: 3}
   m_PrefabInstance: {fileID: 1668035800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1706503766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706503767}
+  m_Layer: 0
+  m_Name: https://www.fiftysounds.com/royalty-free-music/punch-sound-effect.html
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706503767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706503766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 136.20761, y: 0.8335654, z: -24.594532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712060984 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4737152350623078735, guid: fa56e8d29d8d62044926be9a6a05bed7, type: 3}
@@ -63771,11 +63802,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 128.2466
+      value: 128.24658
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7918854
+      value: 2.7856278
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
