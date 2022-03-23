@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
 
     public Animator anim;
     public bool IsDead;
+    public GameObject popDamageShow;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,8 @@ public class EnemyHealth : MonoBehaviour
             anim.SetTrigger("Hit");
 
             enemyHealth -= damage;
+            GameObject damageShow = Instantiate(popDamageShow, transform.position, transform.rotation);
+            damageShow.GetComponent<PopOut>().popManipulation(damage.ToString());
             invincible = true;
         }
         

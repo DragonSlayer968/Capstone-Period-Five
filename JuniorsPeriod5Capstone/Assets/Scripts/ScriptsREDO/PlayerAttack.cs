@@ -123,6 +123,7 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+    public GameObject popOut;
     public GameObject slashSFX;
     public void Slash()
     {

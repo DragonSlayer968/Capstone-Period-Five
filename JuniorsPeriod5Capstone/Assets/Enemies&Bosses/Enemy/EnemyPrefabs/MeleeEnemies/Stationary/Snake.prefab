@@ -235,3 +235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
+  maxHealth: 0
+  invincible: 0
+  IV: 0
+  IVOrig: 0
+  anim: {fileID: 0}
+  IsDead: 0
+  popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}

@@ -52,7 +52,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -174,6 +174,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
+  maxHealth: 0
+  invincible: 0
+  IV: 0
+  IVOrig: 0
+  anim: {fileID: 0}
+  IsDead: 0
+  popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
 --- !u!1 &8927960085193275122
 GameObject:
   m_ObjectHideFlags: 0

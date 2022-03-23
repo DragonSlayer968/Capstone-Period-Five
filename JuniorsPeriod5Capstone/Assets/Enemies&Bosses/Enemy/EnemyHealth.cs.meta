@@ -3,7 +3,9 @@ guid: 7207f09742df1c749bba2f46d290f5f4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - anim: {instanceID: 0}
+  - popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

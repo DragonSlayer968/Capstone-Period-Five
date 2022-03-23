@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinalBossController : MonoBehaviour
 {
@@ -40,9 +41,14 @@ public class FinalBossController : MonoBehaviour
     public int attackValue;
     public bool Phase2;
 
+    public Slider healthSlider;
+    public Text healthText;
+    public EnemyHealth enemyHealth;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -51,6 +57,9 @@ public class FinalBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthSlider.maxValue = enemyHealth.maxHealth;
+        healthSlider.value = enemyHealth.enemyHealth;
+        healthText.text = enemyHealth.enemyHealth + "/" + enemyHealth.maxHealth;
         playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
         direction = gameObject.transform.position.x - player.transform.position.x;
 
