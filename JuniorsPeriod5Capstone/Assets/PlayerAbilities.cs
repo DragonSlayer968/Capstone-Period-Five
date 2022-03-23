@@ -14,13 +14,13 @@ public class PlayerAbilities : MonoBehaviour
     public Text coinText;
     void Start()
     {
-        playerCoin = PlayerPrefs.GetInt("coins");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         coinText.text = ": " + playerCoin;
-        PlayerPrefs.SetInt("coins", playerCoin);
+        
     }
 }

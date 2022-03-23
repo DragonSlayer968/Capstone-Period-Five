@@ -24,6 +24,7 @@ public class PlayerAttack : MonoBehaviour
 
     public bool slashPrimed;
     public float meleeDamage;
+    public float meleeSpeed;
 
 
     [Header("UI")]
@@ -64,6 +65,7 @@ public class PlayerAttack : MonoBehaviour
         InkSlider.value = inkValue; InkSlider.maxValue = maxInk;
 
         StatController();
+        anim.SetFloat("AttackSpeed", meleeSpeed);
     }
 
     public float baseInkCost;
@@ -75,13 +77,17 @@ public class PlayerAttack : MonoBehaviour
     public float baseproDamage;
     public float projdamageafterability;
 
+    public float baseMeleeSpeed;
+    public float meleespeedAfterAbility;
+
     public void StatController()
     {
         if(abilities.mainPath == 1)
         {
             if (abilities.subPath == 1)
             {
-                if(abilities.subPathLevel <= 1)
+                meleeSpeed = baseMeleeSpeed * 1.25f;
+                if (abilities.subPathLevel <= 1)
                 {
                     meleeDamage = baseDamage / 2;
                     slashCost = baseInkCost / 2;
@@ -98,6 +104,7 @@ public class PlayerAttack : MonoBehaviour
 
             else if (abilities.subPath == 2)
             {
+                meleeSpeed = baseMeleeSpeed;
                 projectileDamage = baseproDamage;
                 if (abilities.subPathLevel <= 1)
                 {
@@ -119,6 +126,7 @@ public class PlayerAttack : MonoBehaviour
             meleeDamage = baseDamage;
             slashCost = baseInkCost;
             projectileDamage = baseproDamage;
+            meleeSpeed = baseMeleeSpeed;
         }
 
     }

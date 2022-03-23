@@ -17,6 +17,8 @@ public class InGameMenu : MonoBehaviour
     public Slider sfxVolumeSlider;
     public Slider musicVolumeSlider;
 
+    public AudioListener ears;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,12 @@ public class InGameMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OpenMenu();
+        }
+
+        ears = FindObjectOfType<AudioListener>();
+        if (ears != null)
+        {
+            AudioListener.volume = masterVolume;
         }
 
     }

@@ -24,7 +24,8 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("Subpath", player.subPath);
         PlayerPrefs.SetInt("Subpathlevel", player.subPathLevel);
      
-        PlayerPrefs.SetInt("HasRoll", 1);
+        PlayerPrefs.SetInt("HasRoll", FindObjectOfType<PlayerMovement>().rollunlockCheck);
+        PlayerPrefs.SetInt("coins", player.playerCoin);
     }
 
     public void Load()
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
         player.mainPath = PlayerPrefs.GetInt("Mainpath");
         player.subPath = PlayerPrefs.GetInt("Subpath");
         player.subPathLevel = PlayerPrefs.GetInt("Subpathlevel");
+        player.playerCoin = PlayerPrefs.GetInt("coins");
     }
 
 }

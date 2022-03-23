@@ -3146,6 +3146,7 @@ MonoBehaviour:
   IsJumping: 0
   canMove: 1
   rollUnlocked: 0
+  rollunlockCheck: 0
   doubleJumpUnlocked: 0
   jtDone: 0
   abilities: {fileID: 699632628429983193}
@@ -3203,6 +3204,7 @@ MonoBehaviour:
   inkMultiplyer: 2
   slashPrimed: 0
   meleeDamage: 1
+  meleeSpeed: 1
   InkSlider: {fileID: 58823752}
   targetBoss: {fileID: 0}
   targets: []
@@ -3212,6 +3214,8 @@ MonoBehaviour:
   damageAfterAbility: 0
   baseproDamage: 2
   projdamageafterability: 0
+  baseMeleeSpeed: 1
+  meleespeedAfterAbility: 0
   popOut: {fileID: 0}
   slashSFX: {fileID: 2567765110196405706, guid: 161f396e441cb6a49aa5ed2d85360aa2, type: 3}
   Recharging: 0
@@ -3472,7 +3476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241.2, y: 166}
+  m_AnchoredPosition: {x: -290, y: -196}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5344217313444301375
@@ -3547,7 +3551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.7, y: 10.6}
+  m_AnchoredPosition: {x: 110.7, y: 12.3}
   m_SizeDelta: {x: 160, y: 67.4574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7561445541840731495
@@ -3580,15 +3584,15 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
-    m_FontSize: 75
+    m_FontSize: 25
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 100
-    m_Alignment: 0
+    m_MaxSize: 25
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ': 00'
+  m_Text: '- 00'

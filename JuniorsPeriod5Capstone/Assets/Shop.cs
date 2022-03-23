@@ -152,7 +152,7 @@ public class Shop : MonoBehaviour
         IconUi();
         TextUi();
         OtherUI();
-
+        Prices();
     }
 
     public int price;
@@ -371,6 +371,196 @@ public class Shop : MonoBehaviour
         }
     }
 
+    public Text DescriptionTitle;
+    public Text DescriptionDescribe;
+    public string page1Title, page1Description;
+    public string[] page2Title, page2Descriptions;
+    public string[] swordpage3Title, sword3Description, shieldpage3Title, shielpage3Description, bootspage3Title, bootspage3Description;
+    public string swordpage4Title, sword4Description, shieldpage4Title, shielpage4Description, bootspage4Title, bootspage4Description;
+    public string swordpage5Title, sword5Description, shieldpage5Title, shielpage5Description, bootspage5Title, bootspage5Description;
+    public string swordpage6Title, sword6Description, shieldpage6Title, shielpage6Description, bootspage6Title, bootspage6Description;
+
+    public string path2swordpage4Title, path2sword4Description, path2shieldpage4Title, path2shielpage4Description, path2bootspage4Title, path2bootspage4Description;
+    public string path2swordpage5Title, path2sword5Description, path2shieldpage5Title, path2shielpage5Description, path2bootspage5Title, path2bootspage5Description;
+    public string path2swordpage6Title, path2sword6Description, path2shieldpage6Title, path2shielpage6Description, path2bootspage6Title, path2bootspage6Description;
+
+    public GameObject descriptionMenu;
+
+    public void Description(int what)
+    {
+        descriptionMenu.SetActive(true);
+        if(ShopPage <= 1)
+        {
+            DescriptionTitle.text = page1Title;
+            DescriptionDescribe.text = page1Description;
+        }
+
+        if(ShopPage == 2)
+        {
+            DescriptionTitle.text = page2Title[what];
+            DescriptionDescribe.text = page2Descriptions[what];
+        }
+
+        if(ShopPage == 3)
+        {
+            if(playerAbilities.mainPath == 1)
+            {
+                DescriptionTitle.text = swordpage3Title[what];
+                DescriptionDescribe.text = sword3Description[what];
+            }
+
+            if(playerAbilities.mainPath == 3)
+            {
+                DescriptionTitle.text = shieldpage3Title[what];
+                DescriptionDescribe.text = shielpage3Description[what];
+            }
+
+            if(playerAbilities.mainPath == 2)
+            {
+                DescriptionTitle.text = bootspage3Title[what];
+                DescriptionDescribe.text = bootspage3Description[what];
+            }
+           
+        }
+
+        if(playerAbilities.subPath == 1)
+        {
+            if (ShopPage == 4)
+            {
+                if (playerAbilities.mainPath == 1)
+                {
+                    DescriptionTitle.text = swordpage4Title;
+                    DescriptionDescribe.text = sword4Description;
+                }
+
+                if (playerAbilities.mainPath == 3)
+                {
+                    DescriptionTitle.text = shieldpage4Title;
+                    DescriptionDescribe.text = shielpage4Description;
+                }
+
+                if (playerAbilities.mainPath == 2)
+                {
+                    DescriptionTitle.text = bootspage4Title;
+                    DescriptionDescribe.text = bootspage4Description;
+                }
+            }
+
+            if (ShopPage == 5)
+            {
+                if (playerAbilities.mainPath == 1)
+                {
+                    DescriptionTitle.text = swordpage5Title;
+                    DescriptionDescribe.text = sword5Description;
+                }
+
+                if (playerAbilities.mainPath == 3)
+                {
+                    DescriptionTitle.text = shieldpage5Title;
+                    DescriptionDescribe.text = shielpage5Description;
+                }
+
+                if (playerAbilities.mainPath == 2)
+                {
+                    DescriptionTitle.text = bootspage5Title;
+                    DescriptionDescribe.text = bootspage5Description;
+                }
+            }
+
+            if (ShopPage == 6)
+            {
+                if (playerAbilities.mainPath == 1)
+                {
+                    DescriptionTitle.text = swordpage6Title;
+                    DescriptionDescribe.text = sword6Description;
+                }
+
+                if (playerAbilities.mainPath == 3)
+                {
+                    DescriptionTitle.text = shieldpage6Title;
+                    DescriptionDescribe.text = shielpage6Description;
+                }
+
+                if (playerAbilities.mainPath == 2)
+                {
+                    DescriptionTitle.text = bootspage6Title;
+                    DescriptionDescribe.text = bootspage6Description;
+                }
+            }
+        }
+
+        if (playerAbilities.subPath == 2)
+        {
+            if (ShopPage == 4)
+            {
+                if (playerAbilities.mainPath == 1)
+                {
+                    DescriptionTitle.text = path2swordpage4Title;
+                    DescriptionDescribe.text = path2sword4Description;
+                }
+
+                if (playerAbilities.mainPath == 3)
+                {
+                    DescriptionTitle.text = path2shieldpage4Title;
+                    DescriptionDescribe.text = path2shielpage4Description;
+                }
+
+                if (playerAbilities.mainPath == 2)
+                {
+                    DescriptionTitle.text = path2bootspage4Title;
+                    DescriptionDescribe.text = path2bootspage4Description;
+                }
+            }
+
+            if (ShopPage == 5)
+            {
+                if (playerAbilities.mainPath == 1)
+                {
+                    DescriptionTitle.text = path2swordpage5Title;
+                    DescriptionDescribe.text = path2sword5Description;
+                }
+
+                if (playerAbilities.mainPath == 3)
+                {
+                    DescriptionTitle.text = path2shieldpage5Title;
+                    DescriptionDescribe.text = path2shielpage5Description;
+                }
+
+                if (playerAbilities.mainPath == 2)
+                {
+                    DescriptionTitle.text = path2bootspage5Title;
+                    DescriptionDescribe.text = path2bootspage5Description;
+                }
+            }
+
+            if (ShopPage == 6)
+            {
+                if (playerAbilities.mainPath == 1)
+                {
+                    DescriptionTitle.text = path2swordpage6Title;
+                    DescriptionDescribe.text = path2sword6Description;
+                }
+
+                if (playerAbilities.mainPath == 3)
+                {
+                    DescriptionTitle.text = path2shieldpage6Title;
+                    DescriptionDescribe.text = path2shielpage6Description;
+                }
+
+                if (playerAbilities.mainPath == 2)
+                {
+                    DescriptionTitle.text = path2bootspage6Title;
+                    DescriptionDescribe.text = path2bootspage6Description;
+                }
+            }
+        }
+    }
+
+    public void CloseDescription()
+    {
+        descriptionMenu.SetActive(false);
+    }
+
     public void NextPage()
     {
         if(ShopPage < PagesUnlocked)
@@ -389,11 +579,11 @@ public class Shop : MonoBehaviour
 
     public void Purchase(int type) 
     {
-        if(playerAbilities.playerCoin > price)
+        if(playerAbilities.playerCoin >= price)
         {
             if (ShopPage == 1)
             {
-                player.GetComponent<PlayerMovement>().rollUnlocked = true;
+                PlayerPrefs.SetInt("HasRoll", 1);
                 playerAbilities.playerCoin -= price;
             }
 

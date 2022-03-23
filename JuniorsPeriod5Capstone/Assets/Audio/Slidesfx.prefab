@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8688746109729747339}
   - component: {fileID: 4584797609693951625}
+  - component: {fileID: 7885810474170018651}
   m_Layer: 0
   m_Name: Slidesfx
   m_TagString: Untagged
@@ -127,3 +128,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7885810474170018651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725972151583061820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aeaada0626606e439d4aa6e7e8895b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

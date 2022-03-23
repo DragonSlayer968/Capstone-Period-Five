@@ -232,7 +232,7 @@ public class PlayerHealth : MonoBehaviour
                         else //5% to heal to full //15% to heal on parry *Extreme ability (Might be added later instead of heal to full) - Revive after 1st death at 2 hearts
                         {
                             int healChance = Random.Range(0, 20);
-                            if (healChance <= 2)
+                            if (healChance <= 3)
                             {
                                 health++;
                                 hp++;
@@ -240,7 +240,7 @@ public class PlayerHealth : MonoBehaviour
 
                             }
 
-                            int megaHeal = Random.Range(0, 20);
+                            int megaHeal = Random.Range(0, 15);
                             if (megaHeal == 0)
                             {
                                 for (int i = 0; i < healthPoints.Length; i++)
@@ -248,6 +248,16 @@ public class PlayerHealth : MonoBehaviour
                                     health++;
                                     hp++;
                                     healthPoints[i].sprite = head;
+
+                                    if(health > maxHealth)
+                                    {
+                                        health = maxHealth;
+                                    }
+
+                                    if(hp > maxHealth)
+                                    {
+                                        hp = 5;
+                                    }
                                 }
 
 

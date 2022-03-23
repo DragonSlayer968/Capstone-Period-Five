@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove = true;
 
     //Unlocks
-    public bool rollUnlocked;
+    public bool rollUnlocked; public int rollunlockCheck;
     public bool doubleJumpUnlocked;
 
     //Tutorial
@@ -63,7 +63,11 @@ public class PlayerMovement : MonoBehaviour
             JumpCheck();
             SetSafePlace();
            
-            RollActivate();
+            if(rollUnlocked == true)
+            {
+                RollActivate();
+            }
+           
            
 
 
@@ -76,6 +80,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         AbilityStats();
+        if(PlayerPrefs.GetInt("HasRoll") == 1)
+        {
+            rollUnlocked = true;
+            rollunlockCheck = 1;
+        }
+        else
+        {
+            rollUnlocked = false;
+            rollunlockCheck = 0;
+        }
        
     }
 
