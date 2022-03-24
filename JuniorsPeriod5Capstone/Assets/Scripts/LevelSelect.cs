@@ -21,6 +21,24 @@ public class LevelSelect : MonoBehaviour
     public bool onAuthor = true;
     public int levelsUnlocked;
 
+    public Button previousButton, nextButton;
+
+    private void Update()
+    {
+        if(LevelValue >= levelsUnlocked)
+        {
+            nextButton.interactable = false;
+        }
+
+        else
+        {
+            nextButton.interactable = true;
+        }
+
+       
+
+    }
+
     public void Close()
     {
         if(LevelValue <= levelName.Length - 1)
@@ -81,7 +99,7 @@ public class LevelSelect : MonoBehaviour
 
     public void NextPage()
     {
-        if (LevelValue < levelName.Length - 1 && onAuthor == false)
+        if (LevelValue < levelName.Length - 1 && onAuthor == false && LevelValue < levelsUnlocked)
         {
             StartCoroutine(PageFlipSFX());
             levelSelectAnimation.SetTrigger("PageFlip");
