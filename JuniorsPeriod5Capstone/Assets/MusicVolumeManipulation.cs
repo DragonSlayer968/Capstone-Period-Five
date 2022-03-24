@@ -17,4 +17,7 @@ public class MusicVolumeManipulation : MonoBehaviour
     {
         target.volume = FindObjectOfType<InGameMenu>().musicVolume;
     }
+
+   
+
 }

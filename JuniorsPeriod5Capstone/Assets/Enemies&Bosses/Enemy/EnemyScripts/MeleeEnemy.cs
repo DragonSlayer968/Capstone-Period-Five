@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
+    public bool CanMove;
+
     [Header("Components")]
     public Rigidbody2D rb;
     public Animator body;
@@ -48,7 +50,16 @@ public class MeleeEnemy : MonoBehaviour
         health = GetComponent<EnemyHealth>().enemyHealth;
         if (player)
         {
+            
             RangeController();
+               
+            
+
+            if(CanMove == false)
+            {
+                body.SetBool("Walking", false);
+            }
+            
         }
 
        
@@ -65,43 +76,46 @@ public class MeleeEnemy : MonoBehaviour
 
         if (playerHeight <= heightAllowance && playerHeight >= depthAllowance)
         {
-            if (playerDistance <= walkAllowance)
+            if (CanMove == true)
             {
-
-                if (playerDistance > attackAllowance)
+                if (playerDistance <= walkAllowance)
                 {
-                    body.SetBool("Walking", true);
-                    if (FirstStrike == true)
-                    {
-                        attackTime = origAttackTime;
-                    }
 
 
-                    if (direction < 0)
+                    if (playerDistance > attackAllowance)
                     {
-                        rb.velocity = new Vector2(speed, 0);
-                    }
+                        body.SetBool("Walking", true);
+                        if (FirstStrike == true)
+                        {
+                            attackTime = origAttackTime;
+                        }
 
-                    if (direction > 0)
-                    {
-                        rb.velocity = new Vector2(-speed, 0);
+
+                        if (direction < 0)
+                        {
+                            rb.velocity = new Vector2(speed, 0);
+                        }
+
+                        if (direction > 0)
+                        {
+                            rb.velocity = new Vector2(-speed, 0);
+                        }
+
+
                     }
 
 
                 }
 
-             
-            }
+                else
+                {
+                    body.SetBool("Walking", false);
+                    rb.velocity = new Vector2(0, 0);
+                }
 
-            else
-            {
-                body.SetBool("Walking", false);
-                rb.velocity = new Vector2(0, 0);
-            }
+                if (playerDistance <= lookAtAllowance)
+                {
 
-            if (playerDistance <= lookAtAllowance)
-            {
-             
                     if (direction < 0)
                     {
                         sprite.flipX = true;
@@ -112,7 +126,11 @@ public class MeleeEnemy : MonoBehaviour
                         sprite.flipX = false;
                     }
 
+                }
             }
+           
+
+           
             if (playerDistance <= attackAllowance && HasAttacked == false && playerHeight <= 1)
             {
                 body.SetBool("Walking", false);

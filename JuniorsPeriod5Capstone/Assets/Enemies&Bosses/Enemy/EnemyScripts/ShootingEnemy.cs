@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShootingEnemy : MonoBehaviour
 {
+    public bool CanMove;
+
     [Header("Components")]
     public Rigidbody2D rb;
     public Animator body;
@@ -36,6 +38,7 @@ public class ShootingEnemy : MonoBehaviour
     public bool FirstStrike;
     public bool HasAttacked;
     
+
 
     // Start is called before the first frame update
     void Start()
