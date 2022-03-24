@@ -83,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
             Roll();
         }
 
+        if(abilities.mainPath == 2 && abilities.subPath == 2 && abilities.subPathLevel >= 3)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && rollActive == true)
+            {
+                RollDeactive();
+            }
+        }
+
         AbilityStats();
         if(PlayerPrefs.GetInt("HasRoll") == 1)
         {
@@ -106,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             jumpPower = baseJumpPower;
             rollSpeed = baseRollSpeed;
             rollInkCost = baseRollCost;
+            anim.SetFloat("RollSpeed", 1);
         }
 
         else
@@ -115,13 +124,26 @@ public class PlayerMovement : MonoBehaviour
                 jumpPower = baseJumpPower * 1.15f;
                 rollSpeed = baseRollSpeed * .8f;
                 rollInkCost = baseRollCost;
+                anim.SetFloat("RollSpeed", 1);
             }
 
             if (abilities.subPath == 2)
             {
                 jumpPower = baseJumpPower * 1f;
-                rollSpeed = baseRollSpeed * 1.25f;
+                
                 rollInkCost = 0;
+
+                if(abilities.subPathLevel >= 3)
+                {
+                    anim.SetFloat("RollSpeed", .5f);
+                    rollSpeed = baseRollSpeed * 1.55f;
+                }
+
+                else
+                {
+                    rollSpeed = baseRollSpeed * 1.25f;
+                }
+
             }
         }
 
@@ -145,6 +167,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         
+    }
+
+    public void RollDeactive()
+    {
+        anim.SetTrigger("RollStop");
+        rollActive = false;
     }
 
     public void Movement() //Horizontal Movement
