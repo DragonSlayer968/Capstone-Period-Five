@@ -700,6 +700,7 @@ MonoBehaviour:
   npcText: {fileID: 623618976}
   eObj: {fileID: 2028899117}
   textBackground: {fileID: 2139308298}
+  InRange: 0
 --- !u!61 &161184070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2242,7 +2243,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5e30d1455a3490e45a65f3db5ba38971, type: 3}
+    m_Font: {fileID: 12800000, guid: 9a50e527d8cc26d48ac1c759d1206b4f, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2567,6 +2568,7 @@ MonoBehaviour:
   npcText: {fileID: 623618976}
   eObj: {fileID: 382224641}
   textBackground: {fileID: 2139308298}
+  InRange: 0
 --- !u!61 &746868930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4682,6 +4684,7 @@ MonoBehaviour:
   npcText: {fileID: 623618976}
   eObj: {fileID: 1871526367}
   textBackground: {fileID: 2139308298}
+  InRange: 0
 --- !u!61 &1160647804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20172,7 +20175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.42745098}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -9,6 +9,9 @@ public class NPCManager : MonoBehaviour
     public Text npcText;
     public GameObject eObj;
     public GameObject textBackground;
+
+    public bool InRange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,26 +21,30 @@ public class NPCManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.gameObject.tag == "Player")
+        if(InRange == true)
         {
-            eObj.SetActive(true);
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 eObj.SetActive(false);
                 npcText.text = npcString;
                 textBackground.SetActive(true);
             }
+        }   
+    }
+
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            eObj.SetActive(true);
+            InRange = true;
         }
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        InRange = false;
+        if (other.gameObject.tag == "Player")
         {
             eObj.SetActive(false);
             npcText.text = "";
