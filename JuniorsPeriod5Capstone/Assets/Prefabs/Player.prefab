@@ -3139,6 +3139,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   rb: {fileID: 0}
   speed: 6
+  origSpeed: 6
+  SprintMultiplyer: 1.5
   moveInput: 0
   jumpPower: 9.5
   groundCheckDist: 1.5
@@ -3275,9 +3277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityTreeUnlocked: 0
-  mainPath: 1
-  subPath: 1
-  subPathLevel: 2
+  mainPath: 0
+  subPath: 0
+  subPathLevel: 0
   playerCoin: 0
   coinText: {fileID: 65308845064803867}
 --- !u!114 &733458347

@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Values")]
     //Horizontal Movement
     public float speed; //how fast player is moving
+    public float origSpeed;
+    public float SprintMultiplyer;
     public float moveInput; //- = left, + = right
 
     //Vertical Movement
@@ -142,6 +144,27 @@ public class PlayerMovement : MonoBehaviour
     public void Movement() //Horizontal Movement
     {
         moveInput = Input.GetAxis("Horizontal");
+        if(abilities.mainPath == 2)
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = origSpeed * SprintMultiplyer;
+
+            }
+
+            else if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                speed = origSpeed;
+            }
+        }
+
+        else
+        {
+            speed = origSpeed;
+        }
+        
+
+
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         if (facingRight == false && moveInput > 0) //if facingRight is false but move input is positive turn facingRight to true
@@ -180,7 +203,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveInput != 0) //If player is moving
         {
-            anim.SetFloat("HorizontalValue", 1f); //blendtree: walk
+            if(speed == origSpeed * SprintMultiplyer)
+            {
+                anim.SetFloat("HorizontalValue", 1f); //blendtree: sprint
+            }
+
+            else
+            {
+                anim.SetFloat("HorizontalValue", .5f);
+            }
+           
 
         }
         else //otherwise

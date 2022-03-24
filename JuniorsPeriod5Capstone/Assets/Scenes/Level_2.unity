@@ -3609,11 +3609,11 @@ PrefabInstance:
       objectReference: {fileID: 699632628429983192}
     - target: {fileID: 98358513784917933, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0482252
+      value: -26.401775
       objectReference: {fileID: 0}
     - target: {fileID: 98358513784917933, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9085407
+      value: 4.118541
       objectReference: {fileID: 0}
     - target: {fileID: 98358513784917934, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_BoundingShape2D
@@ -3668,6 +3668,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321923, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 98358514543321923, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -3681,11 +3685,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0482252
+      value: -21.613388
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9085407
+      value: 4.0120015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
@@ -18568,14 +18572,14 @@ MonoBehaviour:
   DescriptionTitle: {fileID: 1870121751}
   DescriptionDescribe: {fileID: 1398842628}
   page1Title: Slippery Oil
-  page1Description: Grants ability to roll in exchange for ink
+  page1Description: Grants ability to roll in exchange for ink (V)
   page2Title:
   - Better Weapon
   - Boots
   - Shield
   page2Descriptions:
   - 'Attacks have a chance to crit '
-  - Player can now sprint
+  - Player can now sprint (LShift)
   - Player has a chance to dodge an unparried attack
   swordpage3Title:
   - Curved Blade
@@ -20346,11 +20350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 699632628666192157, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: -27.95
       objectReference: {fileID: 0}
     - target: {fileID: 699632628666192157, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.17
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 699632628666192157, guid: eefbecf69d43d5c4da00361282b2e0ff, type: 3}
       propertyPath: m_LocalPosition.z
