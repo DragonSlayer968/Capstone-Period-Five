@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower; // Amount of force when jumping
     public float groundCheckDist = 8f; // Jump ray length
 
+    //Roll
+    public float rollInkCost;
 
     [Header("Bools")]
     public bool facingRight = true;
@@ -95,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
        
     }
 
-    public float baseJumpPower, baseRollSpeed;
+    public float baseJumpPower, baseRollSpeed, baseRollCost;
 
     public void AbilityStats()
     {
@@ -103,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpPower = baseJumpPower;
             rollSpeed = baseRollSpeed;
+            rollInkCost = baseRollCost;
         }
 
         else
@@ -111,12 +114,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 jumpPower = baseJumpPower * 1.15f;
                 rollSpeed = baseRollSpeed * .8f;
+                rollInkCost = baseRollCost;
             }
 
             if (abilities.subPath == 2)
             {
                 jumpPower = baseJumpPower * 1f;
                 rollSpeed = baseRollSpeed * 1.25f;
+                rollInkCost = 0;
             }
         }
 
@@ -130,10 +135,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (hit)
             {
-                if (Input.GetKeyDown(KeyCode.V))
+                if (Input.GetKeyDown(KeyCode.V) && ink.inkValue >= rollInkCost)
                 {
                     rollControl();
                     anim.SetTrigger("Roll");
+                    ink.inkValue -= rollInkCost;
                 }
             }
         }
