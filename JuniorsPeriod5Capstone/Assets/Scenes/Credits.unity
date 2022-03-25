@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -340,8 +340,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Scenes 2-4: Connor\n\nScenes 5-7: Connor, Fixed by Connor\n\nScenes 8-10
-    RJ, Fixed by Connor \n\nPause Screen: Devon\n\nCollectible Items: Aidan"
+  m_Text: "Scenes 2-4: Sean, Fixed by Connor\n\nScenes 5-7: Connor, Fixed by Connor\n\nScenes
+    8-10 RJ, Fixed by Connor \n\nPause Screen: Devon\n\nCollectible Items: Aidan"
 --- !u!222 &133177344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -56.772537, y: -393.25003}
-  m_SizeDelta: {x: 1260.4553, y: 51.0357}
+  m_AnchoredPosition: {x: -56.772537, y: -406.75885}
+  m_SizeDelta: {x: 1260.4553, y: 78.0533}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176665418
 MonoBehaviour:
@@ -418,9 +418,11 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Debugging team: Aidan & Connor'
+  m_Text: 'Debugging team: Aidan & Connor Who put long hours
+
+    fixing this game'
 --- !u!222 &176665419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -852,12 +854,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Player Movement: Aidan\n\nEnemies, Boss, & QA: Aidan, Fixed by Aidan\n\nPlayer
-    Health & Attack: Aaron Fixed by Aidan\n\nDay/Night Cycle & Room Transition: Xavier\n\nNPCs:
-    Braeden, Fixed by Aidan And Connor\n\nAudio: Aidan And Connor\n\nMenu & Credits:
-    Jonathan\n\nTimer: Xavier\n\nScenes 1-4: Sean, Fixed by Connor\n\nScenes 5-7:
-    Connor, Fixed by Connor\n\nScenes 8-10 RJ, Fixed by Connor \n\nPause Screen:
-    Devon\n\nCollectible Items: Aidan"
+  m_Text: "Player Movement: Aaron: Fixed byAidan\n\nEnemies, Boss, & QA: Aidan, Fixed
+    by Aidan\n\nPlayer Health & Attack: Aaron Fixed by Aidan\n\nDay/Night Cycle &
+    Room Transition: Xavier\n\nNPCs: Braeden, Fixed by Aidan And Connor\n\nAudio:
+    Aidan And Connor\n\nMenu & Credits: Jonathan\n\nTimer: Xavier\n\nScenes 1-4:
+    Sean, Fixed by Connor\n\nScenes 5-7: Connor, Fixed by Connor\n\nScenes 8-10 RJ,
+    Fixed by Connor \n\nPause Screen: Devon\n\nCollectible Items: Aidan"
 --- !u!222 &609623894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1108,14 +1110,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Scenes 1 & 9-10 Aidan
+  m_Text: 'Scenes 1 & 9-10 RJ, Fixed by Aidan
 
 
     Pause Screen: Devon
 
 
-    Collectible Items:
-    Aidan'
+    Collectible
+    Items: Aidan'
 --- !u!222 &847309422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1362,7 +1364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Save & Load: Aidan'
+  m_Text: 'Save & Load: Devon, Fixed by Aidan'
 --- !u!222 &957268226
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1520,7 +1522,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pause Screen: Aidan
+  m_Text: 'Pause Screen: Devon, Fixed by Aidan
 
 
     Collectible Items: Aidan'
@@ -2179,11 +2181,11 @@ MonoBehaviour:
   m_Text: "Design Project Managers: Jaxon & Maria\n\nCode Project Manager & QA: Jacob\n\nScript
     Writer: Aidan\n\nConcept Artist & Designer: Maria, Fixed by Connor\n\nPlayer
     Movement: Ian Fixed by Aidan\n\nEnemies, Boss, & QA: Aidan, Fixed by Aidan\n\nPlayer
-    Health & Attack: Aaron Fixed by Aidan\n\nDay/Night Cycle & Room Transition: Xavier\n\nNPCs:
+    Health & Attack: Aaron Fixed by Aidan\n\nDay/Night Cycle & Room Transition: Devon\n\nNPCs:
     Braeden, Fixed by Aidan And Connor\n\nAudio: Aidan And Connor\n\nMenu & Credits:
-    Jonathan\n\nTimer: Xavier\n\nScenes 1-4: Sean, Fixed by Connor\n\nScenes 5-7:
-    Connor, Fixed by Connor\n\nScenes 8-10 RJ, Fixed by Connor \n\nPause Screen:
-    Devon\n\nCollectible Items: Aidan"
+    Jonathan\n\nScenes 1-4: Sean, Fixed by Connor\n\nScenes 5-7: Connor, Fixed by
+    Connor\n\nScenes 8-10 RJ, Fixed by Connor \n\nPause Screen: Devon: Fixed by Connor\n\nCollectible
+    Items: Aidan"
 --- !u!222 &1677346141
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2262,9 +2264,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Menu & Credits: Aidan\n\nTimer: Xavier\n\nScenes 1-4: Sean, Fixed by Connor\n\nScenes
-    5-7: Connor, Fixed by Connor\n\nScenes 8-10 RJ, Fixed by Connor \n\nPause Screen:
-    Devon\n\nCollectible Items: Aidan"
+  m_Text: "Menu & Credits: Johnathon, Fixed by Aidan\n\nTimer: Xavier\n\nScenes 1-4:
+    Sean, Fixed by Connor\n\nScenes 5-7: Connor, Fixed by Connor\n\nScenes 8-10 RJ,
+    Fixed by Connor \n\nPause Screen: Devon\n\nCollectible Items: Aidan"
 --- !u!222 &1710101860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2418,9 +2420,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "NPCs: Connor\n\nAudio: Aidan And Connor\n\nMenu & Credits: Jonathan\n\nTimer:
-    Xavier\n\nScenes 1-4: Sean, Fixed by Connor\n\nScenes 5-7: Connor, Fixed by Connor\n\nScenes
-    8-10 RJ, Fixed by Connor \n\nPause Screen: Devon\n\nCollectible Items: Aidan"
+  m_Text: "NPCs: Braedon, Fixed by Connor\n\nAudio: Aidan And Connor\n\nMenu & Credits:
+    Jonathan\n\nTimer: Xavier\n\nScenes 1-4: Sean, Fixed by Connor\n\nScenes 5-7:
+    Connor, Fixed by Connor\n\nScenes 8-10 RJ, Fixed by Connor \n\nPause Screen:
+    Devon\n\nCollectible Items: Aidan"
 --- !u!222 &1935176758
 CanvasRenderer:
   m_ObjectHideFlags: 0
