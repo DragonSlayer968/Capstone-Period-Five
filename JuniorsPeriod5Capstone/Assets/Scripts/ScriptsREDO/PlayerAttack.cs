@@ -103,6 +103,14 @@ public class PlayerAttack : MonoBehaviour
         {
             if (abilities.subPath == 1)
             {
+                if(abilities.subPathLevel == 0)
+                {
+                    meleeDamage = baseDamage;
+                    slashCost = baseInkCost;
+                    projectileDamage = baseproDamage;
+                    meleeSpeed = baseMeleeSpeed;
+                }
+
                 meleeSpeed = baseMeleeSpeed * 1.25f;
                 if (abilities.subPathLevel <= 1)
                 {
