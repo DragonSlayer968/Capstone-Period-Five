@@ -9,6 +9,10 @@ public class BossSummoner : MonoBehaviour
 
     public bool objActivate;
     public bool objDeactivate;
+
+    public Animator anim;
+    public GameObject playerCamera;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,32 +22,35 @@ public class BossSummoner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!boss)
-        {
-            if (objActivate)
-            {
-                obj.SetActive(true);
-            }
-            if (objDeactivate)
-            {
-                obj.SetActive(false);
-            }
-        }
+        
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            boss.SetActive(true);
-            if (objActivate)
-            {
-                obj.SetActive(false);
-            }
-            if (objDeactivate)
-            {
-                obj.SetActive(true);
-            }
+            anim.SetTrigger("Start");
         }
     }
+
+    public void StopPlayer()
+    {
+        playerCamera.SetActive(false);
+        FindObjectOfType<PlayerMovement>().canMove = false;
+        FindObjectOfType<PlayerMovement>().jtNotDOne = true;
+        FindObjectOfType<PlayerAttack>().AttackNotObtained = true;
+        FindObjectOfType<PlayerAttack>().SlashTutorialNotFinished = true;
+    }
+
+    public void EndScene()
+    {
+        playerCamera.SetActive(true);
+        FindObjectOfType<PlayerMovement>().canMove = true;
+        FindObjectOfType<PlayerMovement>().jtNotDOne = false;
+        FindObjectOfType<PlayerAttack>().AttackNotObtained = false;
+        FindObjectOfType<PlayerAttack>().SlashTutorialNotFinished = false;
+        boss.SetActive(true);
+       
+    }
+
 }
