@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 811693797651506809}
   - component: {fileID: 623498254}
   - component: {fileID: 7909889299637699619}
+  - component: {fileID: 7467166489993420056}
   m_Layer: 6
   m_Name: Creature1
   m_TagString: Untagged
@@ -266,7 +267,21 @@ MonoBehaviour:
   anim: {fileID: 0}
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
-  coin: {fileID: 0}
+  coin: {fileID: 4737152350623078735, guid: fa56e8d29d8d62044926be9a6a05bed7, type: 3}
+  maxcoin: 15
+  mincoin: 5
+--- !u!114 &7467166489993420056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811693797651506808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b81d456e36f3c488718345fbb8c48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1567847464558615620
 GameObject:
   m_ObjectHideFlags: 0

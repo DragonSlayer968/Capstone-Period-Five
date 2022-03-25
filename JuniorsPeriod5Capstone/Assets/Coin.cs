@@ -16,12 +16,12 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(coinValue < 10)
+        if(coinValue < 7)
         {
             coinSize = 1;
         }
 
-        else if(coinValue < 20)
+        else if(coinValue < 14)
         {
             coinSize = 1.5f;
         }

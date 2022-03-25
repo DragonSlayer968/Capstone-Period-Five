@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 5615783371582472096}
   - component: {fileID: 2035425965}
   - component: {fileID: 8819421157943297501}
+  - component: {fileID: 5101030364985748414}
   m_Layer: 6
   m_Name: Rat
   m_TagString: Enemy
@@ -229,6 +230,20 @@ MonoBehaviour:
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
   coin: {fileID: 0}
+  maxcoin: 0
+  mincoin: 0
+--- !u!114 &5101030364985748414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615783371582471771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b81d456e36f3c488718345fbb8c48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5615783372220049439
 GameObject:
   m_ObjectHideFlags: 0

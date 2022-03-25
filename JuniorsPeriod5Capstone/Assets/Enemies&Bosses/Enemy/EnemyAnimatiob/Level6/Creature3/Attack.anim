@@ -181,10 +181,24 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.8333333
+    functionName: InstantiateSound
+    data: 
+    objectReferenceParameter: {fileID: 4836953357851699205, guid: ae39cb6830fce6d4f9533aa8ff2ed253, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.0833334
     functionName: Attack
     data: 
     objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0833334
+    functionName: InstantiateSound
+    data: 
+    objectReferenceParameter: {fileID: 4836953357851699205, guid: ae39cb6830fce6d4f9533aa8ff2ed253, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

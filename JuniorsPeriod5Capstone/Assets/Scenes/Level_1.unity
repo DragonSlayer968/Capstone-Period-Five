@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 1
   coinSize: 0
 --- !u!95 &88215293
 Animator:
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 1
   coinSize: 0
 --- !u!95 &434241800
 Animator:
@@ -1815,7 +1815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 1
   coinSize: 0
 --- !u!95 &552072786
 Animator:
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 15
+  coinValue: 10
   coinSize: 0
 --- !u!95 &587374990
 Animator:
@@ -2991,7 +2991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 1
   coinSize: 0
 --- !u!95 &772021931
 Animator:
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 15
+  coinValue: 24
   coinSize: 0
 --- !u!95 &816986905
 Animator:
@@ -3475,7 +3475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 1
   coinSize: 0
 --- !u!95 &860001371
 Animator:
@@ -4070,6 +4070,8 @@ MonoBehaviour:
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
   coin: {fileID: 0}
+  maxcoin: 0
+  mincoin: 0
 --- !u!61 &1030669843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60477,7 +60479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 1
   coinSize: 0
 --- !u!95 &1712060990
 Animator:
@@ -61463,7 +61465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221c253b9fe2a284491810b3a2fc10d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 15
+  coinValue: 10
   coinSize: 0
 --- !u!95 &1891729728
 Animator:
