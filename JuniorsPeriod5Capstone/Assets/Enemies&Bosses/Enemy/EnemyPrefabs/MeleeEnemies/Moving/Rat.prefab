@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7207f09742df1c749bba2f46d290f5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 5
+  enemyHealth: 7
   maxHealth: 0
   invincible: 0
   IV: 0

@@ -31,42 +31,45 @@ public class InGameMenu : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         
-        
-        sfxVolume = sfxVolumeSlider.value;
-        musicVolume = musicVolumeSlider.value;
-
-        if (SceneManager.GetActiveScene().name != "LevelSelect")
+        if(SceneManager.GetActiveScene().name != "MainMenu")
         {
-            returnToLevelSelect.SetActive(true);
-            Quit.SetActive(false);
-            if (FindObjectOfType<PlayerHealth>().health > 0)
-            {
-                masterVolume = masterVolumeSlide.value;
-            }
+            sfxVolume = sfxVolumeSlider.value;
+            musicVolume = musicVolumeSlider.value;
 
+            if (SceneManager.GetActiveScene().name != "LevelSelect")
+            {
+                returnToLevelSelect.SetActive(true);
+                Quit.SetActive(false);
+                if (FindObjectOfType<PlayerHealth>().health > 0)
+                {
+                    masterVolume = masterVolumeSlide.value;
+                }
+
+                else
+                {
+                    masterVolume = 0;
+                }
+
+            }
             else
             {
-                masterVolume = 0;
+                masterVolume = masterVolumeSlide.value;
+                returnToLevelSelect.SetActive(false);
+                Quit.SetActive(true);
             }
 
-        }
-        else
-        {
-            masterVolume = masterVolumeSlide.value;
-            returnToLevelSelect.SetActive(false);
-            Quit.SetActive(true);
-        }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                OpenMenu();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OpenMenu();
+            ears = FindObjectOfType<AudioListener>();
+            if (ears != null)
+            {
+                AudioListener.volume = masterVolume;
+            }
         }
-
-        ears = FindObjectOfType<AudioListener>();
-        if (ears != null)
-        {
-            AudioListener.volume = masterVolume;
-        }
+       
 
     }
 
