@@ -3808,6 +3808,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2818022157773916458, guid: c02b868346a08e04da3f39ddeb1b8bb4, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818022157773916458, guid: c02b868346a08e04da3f39ddeb1b8bb4, type: 3}
+      propertyPath: DepthAllowance
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818022157773916458, guid: c02b868346a08e04da3f39ddeb1b8bb4, type: 3}
+      propertyPath: heightAllowance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2818022157773916469, guid: c02b868346a08e04da3f39ddeb1b8bb4, type: 3}
       propertyPath: m_RootOrder
       value: 0

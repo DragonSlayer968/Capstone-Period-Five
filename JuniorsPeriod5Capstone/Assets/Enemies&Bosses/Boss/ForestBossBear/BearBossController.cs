@@ -18,7 +18,7 @@ public class BearBossController : MonoBehaviour
     public bool Started;
 
     [Header("Target")]
-    public float direction;    
+    public float direction;
     public float attackAllowance;
     public float attackRange;
     public float heightAllowance;
@@ -60,10 +60,10 @@ public class BearBossController : MonoBehaviour
 
         if (Started == true)
         {
-          if(isWalking == true || jumpStarted == true)
+            if (isWalking == true || jumpStarted == true)
             {
                 playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x) + 2;
-               
+
             }
             else
             {
@@ -71,32 +71,32 @@ public class BearBossController : MonoBehaviour
                 direction = gameObject.transform.position.x - player.transform.position.x;
 
             }
-            
+
             playerHeight = player.transform.position.y;
 
-           
-            
+
+
         }
         Movement();
         CycleAttacks();
-        if(jumpStarted == true)
+        if (jumpStarted == true)
         {
             Attack2Jumping();
         }
-        if(isWalking == true)
+        if (isWalking == true)
         {
             Walking();
         }
 
-      
+
     }
 
     public void Movement()
     {
-        if(playerDistance > walkAllowance)
+        if (playerDistance > walkAllowance)
         {
             body.SetBool("Walking", true);
-           // rb.velocity = new Vector2(speed, 0);
+            // rb.velocity = new Vector2(speed, 0);
             if (direction < 0)
             {
                 rb.velocity = new Vector2(speed, 0);
@@ -111,12 +111,12 @@ public class BearBossController : MonoBehaviour
 
         else if (playerDistance <= walkAllowance)
         {
-            if(isWalking == false && jumpStarted == false)
+            if (isWalking == false && jumpStarted == false)
             {
                 body.SetBool("Walking", false);
                 rb.velocity = new Vector2(0, 0);
             }
-          
+
             else if (isWalking == true || jumpStarted == true)
             {
                 if (direction < 0)
@@ -130,9 +130,9 @@ public class BearBossController : MonoBehaviour
                 }
             }
 
-           
 
-           
+
+
 
         }
 
@@ -148,7 +148,7 @@ public class BearBossController : MonoBehaviour
             // sprite.flipX = true;
         }
 
-        
+
 
     }
 
@@ -176,32 +176,33 @@ public class BearBossController : MonoBehaviour
 
     public void CycleAttacks()
     {
-       
-        if(inCoolDown == true)
+
+        if (inCoolDown == true)
         {
             coolDownTime -= Time.deltaTime;
-            if(coolDownTime <= 0)
+            if (coolDownTime <= 0)
             {
                 coolDownTime = origCoolDownTime;
                 inCoolDown = false;
                 attackValue = Random.Range(1, 5);
                 Attack();
-                
+
             }
         }
 
-      
+
 
     }
 
     //Attacks
 
-    
+
 
     public void Attack1Swipe()
     {
-        if(playerDistance <= attackRange  && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
+        if (playerDistance <= attackRange && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
         {
+            Debug.Log("Hit");
             player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
     }
@@ -212,24 +213,25 @@ public class BearBossController : MonoBehaviour
 
     public void Attack2Jump()
     {
-        if(jumpStarted == true)
+        if (jumpStarted == true)
         {
             jumpStarted = false;
-            
+
         }
 
         else
         {
             jumpStarted = true;
-           
+
         }
     }
 
     public void Attack2Jumping()
     {
         print("working");
-        if(playerDistance <= jumpRange && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
+        if (playerDistance <= jumpRange && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
         {
+            Debug.Log("Hit");
             player.GetComponent<PlayerHealth>().Hit(1, gameObject);
         }
     }
@@ -238,14 +240,14 @@ public class BearBossController : MonoBehaviour
     public Transform summonPoint;
     public GameObject summon;
     public GameObject[] summons;
-   
+
 
     public void Attack3Summon()
     {
-       
+
 
         summon = summons[Random.Range(0, summons.Length)];
-       
+
         GameObject summonObject = Instantiate(summon, summonPoint.position, summon.gameObject.transform.rotation);
 
 
@@ -267,9 +269,9 @@ public class BearBossController : MonoBehaviour
 
     public void Walking()
     {
-        if(walkTime > 0)
+        if (walkTime > 0)
         {
-           // playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x) + chargeExtension;
+            // playerDistance = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x) + chargeExtension;
             walkTime -= Time.deltaTime;
             if (playerDistance <= attackRange + 2 && playerHeight <= heightAllowance && playerHeight >= DepthAllowance)
             {
@@ -297,7 +299,7 @@ public class BearBossController : MonoBehaviour
     public void Stunned()
     {
         stunTime -= Time.deltaTime;
-        if(stunTime <= 0)
+        if (stunTime <= 0)
         {
             stunTime = origStun;
             body.SetBool("Stunned", false);
@@ -307,9 +309,9 @@ public class BearBossController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Wall")
+        if (other.tag == "Wall")
         {
-            if(isWalking == true)
+            if (isWalking == true)
             {
                 isWalking = false;
                 body.SetBool("IsCharging", false);
@@ -320,6 +322,6 @@ public class BearBossController : MonoBehaviour
         }
     }
 
-   
+
 
 }

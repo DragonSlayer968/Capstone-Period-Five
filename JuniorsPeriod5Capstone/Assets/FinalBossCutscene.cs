@@ -21,7 +21,7 @@ public class FinalBossCutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class FinalBossCutscene : MonoBehaviour
                 Destroy(boss);
             }
         }
-       
+
 
         if (part == 0)
         {
@@ -60,7 +60,7 @@ public class FinalBossCutscene : MonoBehaviour
 
     public void NextSpeech()
     {
-        if(part == 0)
+        if (part == 0)
         {
             if (TextValue < stuff.Length - 1)
             {
@@ -87,10 +87,10 @@ public class FinalBossCutscene : MonoBehaviour
             else
             {
                 anim.SetTrigger("Run");
-                
+
             }
         }
-       
+
     }
 
     public void LoadNectScene()
