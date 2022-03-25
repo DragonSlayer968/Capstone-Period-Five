@@ -30,8 +30,8 @@ public class InGameMenu : MonoBehaviour
     {
 
         DontDestroyOnLoad(gameObject);
-
-        masterVolume = masterVolumeSlide.value;
+        
+        
         sfxVolume = sfxVolumeSlider.value;
         musicVolume = musicVolumeSlider.value;
 
@@ -39,9 +39,20 @@ public class InGameMenu : MonoBehaviour
         {
             returnToLevelSelect.SetActive(true);
             Quit.SetActive(false);
+            if (FindObjectOfType<PlayerHealth>().health > 0)
+            {
+                masterVolume = masterVolumeSlide.value;
+            }
+
+            else
+            {
+                masterVolume = 0;
+            }
+
         }
         else
         {
+            masterVolume = masterVolumeSlide.value;
             returnToLevelSelect.SetActive(false);
             Quit.SetActive(true);
         }

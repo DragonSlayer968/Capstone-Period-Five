@@ -951,7 +951,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!114 &963387055
 MonoBehaviour:
@@ -2885,7 +2885,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 3027b8d40b952e841ab275c6ac0fd7df, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!82 &3690178228503562646
 AudioSource:
@@ -3260,6 +3260,7 @@ MonoBehaviour:
   paExtend: {fileID: 1040115846}
   abilities: {fileID: 699632628429983193}
   healthUI: {fileID: 579613893}
+  Dead: 0
   Parrying: 0
   parryDamage: 0
   parryHealing: 0
@@ -3285,9 +3286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityTreeUnlocked: 0
-  mainPath: 0
-  subPath: 0
-  subPathLevel: 0
+  mainPath: 1
+  subPath: 2
+  subPathLevel: 2
   playerCoin: 0
   coinText: {fileID: 65308845064803867}
   coinImage: {fileID: 5447965023653986073}
@@ -3375,7 +3376,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7516da21aeb8edf488a067fae37c1795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

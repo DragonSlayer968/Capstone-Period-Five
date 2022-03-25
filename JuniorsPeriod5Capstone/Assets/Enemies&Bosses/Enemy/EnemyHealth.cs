@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        ink = FindObjectOfType<InkDrop>().gameObject;
     }
 
     // Update is called once per frame
@@ -39,6 +40,8 @@ public class EnemyHealth : MonoBehaviour
             }
         }
     }
+
+    public GameObject ink;
 
     public void Hit(float damage)
     {
@@ -68,6 +71,13 @@ public class EnemyHealth : MonoBehaviour
         {
             GameObject enemycoin = Instantiate(coin, transform.position, transform.rotation);
             enemycoin.GetComponent<Coin>().coinValue = coinvalue;
+
+            int randomChance = Random.Range(0, 5);
+            if(randomChance == 0)
+            {
+                Instantiate(ink, transform.position, transform.rotation);
+            }
+
         }
         
         Destroy(gameObject);

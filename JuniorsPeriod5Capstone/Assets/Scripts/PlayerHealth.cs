@@ -97,7 +97,7 @@ public class PlayerHealth : MonoBehaviour
     public void Hit(int Attacker, GameObject enemy)
     {
        
-            if (GetComponent<PlayerMovement>().rollActive == false)
+            if (GetComponent<PlayerMovement>().rollActive == false && Dead == false)
             {
                 if (Parrying == false)
                 {
