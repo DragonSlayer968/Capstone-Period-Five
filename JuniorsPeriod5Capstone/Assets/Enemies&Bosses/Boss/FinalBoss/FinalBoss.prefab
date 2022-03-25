@@ -89,7 +89,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4269886729741509313}
   - component: {fileID: 4269886729741509327}
-  - component: {fileID: 4269886729741509326}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -154,7 +153,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1528e95ee62d6524ca7095b3de3dc7de, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.015686275, g: 0.027450982, b: 0.027450982, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -164,25 +163,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4269886729741509326
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4269886729741509312}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70d48bb16b848a84792b1feb969e7fb3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4269886729782991882
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +596,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.325, y: 1}
   m_AnchoredPosition: {x: -5.340515, y: 0}
   m_SizeDelta: {x: -0.6808, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -771,10 +751,11 @@ GameObject:
   - component: {fileID: 4269886730464899931}
   - component: {fileID: 4269886730464899928}
   - component: {fileID: 4269886730464899929}
-  - component: {fileID: 4269886730464899910}
+  - component: {fileID: 1030669843}
+  - component: {fileID: 1030669838}
   m_Layer: 0
   m_Name: FinalBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +769,7 @@ Transform:
   m_GameObject: {fileID: 4269886730464899933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.31556, y: 2.431385, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 4269886729741509313}
   - {fileID: 4269886730660875824}
@@ -834,10 +815,10 @@ MonoBehaviour:
   DestroyTime: 0
   inCoolDown: 0
   attackValue: 0
-  Phase2: 1
-  healthSlider: {fileID: 0}
-  healthText: {fileID: 0}
-  enemyHealth: {fileID: 0}
+  Phase2: 0
+  healthSlider: {fileID: 4269886729970275469}
+  healthText: {fileID: 4269886729271703233}
+  enemyHealth: {fileID: 1030669838}
   CanTrack: 1
   FistBallProjectile: {fileID: 499715181618651799, guid: 8f64b735ee7341748ab45c409b4e2c0e, type: 3}
   fistShotPoint: {fileID: 4269886730660875824}
@@ -893,7 +874,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4269886730464899910
+--- !u!61 &1030669843
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269886730464899933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008327484, y: -0.07497865}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.51680756, y: 1.9830512}
+  m_EdgeRadius: 0
+--- !u!114 &1030669838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -902,13 +909,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4269886730464899933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25edb8fdcc5856846bde1f70dff0e371, type: 3}
+  m_Script: {fileID: 11500000, guid: 7207f09742df1c749bba2f46d290f5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 4269886729970275469}
-  healthText: {fileID: 4269886729271703233}
-  health: 100
-  maxHealth: 100
+  enemyHealth: 15
+  maxHealth: 350
+  invincible: 0
+  IV: 0
+  IVOrig: 0
+  anim: {fileID: 0}
+  IsDead: 0
+  popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
+  coin: {fileID: 0}
+  ink: {fileID: 0}
+  maxcoin: 0
+  mincoin: 0
 --- !u!1 &4269886730561350618
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class BossSummoner : MonoBehaviour
 
     public Animator anim;
     public GameObject playerCamera;
+    public GameObject camera;
 
     // Start is called before the first frame update
     void Start()
@@ -44,15 +45,21 @@ public class BossSummoner : MonoBehaviour
         FindObjectOfType<PlayerMovement>().jtNotDOne = true;
         FindObjectOfType<PlayerAttack>().AttackNotObtained = true;
         FindObjectOfType<PlayerAttack>().SlashTutorialNotFinished = true;
+        FindObjectOfType<PlayerAbilities>().TutorialCoinNotFound = true;
+        if (camera)
+        {
+            camera.SetActive(true);
+        }
     }
-
     public void EndScene()
     {
+        
         playerCamera.SetActive(true);
         FindObjectOfType<PlayerMovement>().canMove = true;
         FindObjectOfType<PlayerMovement>().jtNotDOne = false;
         FindObjectOfType<PlayerAttack>().AttackNotObtained = false;
         FindObjectOfType<PlayerAttack>().SlashTutorialNotFinished = false;
+        FindObjectOfType<PlayerAbilities>().TutorialCoinNotFound = false;
         boss.SetActive(true);
        
     }
