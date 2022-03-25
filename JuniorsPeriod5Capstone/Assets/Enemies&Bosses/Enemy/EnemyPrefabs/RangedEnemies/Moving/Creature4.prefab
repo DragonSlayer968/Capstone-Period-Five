@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 536988269}
   - component: {fileID: 294591368592432335}
   - component: {fileID: 5982069449321969355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Creature4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -286,8 +286,8 @@ MonoBehaviour:
   attackExtension: 0
   playerDistance: 0
   playerHeight: 0
-  heightAllowance: 1
-  depthAllowance: 0
+  heightAllowance: 3
+  depthAllowance: -3
   player: {fileID: 0}
   attackTime: 0
   origAttackTime: 3

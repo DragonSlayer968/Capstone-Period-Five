@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 367231630}
   - component: {fileID: 8570917048161356291}
   - component: {fileID: 7906722549159278152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -161,8 +161,8 @@ MonoBehaviour:
   attackExtension: 0
   playerDistance: 0
   playerHeight: 0
-  heightAllowance: 1
-  depthAllowance: 0
+  heightAllowance: 3
+  depthAllowance: -3
   player: {fileID: 0}
   attackTime: 0
   origAttackTime: 3

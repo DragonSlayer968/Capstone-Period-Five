@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 1641574874}
   - component: {fileID: 2482361561380369699}
   - component: {fileID: 7231873053536316757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ButterFly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   playerDistance: 0
   playerHeight: 0
   heightAllowance: 3
-  depthAllowance: 0
+  depthAllowance: -3
   player: {fileID: 0}
   attackTime: 0
   origAttackTime: 3

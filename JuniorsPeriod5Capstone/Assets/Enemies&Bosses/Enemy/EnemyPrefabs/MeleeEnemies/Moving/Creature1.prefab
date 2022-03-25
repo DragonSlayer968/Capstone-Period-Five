@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 623498254}
   - component: {fileID: 7909889299637699619}
   - component: {fileID: 7467166489993420056}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Creature1
   m_TagString: Enemy
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
