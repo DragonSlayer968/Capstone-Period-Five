@@ -230,6 +230,7 @@ MonoBehaviour:
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
   coin: {fileID: 0}
+  ink: {fileID: 0}
   maxcoin: 0
   mincoin: 0
 --- !u!114 &5101030364985748414
@@ -319,7 +320,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -5512518725981270550, guid: 8fa1a10dc15f1a54d964d16dfa23fbef, type: 3}
   m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.16}

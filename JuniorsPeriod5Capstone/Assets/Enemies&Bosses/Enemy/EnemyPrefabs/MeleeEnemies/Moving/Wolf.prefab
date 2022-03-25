@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 12389062}
   m_Layer: 7
   m_Name: Wolf
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   IsDead: 0
   popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
   coin: {fileID: 4737152350623078735, guid: fa56e8d29d8d62044926be9a6a05bed7, type: 3}
+  ink: {fileID: 0}
   maxcoin: 10
   mincoin: 3
 --- !u!114 &12389062

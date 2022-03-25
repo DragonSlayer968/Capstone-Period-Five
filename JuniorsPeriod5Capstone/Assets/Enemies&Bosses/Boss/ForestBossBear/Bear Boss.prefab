@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 1935508116}
   m_Layer: 0
   m_Name: Bear Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +679,7 @@ Transform:
   m_GameObject: {fileID: 2818022157773916456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.39, y: 0.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children:
   - {fileID: 2818022156481832979}
   - {fileID: 2818022157346017086}
@@ -823,6 +823,12 @@ MonoBehaviour:
   IV: 0.2
   IVOrig: 0.2
   anim: {fileID: 0}
+  IsDead: 0
+  popDamageShow: {fileID: 6810963207270963780, guid: 1d2cb452f8e7e76418cfbe54feb8a78e, type: 3}
+  coin: {fileID: 0}
+  ink: {fileID: 0}
+  maxcoin: 0
+  mincoin: 0
 --- !u!1 &2818022158178282755
 GameObject:
   m_ObjectHideFlags: 0

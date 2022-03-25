@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class FinalBossCutscene : MonoBehaviour
@@ -28,7 +29,14 @@ public class FinalBossCutscene : MonoBehaviour
     {
         if (boss && start == true)
         {
-            if (boss.GetComponent<EnemyHealth>().enemyHealth <= boss.GetComponent<EnemyHealth>().maxHealth / 2)
+            if (boss.GetComponent<EnemyHealth>().enemyHealth <= boss.GetComponent<EnemyHealth>().maxHealth / 2 && SceneManager.GetActiveScene().name == "Level_9")
+            {
+                part = 1;
+                anim.SetTrigger("Flee");
+                Destroy(boss);
+            }
+
+            else if (boss.GetComponent<EnemyHealth>().enemyHealth <= 0 && SceneManager.GetActiveScene().name == "Level_10")
             {
                 part = 1;
                 anim.SetTrigger("Flee");
