@@ -4193,11 +4193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.613388
+      value: -23.83451
       objectReference: {fileID: 0}
     - target: {fileID: 98358514543321948, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.0120015
+      value: 4.061419
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9107e732eeda3fd459999b804c2634e5, type: 3}
@@ -11684,11 +11684,11 @@ PolygonCollider2D:
       - {x: 154.62898, y: -46.941124}
       - {x: 154.44054, y: -23.095413}
       - {x: 113.13668, y: -22.676235}
-      - {x: 59.442917, y: -8.643024}
+      - {x: 55.77378, y: -7.668831}
       - {x: 55.86554, y: 10.712201}
       - {x: -31.910152, y: 12.204059}
       - {x: -32.53572, y: -15.9126835}
-      - {x: 56.229294, y: -17.813381}
+      - {x: 52.795494, y: -16.783241}
 --- !u!1 &1109019459
 GameObject:
   m_ObjectHideFlags: 0
