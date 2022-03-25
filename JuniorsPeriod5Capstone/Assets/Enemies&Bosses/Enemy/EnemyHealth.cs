@@ -69,7 +69,8 @@ public class EnemyHealth : MonoBehaviour
         coinvalue = Random.Range(mincoin, maxcoin + 1);
         if(coin != null)
         {
-            GameObject enemycoin = Instantiate(coin, transform.position, transform.rotation);
+            Vector3 thing = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            GameObject enemycoin = Instantiate(coin, thing, transform.rotation);
             enemycoin.GetComponent<Coin>().coinValue = coinvalue;
 
             int randomChance = Random.Range(0, 5);

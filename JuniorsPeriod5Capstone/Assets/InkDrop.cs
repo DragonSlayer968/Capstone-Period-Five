@@ -21,6 +21,7 @@ public class InkDrop : MonoBehaviour
         if(collision.tag == "Player")
         {
             collision.GetComponent<PlayerAttack>().inkValue = collision.GetComponent<PlayerAttack>().maxInk;
+            Destroy(gameObject);
         }
     }
 
