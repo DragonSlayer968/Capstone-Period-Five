@@ -40,15 +40,27 @@ public class InGameMenu : MonoBehaviour
             {
                 returnToLevelSelect.SetActive(true);
                 Quit.SetActive(false);
-                if (FindObjectOfType<PlayerHealth>().health > 0)
+                PlayerHealth dude = FindObjectOfType<PlayerHealth>();
+                if (dude)
                 {
-                    masterVolume = masterVolumeSlide.value;
+                    if (dude.health > 0)
+                    {
+                        masterVolume = masterVolumeSlide.value;
+                    }
+
+                    else
+                    {
+                        masterVolume = 0;
+                    }
+
                 }
 
                 else
                 {
-                    masterVolume = 0;
+                    masterVolume = masterVolumeSlide.value;
                 }
+
+               
 
             }
             else

@@ -3208,7 +3208,7 @@ MonoBehaviour:
   TBIorig: 3
   inkMultiplyer: 2
   slashPrimed: 0
-  meleeDamage: 1
+  meleeDamage: 4
   meleeSpeed: 1
   InkSlider: {fileID: 58823752}
   targetBoss: {fileID: 0}

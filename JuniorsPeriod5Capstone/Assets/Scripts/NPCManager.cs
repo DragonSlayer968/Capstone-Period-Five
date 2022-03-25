@@ -11,7 +11,8 @@ public class NPCManager : MonoBehaviour
     public GameObject textBackground;
 
     public bool InRange;
-
+    public bool Fountain;
+    public Teleport tele;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,10 @@ public class NPCManager : MonoBehaviour
                 eObj.SetActive(false);
                 npcText.text = npcString;
                 textBackground.SetActive(true);
+                if(Fountain == true)
+                {
+                    tele.teleport();
+                }
             }
         }   
     }
