@@ -10,13 +10,17 @@ public class GroundCheck : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
-            player.anim.SetBool("IsFalling", false);
-            if(player.IsJumping == true)
+            if (player)
             {
-                GameObject landSound = Instantiate(landSFX, transform.position, transform.rotation);
-                Destroy(landSound, .5f);
+                player.anim.SetBool("IsFalling", false);
+                if (player.IsJumping == true)
+                {
+                    GameObject landSound = Instantiate(landSFX, transform.position, transform.rotation);
+                    Destroy(landSound, .5f);
+                }
+                player.IsJumping = false;
             }
-            player.IsJumping = false;
+           
         }
     }
 

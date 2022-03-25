@@ -31,7 +31,7 @@ public class TutorialPoint : MonoBehaviour
     void Update()
     {
 
-        if (TutorialValue == PlayerPrefs.GetInt("TV"))
+        if (PlayerPrefs.GetInt("TV") == TutorialValue)
         {
             player.GetComponent<PlayerMovement>().jtNotDOne = false;
 
