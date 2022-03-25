@@ -2604,8 +2604,9 @@ MonoBehaviour:
   Icon: {fileID: 222458015}
   onAuthor: 1
   levelsUnlocked: 0
-  previousButton: {fileID: 0}
+  previousButton: {fileID: 2020868816}
   nextButton: {fileID: 1292695433}
+  playButton: {fileID: 524798814}
 --- !u!114 &1018114953
 MonoBehaviour:
   m_ObjectHideFlags: 0

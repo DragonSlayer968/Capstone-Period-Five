@@ -21,16 +21,17 @@ public class LevelSelect : MonoBehaviour
     public bool onAuthor = true;
     public int levelsUnlocked;
 
-    public Button previousButton, nextButton;
+    public Button previousButton, nextButton, playButton;
 
     private void Start()
     {
         print(PlayerPrefs.GetInt("LevelsUnlocked"));
+        levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked");
     }
 
     private void Update()
     {
-        levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked");
+        
         if (LevelValue >= levelsUnlocked)
         {
             nextButton.interactable = false;
@@ -41,7 +42,15 @@ public class LevelSelect : MonoBehaviour
             nextButton.interactable = true;
         }
 
-       
+       if(LevelValue == 0 && levelsUnlocked > 0)
+        {
+            playButton.interactable = false;
+        }
+
+        else if(LevelValue != 0)
+        {
+            playButton.interactable = true;
+        }
 
     }
 

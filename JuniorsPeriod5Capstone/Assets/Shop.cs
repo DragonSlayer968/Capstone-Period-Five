@@ -79,29 +79,29 @@ public class Shop : MonoBehaviour
             print(PlayerPrefs.GetInt("ShopLevel"));
         }
 
-        if(PlayerPrefs.GetInt("LevelsUnlocked") == 3 && playerAbilities.mainPath == 0)
+        if(PlayerPrefs.GetInt("LevelsUnlocked") >= 3 && playerAbilities.mainPath == 0)
         {
             PagesUnlocked = 2;
         }
 
         else if(playerAbilities.mainPath > 0)
         {
-            if(PlayerPrefs.GetInt("LevelsUnlocked") == 4)
+            if(PlayerPrefs.GetInt("LevelsUnlocked") >= 4)
             {
                 PagesUnlocked = 3;
             }
 
-            if(playerAbilities.subPath > 0 && PlayerPrefs.GetInt("LevelsUnlocked") == 6)
+            if(playerAbilities.subPath > 0 && PlayerPrefs.GetInt("LevelsUnlocked") >= 6)
             {
                 PagesUnlocked = 4;
             }
 
-            if (playerAbilities.subPathLevel == 1 && PlayerPrefs.GetInt("LevelsUnlocked") == 7)
+            if (playerAbilities.subPathLevel == 1 && PlayerPrefs.GetInt("LevelsUnlocked") >= 7)
             {
                 PagesUnlocked = 5;
             }
 
-            if (playerAbilities.subPathLevel == 2 && PlayerPrefs.GetInt("LevelsUnlocked") == 8)
+            if (playerAbilities.subPathLevel == 2 && PlayerPrefs.GetInt("LevelsUnlocked") >= 8)
             {
                 PagesUnlocked = 6;
             }
