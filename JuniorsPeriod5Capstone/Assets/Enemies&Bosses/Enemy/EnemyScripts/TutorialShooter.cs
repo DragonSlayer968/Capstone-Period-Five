@@ -53,6 +53,7 @@ public class TutorialShooter : MonoBehaviour
     {
         GameObject bullet = Instantiate(trapProj, trapSP.transform.position, trapSP.transform.rotation);
         bullet.GetComponent<TrapProj>().direction = setDirection;
+        bullet.GetComponent<TrapProj>().shooter = gameObject;
         Destroy(bullet, bulletTime);
     }
 

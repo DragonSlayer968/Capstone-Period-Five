@@ -29,6 +29,9 @@ public class CheckPoint : MonoBehaviour
             if(DeathPoint == true)
             {
                 collision.GetComponent<PlayerHealth>().health = 0;
+
+                
+                
             }
             GetComponent<Animator>().SetTrigger("Check");
             collision.GetComponent<PlayerHealth>().checkPointValue = checkValue;

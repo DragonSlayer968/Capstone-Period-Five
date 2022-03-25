@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public bool doubleJumpUnlocked;
 
     //Tutorial
-    public bool jtDone;
+    public bool jtNotDOne;
 
     public PlayerAbilities abilities;
 
@@ -58,24 +58,32 @@ public class PlayerMovement : MonoBehaviour
     {
         if(rollActive == false)
         {
-            if (canMove)
+            if(GetComponent<PlayerHealth>().health > 1)
             {
-                Movement(); //Calls movement
-                JumpEew();
+                if (canMove)
+                {
+                    Movement(); //Calls movement
+                    if (jtNotDOne == false)
+                    {
+                        JumpEew();
+                    }
+
+                }
+                MovementAnimation(); //calls movementanimation
+                JumpCheck();
+                SetSafePlace();
+
+                if (rollUnlocked == true)
+                {
+                    RollActivate();
+                }
+
             }
-            MovementAnimation(); //calls movementanimation
-            JumpCheck();
-            SetSafePlace();
-           
-            if(rollUnlocked == true)
+
+            else
             {
-                RollActivate();
+                rb.velocity = new Vector2(0 , 0);
             }
-           
-           
-
-
-
         }
 
         else

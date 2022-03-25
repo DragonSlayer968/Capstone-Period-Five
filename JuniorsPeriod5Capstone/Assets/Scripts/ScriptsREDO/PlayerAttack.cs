@@ -13,6 +13,8 @@ public class PlayerAttack : MonoBehaviour
     public bool right = true;
     public PlayerAbilities abilities;
 
+    public GameObject inkObject;
+
     [Header("Attacks")]
     public GameObject swordProj;
     public Transform swordPoint;
@@ -34,6 +36,12 @@ public class PlayerAttack : MonoBehaviour
     public BossHealth targetBoss;
     public List<EnemyHealth> targets;
 
+    [Header("Bools")]
+    public bool SlashTutorialNotFinished;
+    public bool AttackNotObtained;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,14 +55,22 @@ public class PlayerAttack : MonoBehaviour
         CheckStateOfMovement();
         InkController();
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if(SlashTutorialNotFinished == false)
         {
-            slashPrimed = true;
-        }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                slashPrimed = true;
+            }
 
-        else if (Input.GetKeyUp(KeyCode.S))
+            else if (Input.GetKeyUp(KeyCode.S))
+            {
+                slashPrimed = false;
+            }
+            inkObject.SetActive(true);
+        }
+        else
         {
-            slashPrimed = false;
+            inkObject.SetActive(false);
         }
 
         if(inkValue > maxInk)
@@ -67,7 +83,8 @@ public class PlayerAttack : MonoBehaviour
         StatController();
         anim.SetFloat("AttackSpeed", meleeSpeed);
     }
-
+    
+    [Header("Other")]
     public float baseInkCost;
     public float inkCostAfterAbility;
 
@@ -264,7 +281,7 @@ public class PlayerAttack : MonoBehaviour
             anim.SetFloat("StateOfBeing", 0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && AttackNotObtained == false)
         {
             anim.SetTrigger("Attack");
 

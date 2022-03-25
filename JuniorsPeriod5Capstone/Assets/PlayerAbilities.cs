@@ -12,6 +12,9 @@ public class PlayerAbilities : MonoBehaviour
 
     public int playerCoin;
     public Text coinText;
+    public GameObject coinImage;
+    public bool TutorialCoinNotFound;
+
     void Start()
     {
         
@@ -20,7 +23,16 @@ public class PlayerAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinText.text = ": " + playerCoin;
-        
+        if(TutorialCoinNotFound == false)
+        {
+            coinText.text = ": " + playerCoin;
+            coinImage.SetActive(true);
+        }
+
+        else
+        {
+            coinImage.SetActive(false);
+        }
+
     }
 }

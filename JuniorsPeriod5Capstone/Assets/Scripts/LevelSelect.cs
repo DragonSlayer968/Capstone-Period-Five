@@ -23,6 +23,11 @@ public class LevelSelect : MonoBehaviour
 
     public Button previousButton, nextButton;
 
+    private void Start()
+    {
+        levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked");
+    }
+
     private void Update()
     {
         if(LevelValue >= levelsUnlocked)

@@ -2659,26 +2659,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5000350393088048819, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000350393088048819, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    - target: {fileID: 5000350393182320508, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000350393182320508, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    - target: {fileID: 5000350393399158477, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 9a50e527d8cc26d48ac1c759d1206b4f, type: 3}
     - target: {fileID: 5000350393506944345, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
       propertyPath: m_Name
       value: InGameMenu
@@ -2727,30 +2707,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5000350393965401569, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 9a50e527d8cc26d48ac1c759d1206b4f, type: 3}
-    - target: {fileID: 5000350394157202659, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 9a50e527d8cc26d48ac1c759d1206b4f, type: 3}
-    - target: {fileID: 5000350394428753636, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 9a50e527d8cc26d48ac1c759d1206b4f, type: 3}
-    - target: {fileID: 5000350394626459355, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000350394626459355, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    - target: {fileID: 5000350395091508529, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 9a50e527d8cc26d48ac1c759d1206b4f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50ff00e1331fd694f9b2ee4965152565, type: 3}
 --- !u!1 &775143592

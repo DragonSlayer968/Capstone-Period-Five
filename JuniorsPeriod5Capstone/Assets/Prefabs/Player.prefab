@@ -3144,19 +3144,21 @@ MonoBehaviour:
   moveInput: 0
   jumpPower: 9.5
   groundCheckDist: 1.5
+  rollInkCost: 0
   facingRight: 1
   IsJumping: 0
   canMove: 1
   rollUnlocked: 0
   rollunlockCheck: 0
   doubleJumpUnlocked: 0
-  jtDone: 0
+  jtNotDOne: 0
   abilities: {fileID: 699632628429983193}
   ground:
     serializedVersion: 2
     m_Bits: 8
   baseJumpPower: 12
   baseRollSpeed: 7
+  baseRollCost: 0
   jumpSFX: {fileID: 2633142407723100824, guid: 1426bddced183b9478b8fcbe3cebc329, type: 3}
   doubleJumpVFX: {fileID: 2561461406238886362, guid: e00f242a66b5f874090e523455e937df, type: 3}
   DJpoint: {fileID: 655166715}
@@ -3195,6 +3197,7 @@ MonoBehaviour:
   Rotate: {x: 0, y: 0, z: 0}
   right: 1
   abilities: {fileID: 699632628429983193}
+  inkObject: {fileID: 58823750}
   swordProj: {fileID: 1075022634648908438, guid: c75f2a23631892c43a8240d8e482bdd1, type: 3}
   swordPoint: {fileID: 1481348375}
   inkValue: 10
@@ -3210,6 +3213,8 @@ MonoBehaviour:
   InkSlider: {fileID: 58823752}
   targetBoss: {fileID: 0}
   targets: []
+  SlashTutorialNotFinished: 0
+  AttackNotObtained: 0
   baseInkCost: 4
   inkCostAfterAbility: 0
   baseDamage: 4
@@ -3254,6 +3259,7 @@ MonoBehaviour:
   noHead: {fileID: 182687263083871259, guid: 072f84eec86b89a47a6e57400f46a55d, type: 3}
   paExtend: {fileID: 1040115846}
   abilities: {fileID: 699632628429983193}
+  healthUI: {fileID: 579613893}
   Parrying: 0
   parryDamage: 0
   parryHealing: 0
@@ -3261,6 +3267,8 @@ MonoBehaviour:
   path: 0
   ParryProj: {fileID: 4523920726796674305, guid: 145cb8c36e359ec4f855bab331771c9f, type: 3}
   ParrySound: {fileID: 1680457847364673754, guid: c9ffb94f71cb87b4982da1030243be64, type: 3}
+  Invulnerable: 0
+  blockNotObtained: 0
   deathCanvas: {fileID: 0}
   deathSound: {fileID: 0}
   checkPointValue: 0
@@ -3282,6 +3290,8 @@ MonoBehaviour:
   subPathLevel: 0
   playerCoin: 0
   coinText: {fileID: 65308845064803867}
+  coinImage: {fileID: 5447965023653986073}
+  TutorialCoinNotFound: 0
 --- !u!114 &733458347
 MonoBehaviour:
   m_ObjectHideFlags: 0

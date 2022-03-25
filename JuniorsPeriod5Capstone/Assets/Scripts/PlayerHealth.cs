@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public PlayerAttack paExtend;
     public PlayerAbilities abilities;
 
+    public GameObject healthUI;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +34,15 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public bool Dead;
+
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && Dead == false)
         {
             anim.SetTrigger("Dead");
-
+            Dead = true;
         }
 
 
@@ -48,7 +51,15 @@ public class PlayerHealth : MonoBehaviour
         Parry();
 
 
+        if(Invulnerable == true)
+        {
+            healthUI.SetActive(false);
+        }
 
+        else
+        {
+            healthUI.SetActive(true);
+        }
 
     }
 
@@ -64,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Parry()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1)) //make cost ink
+        if (Input.GetKeyDown(KeyCode.Mouse1) && blockNotObtained == false) //make cost ink
         {
             ParryChange();
             anim.SetTrigger("Parry");
@@ -77,293 +88,299 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-
+    public bool Invulnerable;
+    public bool blockNotObtained;
     public void Hit(int Attacker, GameObject enemy)
     {
-        if (GetComponent<PlayerMovement>().rollActive == false)
-        {
-            if (Parrying == false)
+       
+            if (GetComponent<PlayerMovement>().rollActive == false)
             {
-                if (IV == false)
+                if (Parrying == false)
                 {
-                    if (abilities.mainPath != 3)
+                    if (IV == false && Invulnerable == false)
                     {
-                        anim.SetTrigger("Hit");
-                        health--;
-                        IV = true;
-                        healthPoints[hp - 1].sprite = noHead;
-                        hp--;
-                    }
-
-                    else
-                    {
-                        if (abilities.subPath == 1)
+                        if (abilities.mainPath != 3)
                         {
-                            if (abilities.subPathLevel == 0)
-                            {
-                                int dodgeChance = Random.Range(0, 10);
-                                if (dodgeChance != 0)
-                                {
-                                    anim.SetTrigger("Hit");
-                                    health--;
-                                    IV = true;
-                                    healthPoints[hp - 1].sprite = noHead;
-                                    hp--;
-                                }
-                            }
-
-                            else
-                            {
-                                int dodgeChance = Random.Range(0, 5);
-                                if (dodgeChance != 0)
-                                {
-                                    anim.SetTrigger("Hit");
-                                    health--;
-                                    IV = true;
-                                    healthPoints[hp - 1].sprite = noHead;
-                                    hp--;
-                                }
-                            }
+                            anim.SetTrigger("Hit");
+                            health--;
+                            IV = true;
+                            healthPoints[hp - 1].sprite = noHead;
+                            hp--;
                         }
 
                         else
                         {
-                            int dodgeChance = Random.Range(0, 10);
-                            if (dodgeChance == 0)
+                            if (abilities.subPath == 1)
                             {
-                                if (abilities.subPathLevel >= 1)
+                                if (abilities.subPathLevel == 0)
                                 {
-                                    EnemyHealth check = enemy.GetComponent<EnemyHealth>();
-
-                                    if (check)
+                                    int dodgeChance = Random.Range(0, 10);
+                                    if (dodgeChance != 0)
                                     {
-                                        enemy.GetComponent<EnemyHealth>().enemyHealth -= 10;
+                                        anim.SetTrigger("Hit");
+                                        health--;
+                                        IV = true;
+                                        healthPoints[hp - 1].sprite = noHead;
+                                        hp--;
+                                    }
+                                }
+
+                                else
+                                {
+                                    int dodgeChance = Random.Range(0, 5);
+                                    if (dodgeChance != 0)
+                                    {
+                                        anim.SetTrigger("Hit");
+                                        health--;
+                                        IV = true;
+                                        healthPoints[hp - 1].sprite = noHead;
+                                        hp--;
                                     }
                                 }
                             }
 
                             else
                             {
-                                anim.SetTrigger("Hit");
-                                health--;
-                                IV = true;
-                                healthPoints[hp - 1].sprite = noHead;
-                                hp--;
+                                int dodgeChance = Random.Range(0, 10);
+                                if (dodgeChance == 0)
+                                {
+                                    if (abilities.subPathLevel >= 1)
+                                    {
+                                        EnemyHealth check = enemy.GetComponent<EnemyHealth>();
+
+                                        if (check)
+                                        {
+                                            enemy.GetComponent<EnemyHealth>().enemyHealth -= 10;
+                                        }
+                                    }
+                                }
+
+                                else
+                                {
+                                    anim.SetTrigger("Hit");
+                                    health--;
+                                    IV = true;
+                                    healthPoints[hp - 1].sprite = noHead;
+                                    hp--;
+                                }
+
+
                             }
-
-
-                        }
-                    }
-
-
-
-
-                }
-            }
-
-            else
-            {
-
-                if (abilities.mainPath != 3)
-                {
-                    if (Attacker == 1)
-                    {
-                        print("parried");
-                    }
-
-                    if (Attacker == 2)
-                    {
-                        GameObject slashSound = Instantiate(ParrySound, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
-                        GameObject proj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
-                        proj.transform.eulerAngles = paExtend.Rotate;
-                        if (paExtend.right == true)
-                        {
-                            proj.GetComponent<Projectile>().IsRight = true;
                         }
 
-                        else
-                        {
-                            proj.GetComponent<Projectile>().IsRight = false;
-                        }
+
+
+
                     }
                 }
 
                 else
                 {
 
-                    if (abilities.subPath == 1) //Defense - Harmony 
+                    if (abilities.mainPath != 3)
                     {
-                        if (abilities.subPathLevel <= 0) //Base - 5% to heal on parry
+                        print(Attacker + "Eh");
+                        if (Attacker == 1)
                         {
-                            int healChance = Random.Range(0, 20);
-                            if (healChance == 0)
-                            {
-                                health++;
-                                hp++;
-                                healthPoints[hp - 1].sprite = head;
-
-                            }
+                            print("parried");
                         }
 
-                        else if (abilities.subPathLevel == 1) //Increases passive chance to not take damage to 20% //8% to heal on parry
+                        if (Attacker == 2)
                         {
-                            int healChance = Random.Range(0, 100);
-                            if (healChance <= 7)
+                            print("eh");
+                            GameObject slashSound = Instantiate(ParrySound, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+                            GameObject proj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+                            proj.transform.eulerAngles = paExtend.Rotate;
+                            if (paExtend.right == true)
                             {
-                                health++;
-                                hp++;
-                                healthPoints[hp - 1].sprite = head;
+                                proj.GetComponent<Projectile>().IsRight = true;
+                            }
 
+                            else
+                            {
+                                proj.GetComponent<Projectile>().IsRight = false;
                             }
                         }
+                    }
 
-                        else if (abilities.subPathLevel == 2) //10% to heal on parry
+                    else
+                    {
+
+                        if (abilities.subPath == 1) //Defense - Harmony 
                         {
-                            int healChance = Random.Range(0, 10);
-                            if (healChance == 0)
+                            if (abilities.subPathLevel <= 0) //Base - 5% to heal on parry
                             {
-                                health++;
-                                hp++;
-                                healthPoints[hp - 1].sprite = head;
-
-                            }
-                        }
-
-                        else //5% to heal to full //15% to heal on parry *Extreme ability (Might be added later instead of heal to full) - Revive after 1st death at 2 hearts
-                        {
-                            int healChance = Random.Range(0, 20);
-                            if (healChance <= 3)
-                            {
-                                health++;
-                                hp++;
-                                healthPoints[hp - 1].sprite = head;
-
-                            }
-
-                            int megaHeal = Random.Range(0, 15);
-                            if (megaHeal == 0)
-                            {
-                                for (int i = 0; i < healthPoints.Length; i++)
+                                int healChance = Random.Range(0, 20);
+                                if (healChance == 0)
                                 {
                                     health++;
                                     hp++;
-                                    healthPoints[i].sprite = head;
+                                    healthPoints[hp - 1].sprite = head;
 
-                                    if(health > maxHealth)
-                                    {
-                                        health = maxHealth;
-                                    }
+                                }
+                            }
 
-                                    if(hp > maxHealth)
-                                    {
-                                        hp = 5;
-                                    }
+                            else if (abilities.subPathLevel == 1) //Increases passive chance to not take damage to 20% //8% to heal on parry
+                            {
+                                int healChance = Random.Range(0, 100);
+                                if (healChance <= 7)
+                                {
+                                    health++;
+                                    hp++;
+                                    healthPoints[hp - 1].sprite = head;
+
+                                }
+                            }
+
+                            else if (abilities.subPathLevel == 2) //10% to heal on parry
+                            {
+                                int healChance = Random.Range(0, 10);
+                                if (healChance == 0)
+                                {
+                                    health++;
+                                    hp++;
+                                    healthPoints[hp - 1].sprite = head;
+
+                                }
+                            }
+
+                            else //5% to heal to full //15% to heal on parry *Extreme ability (Might be added later instead of heal to full) - Revive after 1st death at 2 hearts
+                            {
+                                int healChance = Random.Range(0, 20);
+                                if (healChance <= 3)
+                                {
+                                    health++;
+                                    hp++;
+                                    healthPoints[hp - 1].sprite = head;
+
                                 }
 
+                                int megaHeal = Random.Range(0, 15);
+                                if (megaHeal == 0)
+                                {
+                                    for (int i = 0; i < healthPoints.Length; i++)
+                                    {
+                                        health++;
+                                        hp++;
+                                        healthPoints[i].sprite = head;
+
+                                        if (health > maxHealth)
+                                        {
+                                            health = maxHealth;
+                                        }
+
+                                        if (hp > maxHealth)
+                                        {
+                                            hp = 5;
+                                        }
+                                    }
+
+
+                                }
 
                             }
 
                         }
 
-                    }
-
-                    if (Attacker == 1)
-                    {
-                        if (abilities.subPath == 2) //Hate
+                        if (Attacker == 1)
                         {
-                            EnemyHealth check = enemy.GetComponent<EnemyHealth>();
-
-                            if (check)
+                            if (abilities.subPath == 2) //Hate
                             {
-                                if (abilities.subPathLevel <= 0) //Base - low damage
+                                EnemyHealth check = enemy.GetComponent<EnemyHealth>();
+
+                                if (check)
                                 {
-                                    enemy.GetComponent<EnemyHealth>().enemyHealth -= 5;
+                                    if (abilities.subPathLevel <= 0) //Base - low damage
+                                    {
+                                        enemy.GetComponent<EnemyHealth>().enemyHealth -= 5;
+                                    }
+
+                                    else if (abilities.subPathLevel == 1) //Passive chance to not take damage also damages attacked enemy
+                                    {
+                                        enemy.GetComponent<EnemyHealth>().enemyHealth -= 10;
+                                    }
+
+                                    else if (abilities.subPathLevel == 2) //Projectile enemies will be damaged directly
+                                    {
+                                        enemy.GetComponent<EnemyHealth>().enemyHealth -= 15;
+                                    }
+
+                                    else //25% to crit the parry dealing 1.5* damage or if projectile sending out two parry projectiles
+                                    {
+                                        int critchance = Random.Range(0, 3);
+                                        if (critchance == 0)
+                                        {
+                                            enemy.GetComponent<EnemyHealth>().enemyHealth -= 20 * 1.5f;
+                                        }
+                                        else
+                                        {
+                                            enemy.GetComponent<EnemyHealth>().enemyHealth -= 20;
+                                        }
+
+
+                                    }
                                 }
 
-                                else if (abilities.subPathLevel == 1) //Passive chance to not take damage also damages attacked enemy
+                            }
+                            print("parried");
+                        }
+
+                        if (Attacker == 2)
+                        {
+                            GameObject slashSound = Instantiate(ParrySound, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+                            GameObject proj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+
+                            if (abilities.subPath == 2 && abilities.subPathLevel > 1)
+                            {
+
+
+                                EnemyHealth check = enemy.GetComponent<EnemyHealth>();
+                                if (check)
                                 {
-                                    enemy.GetComponent<EnemyHealth>().enemyHealth -= 10;
+                                    enemy.GetComponent<EnemyHealth>().enemyHealth -= 8;
                                 }
 
-                                else if (abilities.subPathLevel == 2) //Projectile enemies will be damaged directly
-                                {
-                                    enemy.GetComponent<EnemyHealth>().enemyHealth -= 15;
-                                }
-
-                                else //25% to crit the parry dealing 1.5* damage or if projectile sending out two parry projectiles
+                                if (abilities.subPathLevel == 3)
                                 {
                                     int critchance = Random.Range(0, 3);
                                     if (critchance == 0)
                                     {
-                                        enemy.GetComponent<EnemyHealth>().enemyHealth -= 20 * 1.5f;
-                                    }
-                                    else
-                                    {
-                                        enemy.GetComponent<EnemyHealth>().enemyHealth -= 20;
-                                    }
+                                        GameObject secondProj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
+                                        secondProj.transform.eulerAngles = paExtend.Rotate;
+                                        if (paExtend.right == true)
+                                        {
+                                            secondProj.GetComponent<Projectile>().IsRight = true;
+                                        }
 
-
-                                }
-                            }
-
-                        }
-                        print("parried");
-                    }
-
-                    if (Attacker == 2)
-                    {
-                        GameObject slashSound = Instantiate(ParrySound, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
-                        GameObject proj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
-
-                        if (abilities.subPath == 2 && abilities.subPathLevel > 1)
-                        {
-
-
-                            EnemyHealth check = enemy.GetComponent<EnemyHealth>();
-                            if (check)
-                            {
-                                enemy.GetComponent<EnemyHealth>().enemyHealth -= 8;
-                            }
-
-                            if (abilities.subPathLevel == 3)
-                            {
-                                int critchance = Random.Range(0, 3);
-                                if (critchance == 0)
-                                {
-                                    GameObject secondProj = Instantiate(ParryProj, paExtend.swordPoint.position, paExtend.swordPoint.rotation);
-                                    secondProj.transform.eulerAngles = paExtend.Rotate;
-                                    if (paExtend.right == true)
-                                    {
-                                        secondProj.GetComponent<Projectile>().IsRight = true;
-                                    }
-
-                                    else
-                                    {
-                                        secondProj.GetComponent<Projectile>().IsRight = false;
+                                        else
+                                        {
+                                            secondProj.GetComponent<Projectile>().IsRight = false;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        proj.transform.eulerAngles = paExtend.Rotate;
-                        if (paExtend.right == true)
-                        {
-                            proj.GetComponent<Projectile>().IsRight = true;
-                        }
+                            proj.transform.eulerAngles = paExtend.Rotate;
+                            if (paExtend.right == true)
+                            {
+                                proj.GetComponent<Projectile>().IsRight = true;
+                            }
 
-                        else
-                        {
-                            proj.GetComponent<Projectile>().IsRight = false;
+                            else
+                            {
+                                proj.GetComponent<Projectile>().IsRight = false;
+                            }
                         }
                     }
+
+
+
+
+
                 }
 
-
-
-
-
             }
-
-        }
+        
+       
 
     }
 
