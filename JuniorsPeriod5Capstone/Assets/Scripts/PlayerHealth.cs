@@ -48,7 +48,11 @@ public class PlayerHealth : MonoBehaviour
 
 
         Invincibility();
-        Parry();
+        if(blockNotObtained == false)
+        {
+            Parry();
+        }
+        
 
 
         if(Invulnerable == true)
@@ -75,7 +79,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Parry()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && blockNotObtained == false) //make cost ink
+        if (Input.GetKeyDown(KeyCode.Mouse1)) //make cost ink
         {
             ParryChange();
             anim.SetTrigger("Parry");

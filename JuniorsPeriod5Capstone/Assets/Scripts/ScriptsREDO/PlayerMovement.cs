@@ -58,9 +58,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(rollActive == false)
         {
-            if(GetComponent<PlayerHealth>().health > 1)
+            if(GetComponent<PlayerHealth>().health > 0)
             {
-                if (canMove)
+                if (canMove == true)
                 {
                     Movement(); //Calls movement
                     if (jtNotDOne == false)

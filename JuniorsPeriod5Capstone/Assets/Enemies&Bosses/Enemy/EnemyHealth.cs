@@ -45,12 +45,16 @@ public class EnemyHealth : MonoBehaviour
         
         if(invincible == false)
         {
-            anim.SetTrigger("Hit");
+            if(enemyHealth > 0)
+            {
+                //anim.SetTrigger("Hit");
 
-            enemyHealth -= damage;
-            GameObject damageShow = Instantiate(popDamageShow, transform.position, transform.rotation);
-            damageShow.GetComponent<PopOut>().popManipulation(damage.ToString());
-            invincible = true;
+                enemyHealth -= damage;
+                GameObject damageShow = Instantiate(popDamageShow, transform.position, transform.rotation);
+                damageShow.GetComponent<PopOut>().popManipulation(damage.ToString());
+                invincible = true;
+            }
+           
         }
         
     }
