@@ -160,7 +160,7 @@ public class Shop : MonoBehaviour
     {
         if(ShopPage <= 1)
         {
-            price = 50;
+            price = 0;
         }
 
         if(ShopPage == 2)
