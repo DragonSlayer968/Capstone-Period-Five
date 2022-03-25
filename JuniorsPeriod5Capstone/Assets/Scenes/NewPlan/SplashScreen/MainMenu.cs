@@ -46,6 +46,19 @@ public class MainMenu : MonoBehaviour
         SelectionAnimator.SetTrigger("Selection");
     }
 
+    public void NewAction()
+    {
+        PlayerPrefs.SetInt("ShopLevel", 0);
+        PlayerPrefs.SetInt("HasRoll", 0);
+        PlayerPrefs.SetInt("LevelsUnlocked", 0);
+        PlayerPrefs.SetInt("Cp", 0);
+        PlayerPrefs.SetInt("Mainpath", 0);
+        PlayerPrefs.SetInt("Subpath", 0);
+        PlayerPrefs.SetInt("Subpathlevel", 0);       
+        PlayerPrefs.SetInt("coins", 0);
+        PlayerPrefs.SetInt("TV", 0);
+    }
+
     public void QuitSelected()
     {
         if (Credits == false && Play == false)

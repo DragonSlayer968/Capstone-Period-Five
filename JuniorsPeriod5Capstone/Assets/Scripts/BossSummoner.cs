@@ -6,6 +6,7 @@ public class BossSummoner : MonoBehaviour
 {
     public GameObject boss;
     public GameObject obj;
+    public GameObject scenetran;
 
     public bool objActivate;
     public bool objDeactivate;
@@ -22,7 +23,10 @@ public class BossSummoner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(boss == null)
+        {
+            scenetran.SetActive(true);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -52,5 +56,7 @@ public class BossSummoner : MonoBehaviour
         boss.SetActive(true);
        
     }
+
+    
 
 }
