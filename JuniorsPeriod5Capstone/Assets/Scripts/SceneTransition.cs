@@ -60,12 +60,15 @@ public class SceneTransition : MonoBehaviour
         {
            
             PlayerPrefs.SetInt("Cp", 0);
-            if(PlayerPrefs.GetInt("LevelsUnlocked") < nextLevel)
+            if(PlayerPrefs.GetInt("LevelsUnlocked") <= nextLevel)
             {
+                print(nextLevel);
                 PlayerPrefs.SetInt("LevelsUnlocked", nextLevel);
+                print(nextLevel);
+                print(PlayerPrefs.GetInt("LevelsUnlocked"));
             }
 
-            if(PlayerPrefs.GetInt("ShopLevel") < shopLevelUnlocked)
+            if(PlayerPrefs.GetInt("ShopLevel") <= shopLevelUnlocked)
             {
                 PlayerPrefs.SetInt("ShopLevel", shopLevelUnlocked);
             }

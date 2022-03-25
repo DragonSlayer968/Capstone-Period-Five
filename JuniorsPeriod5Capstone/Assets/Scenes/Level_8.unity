@@ -1011,6 +1011,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4579574660683601632, guid: 3c3d00e132185be4fb06f33eb1a99f09, type: 3}
+      propertyPath: nextLevel
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579574660683601632, guid: 3c3d00e132185be4fb06f33eb1a99f09, type: 3}
       propertyPath: sceneToLoad
       value: LevelSelect
       objectReference: {fileID: 0}

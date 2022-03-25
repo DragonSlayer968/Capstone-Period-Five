@@ -25,12 +25,13 @@ public class LevelSelect : MonoBehaviour
 
     private void Start()
     {
-        levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked");
+        print(PlayerPrefs.GetInt("LevelsUnlocked"));
     }
 
     private void Update()
     {
-        if(LevelValue >= levelsUnlocked)
+        levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked");
+        if (LevelValue >= levelsUnlocked)
         {
             nextButton.interactable = false;
         }
