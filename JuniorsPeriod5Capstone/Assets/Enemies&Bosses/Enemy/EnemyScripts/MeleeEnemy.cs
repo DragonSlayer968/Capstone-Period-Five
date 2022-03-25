@@ -118,12 +118,14 @@ public class MeleeEnemy : MonoBehaviour
 
                     if (direction < 0)
                     {
-                        sprite.flipX = true;
+                        transform.eulerAngles = new Vector3(0, 180, 0);
+                        //sprite.flipX = true;
                     }
 
                     if (direction > 0)
                     {
-                        sprite.flipX = false;
+                        transform.eulerAngles = new Vector3(0, 0, 0);
+                        //sprite.flipX = false;
                     }
 
                 }

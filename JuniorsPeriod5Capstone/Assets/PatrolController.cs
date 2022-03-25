@@ -32,6 +32,11 @@ public class PatrolController : MonoBehaviour
         {
             Enemy.GetComponent<MeleeEnemy>().CanMove = true;
         }
+
+        if (enemyValue == 2 && collision.gameObject.layer == 3)
+        {
+            Enemy.GetComponent<ShootingEnemy>().CanMove = false;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -39,6 +44,11 @@ public class PatrolController : MonoBehaviour
         if(enemyValue == 1 && collision.gameObject.layer == 3)
         {
             Enemy.GetComponent<MeleeEnemy>().CanMove = false;
+        }
+
+        if (enemyValue == 2 && collision.gameObject.layer == 3)
+        {
+            Enemy.GetComponent<ShootingEnemy>().CanMove = true;
         }
     }
 
